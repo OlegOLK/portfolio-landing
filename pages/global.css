@@ -1,0 +1,33 @@
+main{
+    font-family: Manrope;
+}
+
+.logo {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: Manrope;
+}
+
+.secondary-menu {
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 21px;
+    /* identical to box height, or 150% */
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.bg-main-color {
+    background-color: #7DC7A8;
+}
+
+.main-color {
+    color: #7DC7A8;
+}
