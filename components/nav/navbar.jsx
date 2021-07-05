@@ -1,4 +1,4 @@
-import { BellIcon, MenuIcon, FingerPrintIcon } from '@heroicons/react/outline'
+import { BellIcon, UserIcon, FingerPrintIcon } from '@heroicons/react/outline'
 
 export default function MyNav() {
     return (

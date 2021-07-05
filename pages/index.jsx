@@ -43,7 +43,7 @@ export default function Home() {
         </div>
         <div className="flex justify-end items-start">
           <img
-          className="w-auto"
+          className="w-auto -mt-16"
             src="./test.svg">
           </img>
 
