@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Navbar from './../components/nav/nav';
 import MyNav from '../components/nav/navbar';
 import DisctordPopup from '../components/discord/discord'
+import More from '../components/more/more'
 
 export default function Home() {
   return (
@@ -16,9 +17,9 @@ export default function Home() {
       <MyNav></MyNav>
       {/* <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center"> */}
       <div className="container mx-auto grid w-full h-full grid-cols-2 gap-4 relative">
-      <DisctordPopup></DisctordPopup>
-
-        <div className="mt-28 ml-14">
+        <DisctordPopup></DisctordPopup>
+        <More></More>
+        <div className="mt-28">
           <p className="text-6xl font-bold	leading-snug	">
             Your Crypto-trades <br />
             and portfolios <br />
@@ -43,14 +44,36 @@ export default function Home() {
         </div>
         <div className="flex justify-end items-start">
           <img
-          className="w-auto -mt-16"
+            className="w-auto -mt-16"
             src="./test.svg">
           </img>
 
 
         </div>
       </div>
+<div className="h-screen">
+    <video controls className="w-full h-full mt-16">
+  <source src="movie.mp4" type="video/mp4" />
+  <source src="movie.ogg" type="video/ogg" />
+  Your browser does not support the video tag.
 
+    </video>
+</div>
+
+<div className="h-screen container mx-auto grid w-full grid-cols-2 gap-4 relative">
+  <div>
+  Enjoy automatic updates 
+of your wallets
+  </div>
+<div className="flex justify-end items-start">
+          <img
+            className="w-auto -mt-16"
+            src="./test.svg">
+          </img>
+
+
+        </div>
+</div>
       {/* </main> */}
 
       {/* <footer className="flex items-center justify-center w-full h-24 border-t">

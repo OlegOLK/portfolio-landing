@@ -2,7 +2,7 @@ import { BadgeCheckIcon } from '@heroicons/react/outline'
 
 export default function DisctordPopup() {
     return (
-        <div className="fixed bottom-4 right-6 ">
+        <div className="fixed bottom-4 right-6">
             <button
                 className="shadow-lg py-3 px-3 flex items-center justify-start text-base font-semibold rounded-lg h-16 w-72 ">
                 <svg className="inline" width="36" height="40" viewBox="0 0 36 40" fill="none" xmlns="http://www.w3.org/2000/svg">
