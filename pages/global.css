@@ -1,5 +1,6 @@
-main{
+body{
     font-family: Manrope !important;
+    overflow-x: hidden;
 }
 
 .font-main{
@@ -114,4 +115,12 @@ background: #FFFFFF;
 box-shadow: 0px 8px 16px rgba(137, 160, 172, 0.16);
 border-radius: 10px;
 transform: rotate(-90deg)
+}
+.cube-vertical{
+    width: 160px;
+    height: 160px;
+    background: #FFFFFF;
+box-shadow: 0px 8px 16px rgba(137, 160, 172, 0.16);
+border-radius: 10px;
+transform: rotate(180deg);
 }

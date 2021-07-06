@@ -118,7 +118,11 @@ export default function Home() {
 
           </div>
         </div>
-        <div className="flex items-end">
+        <div className="flex items-end relative">
+          <div className="absolute -right-24 top-0">
+            <figure className="cube-vertical"></figure>
+            <figure className="cube-vertical"></figure>
+          </div>
         <div className="flex justify-items-start space-x-2">
           <div>
             <img src="cube_1.svg" className="inline" />
