@@ -3,7 +3,8 @@ import Navbar from './../components/nav/nav';
 import MyNav from '../components/nav/navbar';
 import DisctordPopup from '../components/discord/discord'
 import More from '../components/more/more'
-import { ArrowRightIcon, UserIcon, FingerPrintIcon } from '@heroicons/react/outline'
+import { ArrowRightIcon, FingerPrintIcon } from '@heroicons/react/outline'
+import { ChevronRightIcon } from '@heroicons/react/solid'
 
 export default function Home() {
   return (
@@ -71,6 +72,7 @@ export default function Home() {
       </div>
 
       <div className="h-screen container mx-auto grid w-full grid-cols-2 gap-x-4 gap-y-44	 relative z-0 mt-8">
+        {/* Feature #1 r->l */}
         <div className="flex justify-items-start space-x-2 mt-20">
           <div>
             <img src="cube_1.svg" className="inline" />
@@ -107,7 +109,7 @@ export default function Home() {
 
 
         </div>
-        
+        {/* Feature #2 l->r */}
         <div className="mt-16">
           <div className="flex justify-start items-start">
             <img
@@ -123,76 +125,74 @@ export default function Home() {
             <figure className="cube-vertical"></figure>
             <figure className="cube-vertical"></figure>
           </div>
-        <div className="flex justify-items-start space-x-2">
-          <div>
-            <img src="cube_1.svg" className="inline" />
+          <div className="flex justify-items-start space-x-2">
+            <div>
+              <img src="cube_1.svg" className="inline" />
 
-          </div>
-          <div>
+            </div>
+            <div>
 
 
-            <div className="feature-header">
-            Get a multi currency  <br/>
+              <div className="feature-header">
+                Get a multi currency  <br />
 support
   </div>
-            <div className="feature-subheader mt-4">
-            Track your trades performance not only in USD and <br/>
-            BTC! - TradeFo calculates  profits in many <br/>
-            currencies. Choose any 2 base currencies you <br/>
-            want and switch between them on the fly! 
+              <div className="feature-subheader mt-4">
+                Track your trades performance not only in USD and <br />
+            BTC! - TradeFo calculates  profits in many <br />
+            currencies. Choose any 2 base currencies you <br />
+            want and switch between them on the fly!
   </div>
-            <div>
-              <button
-                className="relative font-main bg-none border-0 text-left  py-3 block text-base font-semibold main-color ml-0">
+              <div>
+                <button
+                  className="relative font-main bg-none border-0 text-left  py-3 block text-base font-semibold main-color ml-0">
 
-                Learn more
+                  Learn more
                                     <ArrowRightIcon className="inline h-5 w-5 ml-2" aria-hidden="true" />
-              </button>
+                </button>
+              </div>
             </div>
           </div>
-        </div>
 
         </div>
 
-
+        {/* feature #3 r->l */}
         <div className="flex items-center relative">
           <div className="absolute -bottom-12 -left-44">
-          <figure className="cube inline-block mr-4 ">
+            <figure className="cube inline-block mr-4 ">
 
-</figure>
-           <figure className="cube inline-block">
+            </figure>
+            <figure className="cube inline-block">
 
-           </figure>
+            </figure>
           </div>
-        <div className="flex justify-items-start space-x-2">
-          <div>
-            <img src="cube_1.svg" className="inline" />
+          <div className="flex justify-items-start space-x-2">
+            <div>
+              <img src="cube_1.svg" className="inline" />
 
-          </div>
-          <div>
+            </div>
+            <div>
 
 
-            <div className="feature-header">
-            Set your cost basis
+              <div className="feature-header">
+                Set your cost basis
   </div>
-            <div className="feature-subheader mt-4">
-            Specify the initial cost of each asset in your <br/>
+              <div className="feature-subheader mt-4">
+                Specify the initial cost of each asset in your <br />
             Portfolio and enjoy precise overview.
   </div>
-            <div>
-              <button
-                className="relative font-main bg-none border-0 text-left  py-3 block text-base font-semibold main-color ml-0">
+              <div>
+                <button
+                  className="relative font-main bg-none border-0 text-left  py-3 block text-base font-semibold main-color ml-0">
 
-                Learn more
+                  Learn more
                                     <ArrowRightIcon className="inline h-5 w-5 ml-2" aria-hidden="true" />
-              </button>
+                </button>
+              </div>
             </div>
           </div>
-        </div>
 
         </div>
-
-
         <div className="mt-16">
           <div className="flex justify-start items-start">
             <img
@@ -203,9 +203,109 @@ support
 
           </div>
         </div>
-      
-      </div>
 
+        {/* Feature #4 l->r */}
+        <div className="mt-2">
+          <div className="flex justify-start items-start">
+            <img
+              className="w-auto -mt-12"
+              src="./feature_4.png">
+            </img>
+
+
+          </div>
+        </div>
+        <div className="flex items-center relative">
+          <div className="absolute -bottom-12 -right-44">
+            <figure className="cube inline-block mr-4 "></figure>
+            <figure className="cube inline-block"></figure>
+          </div>
+          <div className="flex justify-items-start space-x-2">
+            <div>
+              <img src="cube_1.svg" className="inline" />
+
+            </div>
+            <div>
+
+
+              <div className="feature-header">
+                Share your trade   <br />
+            performance
+  </div>
+              <div className="feature-subheader mt-4">
+                You can generate a link to  your portfolios or <br />
+            wallets statistics. You decide what to share!
+  </div>
+              <div>
+                <button
+                  className="relative font-main bg-none border-0 text-left  py-3 block text-base font-semibold main-color ml-0">
+
+                  Learn more
+                                    <ArrowRightIcon className="inline h-5 w-5 ml-2" aria-hidden="true" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+{/* Excanges */}
+        <div className="col-span-2  text-center">
+          <div className="flex justify-center items-center">
+            <img src="cube_1.svg" className="inline" />
+            <p className="inline feature-header ml-4 self-center">Connect to your favorite exchanges</p>
+
+          </div>
+          <div className="flex justify-items-start mt-16 space-x-20 mx-24">
+            <img src="binance.png" />
+            <img src="binance.png" />
+            <img src="binance.png" />
+            <img src="binance.png" />
+            <img src="binance.png" />
+            <ChevronRightIcon className="inline h-5 w-5 main-color self-center" aria-hidden="true" />
+          </div>
+
+        </div>
+     
+     
+        {/* FAQ */}
+        <div className="flex items-start relative">
+          <div className="absolute -bottom-12 -left-44">
+          <figure className="cube-vertical"></figure>
+          <figure className="cube-vertical"></figure>
+          </div>
+          <div className="flex justify-items-start space-x-2">
+            <div>
+              <img src="cube_1.svg" className="inline" />
+
+            </div>
+            <div>
+
+
+              <div className="feature-header">
+                FAQs
+  </div>
+              <div className="feature-subheader mt-4">
+              You might be wondering
+  </div>
+             
+            </div>
+          </div>
+
+        </div>
+        <div className="mt-16">
+          <div className="flex justify-start items-start">
+            <img
+              className="w-auto -mt-12"
+              src="./feature_3.png">
+            </img>
+
+
+          </div>
+        </div>
+
+     
+      </div>
     </div>
   )
 }
