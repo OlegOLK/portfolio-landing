@@ -1,5 +1,9 @@
 main{
-    font-family: Manrope;
+    font-family: Manrope !important;
+}
+
+.font-main{
+    font-family: Manrope !important;
 }
 
 .logo {
@@ -11,7 +15,25 @@ main{
     text-transform: capitalize;
     font-family: Manrope;
 }
+.playIcon{
+    /* clip-path: polygon(0 0, 0% 100%, 100% 50%); */
+    /* background-color: #7DC7A8; */
+    height: 64px;
+    width: 64px;
+    left: 50%;
+    top: 50%
+}
+.play-button{
+    height: 10rem;
+    width: 10rem;
+    clip-path: circle(50%);
+    right: calc(50% - 5rem);
+    background-color: white;
+}
 
+.video{
+    height: calc(100% - 8rem);
+}
 .more-about{
     font-family: Manrope;
 font-style: normal;
@@ -62,4 +84,34 @@ line-height: 22px;
 
 .main-color {
     color: #7DC7A8;
+}
+
+.feature-header{
+    font-family: Manrope;
+font-style: normal;
+font-weight: 800;
+font-size: 32px;
+line-height: 42px;
+/* or 131% */
+}
+
+.feature-subheader{
+    font-family: Manrope;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 32px;
+/* or 200% */
+
+
+color: rgba(0, 0, 0, 0.7);
+}
+
+.cube{
+    width: 160px;
+height: 160px;
+background: #FFFFFF;
+box-shadow: 0px 8px 16px rgba(137, 160, 172, 0.16);
+border-radius: 10px;
+transform: rotate(-90deg)
 }
