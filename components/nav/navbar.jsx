@@ -2,9 +2,9 @@ import { BellIcon, UserIcon, FingerPrintIcon } from '@heroicons/react/outline'
 
 export default function MyNav() {
     return (
-        <nav className=" bg-white sticky top-0 z-50">
-            <div className="container mx-auto">
-                <div className="relative flex items-center justify-between h-28">
+        <nav className="bg-white  top-0 z-50 fixed w-full">
+            <div className="container mx-auto ">
+                <div className="relative flex items-center  justify-between h-28">
                     <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                         <div className="flex-shrink-0 flex items-center">
                             <img

@@ -18,10 +18,11 @@ export default function Home() {
       </Head>
       <MyNav></MyNav>
       {/* <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center"> */}
-      <div className="container mx-auto grid w-full h-full grid-cols-2 gap-4 relative">
+      <main className="container mx-auto grid w-full h-screen grid-cols-2 gap-4 relative box-border mt-16">
         <DisctordPopup></DisctordPopup>
         <More></More>
-        <div className="mt-28">
+        <div div className="flex items-center -mt-24">
+        <div>
           <p className="text-6xl font-bold	leading-snug	">
             Your Crypto-trades <br />
             and portfolios <br />
@@ -44,17 +45,22 @@ export default function Home() {
             </button>
           </div>
         </div>
-        <div className="flex justify-end items-start">
+        
+        </div>
+        <div className="flex items-center -mt-44">
           <img
-            className="w-auto -mt-16"
+            className="w-auto h-full"
             src="./test.svg">
           </img>
 
 
         </div>
-      </div>
+      </main>
+    
+    
+    
       <div className="h-screen z-40 relative">
-        <div className="relative w-full video bg-gray-400 mt-32">
+        <div className="relative w-full video bg-gray-400 mt-16">
           <div className="absolute inset-y-1/2 play-button bg-red-500 flex items-center justify-center">
             <div className="playIcon -ml-1">
               <svg width="64" cheight="62" viewBox="0 0 64 62" fill="#7DC7A8" xmlns="http://www.w3.org/2000/svg">
@@ -71,7 +77,7 @@ export default function Home() {
         </video> */}
       </div>
 
-      <div className="h-screen container mx-auto grid w-full grid-cols-2 gap-x-4 gap-y-44	 relative z-0 mt-8">
+      <div className="h-screen container mx-auto w-full grid  grid-cols-2 gap-x-4 gap-y-44	 relative z-0 mt-8">
         {/* Feature #1 r->l */}
         <div className="flex justify-items-start space-x-2 mt-20">
           <div>
@@ -121,7 +127,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex items-end relative">
-          <div className="absolute -right-24 top-0">
+          <div className="absolute side-figure top-0">
             <figure className="cube-vertical"></figure>
             <figure className="cube-vertical"></figure>
           </div>
@@ -256,7 +262,7 @@ support
             <p className="inline feature-header ml-4 self-center">Connect to your favorite exchanges</p>
 
           </div>
-          <div className="flex justify-items-start mt-16 space-x-20 mx-24">
+          <div className="flex justify-between mt-16 space-x-20 mx-24">
             <img src="binance.png" />
             <img src="binance.png" />
             <img src="binance.png" />

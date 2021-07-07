@@ -87,6 +87,10 @@ line-height: 22px;
     color: #7DC7A8;
 }
 
+.-mt-10-p{
+    margin-top: -20%;
+}
+
 .feature-header{
     font-family: Manrope;
 font-style: normal;
@@ -123,4 +127,12 @@ transform: rotate(-90deg)
 box-shadow: 0px 8px 16px rgba(137, 160, 172, 0.16);
 border-radius: 10px;
 transform: rotate(180deg);
+}
+
+.side-figure{
+    right: -13vw;
+}
+
+.more-about-app{
+    margin-bottom: calc(4rem + 7rem);
 }
