@@ -1,10 +1,11 @@
 import Head from 'next/head'
-import Navbar from './../components/nav/nav';
+import Navbar from '../components/nav/nav';
 import MyNav from '../components/nav/navbar';
 import DisctordPopup from '../components/discord/discord'
 import More from '../components/more/more'
 import { ArrowRightIcon, FingerPrintIcon } from '@heroicons/react/outline'
 import { ChevronRightIcon } from '@heroicons/react/solid'
+import { Accordion } from '../components/accordion/accordion'
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet" />
       </Head>
       <MyNav></MyNav>
@@ -21,31 +22,31 @@ export default function Home() {
       <main className="container mx-auto grid w-full h-screen grid-cols-2 gap-4 relative box-border mt-16">
         <DisctordPopup></DisctordPopup>
         <More></More>
-        <div div className="flex items-center -mt-24">
-        <div>
-          <p className="text-6xl font-bold	leading-snug	">
-            Your Crypto-trades <br />
+        <div className="flex items-center -mt-24">
+          <div>
+            <p className="text-6xl font-bold	leading-snug	">
+              Your Crypto-trades <br />
             and portfolios <br />
             efficiency
             </p>
 
-          <p className="mt-8">
-            Track your investments based on the matematically perfect analytics. <br />
+            <p className="mt-8">
+              Track your investments based on the matematically perfect analytics. <br />
             Get a clear overview of your profits on multiple levels.
           </p>
-          <div className="mt-16">
-            <button
-              className="inline relative shadow-lg w-44 py-3 text-base font-semibold bg-main-color rounded-lg text-white ">
-              Get Started
+            <div className="mt-16">
+              <button
+                className="inline relative shadow-lg w-44 py-3 text-base font-semibold bg-main-color rounded-lg text-white ">
+                Get Started
                             </button>
 
-            <button
-              className="relative bg-none border-0  w-44 py-3 inline text-base font-semibold main-color">
-              Watch the video
+              <button
+                className="relative bg-none border-0  w-44 py-3 inline text-base font-semibold main-color">
+                Watch the video
             </button>
+            </div>
           </div>
-        </div>
-        
+
         </div>
         <div className="flex items-center -mt-44">
           <img
@@ -56,14 +57,14 @@ export default function Home() {
 
         </div>
       </main>
-    
-    
-    
+
+
+
       <div className="h-screen z-40 relative">
         <div className="relative w-full video bg-gray-400 mt-16">
           <div className="absolute inset-y-1/2 play-button bg-red-500 flex items-center justify-center">
             <div className="playIcon -ml-1">
-              <svg width="64" cheight="62" viewBox="0 0 64 62" fill="#7DC7A8" xmlns="http://www.w3.org/2000/svg">
+              <svg width="64" height="62" viewBox="0 0 64 62" fill="#7DC7A8" xmlns="http://www.w3.org/2000/svg">
                 <path d="M19.1933 16.6405C19.1933 13.1764 22.9433 11.0113 25.9433 12.7434L58.9433 31.7959C61.9433 33.528 61.9433 37.8581 58.9433 39.5902L25.9433 58.6427C22.9433 60.3748 19.1933 58.2097 19.1933 54.7456L19.1933 16.6405Z" fill="#7DC7A8" stroke="#F3F3F3" />
               </svg>
 
@@ -77,10 +78,10 @@ export default function Home() {
         </video> */}
       </div>
 
-      <div className="h-screen container mx-auto w-full grid  grid-cols-2 gap-x-4 gap-y-44	 relative z-0 mt-8">
+      <div className="container mx-auto w-full grid  grid-cols-2 gap-x-4 gap-y-44	 relative z-0 mt-8">
         {/* Feature #1 r->l */}
         <div className="flex justify-items-start space-x-2 mt-20">
-          <div>
+          <div >
             <img src="cube_1.svg" className="inline" />
 
           </div>
@@ -255,7 +256,7 @@ support
 
         </div>
 
-{/* Excanges */}
+        {/* Excanges */}
         <div className="col-span-2  text-center">
           <div className="flex justify-center items-center">
             <img src="cube_1.svg" className="inline" />
@@ -272,13 +273,17 @@ support
           </div>
 
         </div>
-     
-     
-        {/* FAQ */}
-        <div className="flex items-start relative">
+
+
+
+      </div>
+{/* FAQ */}
+      <div className="w-full mt-40 container mx-auto flex space-x-32">
+        
+        <div className="flex items-start relative flex-none">
           <div className="absolute -bottom-12 -left-44">
-          <figure className="cube-vertical"></figure>
-          <figure className="cube-vertical"></figure>
+            <figure className="cube-vertical"></figure>
+            <figure className="cube-vertical"></figure>
           </div>
           <div className="flex justify-items-start space-x-2">
             <div>
@@ -292,26 +297,45 @@ support
                 FAQs
   </div>
               <div className="feature-subheader mt-4">
-              You might be wondering
+                You might be wondering
   </div>
-             
+
             </div>
           </div>
 
         </div>
-        <div className="mt-16">
-          <div className="flex justify-start items-start">
-            <img
-              className="w-auto -mt-12"
-              src="./feature_3.png">
-            </img>
+        <div className="flex-grow">
+          <div className="flex flex-wrap space-y-6 justify-start items-start mx-32">
 
-
+            <Accordion isToggled={true} header="How does the exchange integration works?" subHeader="You will be asked to provide  Read-Only API keys. Keys would be used for constant sync of your trades" > </Accordion>
+            <Accordion header="What is the Portfolio?" subHeader="You will be asked to provide  Read-Only API keys. Keys would be used for constant sync of your trades" > </Accordion>
+            <Accordion header="Can I edit trades that were imported?" subHeader="You will be asked to provide  Read-Only API keys. Keys would be used for constant sync of your trades" > </Accordion>
+            <Accordion header="What is the cost base setting?" subHeader="You will be asked to provide  Read-Only API keys. Keys would be used for constant sync of your trades" > </Accordion>
           </div>
         </div>
 
-     
+
       </div>
+   
+   <div className="w-full bg-main-color h-full mt-24 py-24">
+          <div className="flex flex-wrap justify-center items-center h-full w-full">
+            <div className="w-full">
+          <p className="text-white bottom-cta mt-32				text-center">Start tracking your <br/>crypto-trades for free now</p>
+          <p className="text-white text-center mt-8 text-base	">Join TradeFo to track your positive/negative profits  <br/>
+and assets statistics according to portfolios and wallets.</p>
+
+
+          </div>
+          <button
+                                        className="mt-16 shadow-lg w-44 py-3 block text-base font-semibold bg-white rounded-lg ">
+                                        Start for free
+                            </button></div>
+   </div>
+
+
+   <footer className="footer-bg w-full h-80">
+
+   </footer>
     </div>
   )
 }

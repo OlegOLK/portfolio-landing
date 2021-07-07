@@ -136,3 +136,15 @@ transform: rotate(180deg);
 .more-about-app{
     margin-bottom: calc(4rem + 7rem);
 }
+
+.bottom-cta{
+    font-family: Manrope;
+font-style: normal;
+font-weight: 800;
+font-size: 48px;
+line-height: 54px;
+}
+
+.footer-bg{
+    background: rgba(0, 0, 0, 0.7);
+}
