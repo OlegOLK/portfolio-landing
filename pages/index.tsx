@@ -4,7 +4,7 @@ import MyNav from '../components/nav/navbar';
 import DisctordPopup from '../components/discord/discord'
 import More from '../components/more/more'
 import { ArrowRightIcon, FingerPrintIcon } from '@heroicons/react/outline'
-import { ChevronRightIcon } from '@heroicons/react/solid'
+import { ChevronRightIcon, PlayIcon } from '@heroicons/react/solid'
 import { Accordion } from '../components/accordion/accordion'
 
 export default function Home() {
@@ -277,9 +277,9 @@ support
 
 
       </div>
-{/* FAQ */}
+      {/* FAQ */}
       <div className="w-full mt-40 container mx-auto flex space-x-32">
-        
+
         <div className="flex items-start relative flex-none">
           <div className="absolute -bottom-12 -left-44">
             <figure className="cube-vertical"></figure>
@@ -316,26 +316,95 @@ support
 
 
       </div>
-   
-   <div className="w-full bg-main-color h-full mt-24 py-24">
-          <div className="flex flex-wrap justify-center items-center h-full w-full">
-            <div className="w-full">
-          <p className="text-white bottom-cta mt-32				text-center">Start tracking your <br/>crypto-trades for free now</p>
-          <p className="text-white text-center mt-8 text-base	">Join TradeFo to track your positive/negative profits  <br/>
+
+      <div className="w-full bg-main-color h-full mt-24 py-24">
+        <div className="flex flex-wrap justify-center items-center h-full w-full">
+          <div className="w-full">
+            <p className="text-white bottom-cta mt-32				text-center">Start tracking your <br />crypto-trades for free now</p>
+            <p className="text-white text-center mt-8 text-base	">Join TradeFo to track your positive/negative profits  <br />
 and assets statistics according to portfolios and wallets.</p>
 
 
           </div>
           <button
-                                        className="mt-16 shadow-lg w-44 py-3 block text-base font-semibold bg-white rounded-lg ">
-                                        Start for free
+            className="mt-16 shadow-lg w-44 py-3 block text-base font-semibold bg-white rounded-lg ">
+            Start for free
                             </button></div>
-   </div>
+      </div>
 
 
-   <footer className="footer-bg w-full h-80">
+      <footer className="footer-bg w-full h-80 relative">
+        <div className="flex justify-around items-baseline container mx-auto pt-20">
+          <div>
+            <img
+              className="inline-block h-8 w-auto"
+              src="/main.svg"
+              alt="Workflow"
+            />
+            <p className="text-white text-2xl font-extrabold inline-block ml-4">TradeFo</p>
+          </div>
 
-   </footer>
+          <div className="space-y-2">
+            <p className="text-gray-400 capitalize">PRODUCT</p>
+            <p className="text-white text-sm">Features</p>
+            <p className="text-white text-sm"> How it works </p>
+            <p className="text-white text-sm">Pricing</p>
+          </div>
+
+          <div className="space-y-2">
+          <p className="text-gray-400 capitalize">COMPANY</p>
+            <p className="text-white text-sm">Our team</p>
+            <p className="text-white text-sm"> Policies </p>
+            <p className="text-white text-sm">Terms and conditions</p>
+          </div>
+
+          <div className="space-y-2">
+          <p className="text-gray-400 capitalize">CONTACTS</p>
+            <p className="text-white text-sm">info@form.com</p>
+            <p className="text-white text-sm">882-587-3025 </p>
+            <p className="text-white text-sm">6116 Willa River 610</p>
+          </div>
+
+          <div className="space-y-2 items-baseline">
+          <p className="text-gray-400 capitalize">Mobile</p>
+          <div>
+            <div className="inline-block">
+              <PlayIcon className="h-7 w-7 main-color"/>
+            </div>
+            <div className="inline-block text-white">
+              <p className="text-xs">Get it on</p>
+              <p>Google Play</p>
+            </div>
+            </div>
+
+            <div>
+            <div className="inline-block">
+              <PlayIcon className="h-7 w-7 main-color"/>
+            </div>
+            <div className="inline-block text-white">
+              <p className="text-xs">Download on the</p>
+              <p>App Store</p>
+            </div>
+            </div>
+          </div>
+
+          <div className="space-y-2">
+          <p className="text-gray-400 capitalize">Newsletter</p>
+            <p className="text-white text-sm">Join our mailing list</p>
+    <div className="flex flex-nowrap space-0">
+      <input type="email" className="h-10 w-44 rounded-l-md px-2 inline-block" />
+      <button
+                                        className="inline-block text-xs w-10 rounded-r-md h-10 bg-none border-0 font-semibold bg-main-color">
+                                        <ArrowRightIcon className="text-white inline h-5 w-5 mr-2" aria-hidden="true" />
+                                </button>
+     </div>
+          </div>
+        </div>
+
+<div className="h-9 border-t-2 bottom-0 absolute w-full border-gray-500 items-center flex justify-center">
+ <span className="text-gray-500 text-sm">©2021 - TradeFo  |   All rights reserved</span>
+</div>
+      </footer>
     </div>
   )
 }
