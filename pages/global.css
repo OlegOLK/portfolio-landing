@@ -3,6 +3,11 @@ body{
     overflow-x: hidden;
 }
 
+html{
+    scroll-behavior: smooth;
+
+}
+
 .font-main{
     font-family: Manrope !important;
 }

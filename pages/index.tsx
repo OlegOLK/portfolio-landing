@@ -77,8 +77,8 @@ export default function Home() {
             Your browser does not support the video tag.
         </video> */}
       </div>
-
-      <div className="container mx-auto w-full grid  grid-cols-2 gap-x-4 gap-y-44	 relative z-0 mt-8">
+<div id="features"></div>
+      <div  className="container mx-auto w-full grid  grid-cols-2 gap-x-4 gap-y-44	 relative z-0 mt-8">
         {/* Feature #1 r->l */}
         <div className="flex justify-items-start space-x-2 mt-20">
           <div >
@@ -335,9 +335,9 @@ and assets statistics according to portfolios and wallets.</p>
 
       <footer className="footer-bg w-full h-80 relative">
         <div className="flex justify-around items-baseline container mx-auto pt-20">
-          <div>
+          <div >
             <img
-              className="inline-block h-8 w-auto"
+              className="inline-block h-8 w-auto -mt-2"
               src="/main.svg"
               alt="Workflow"
             />
@@ -369,21 +369,22 @@ and assets statistics according to portfolios and wallets.</p>
           <p className="text-gray-400 capitalize">Mobile</p>
           <div>
             <div className="inline-block">
-              <PlayIcon className="h-7 w-7 main-color"/>
+              <a href="#" className="cursor-pointer">
+              <img alt="google play" className="h-12 -ml-2 w-auto main-color" src="./google-play-badge.png" />
+              </a>{/* <PlayIcon className="h-7 w-7 main-color"/> */}
             </div>
-            <div className="inline-block text-white">
+            {/* <div className="inline-block text-white">
               <p className="text-xs">Get it on</p>
               <p>Google Play</p>
-            </div>
+            </div> */}
             </div>
 
             <div>
             <div className="inline-block">
-              <PlayIcon className="h-7 w-7 main-color"/>
-            </div>
-            <div className="inline-block text-white">
-              <p className="text-xs">Download on the</p>
-              <p>App Store</p>
+              <a href="#" className="cursor-pointer">
+            <img alt="google play" className="h-8 w-auto main-color" src="./Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" />
+            </a>
+              {/* <PlayIcon className="h-7 w-7 main-color"/> */}
             </div>
             </div>
           </div>
