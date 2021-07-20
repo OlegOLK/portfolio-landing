@@ -12,6 +12,10 @@ html{
     font-family: Manrope !important;
 }
 
+#features{
+    scroll-margin-top: 150px;
+}
+
 .logo {
     font-style: normal;
     font-weight: 800;
@@ -115,6 +119,44 @@ line-height: 32px;
 
 
 color: rgba(0, 0, 0, 0.7);
+}
+.ReactCollapse--collapse {
+    transition: height 500ms;
+  }
+
+  #accordion-toggle-btn .icon-plus{
+    transition: opacity .3s, transform .3s;
+  }
+
+  #accordion-toggle-btn .icon-minus{
+    transition: opacity .3s, transform .3s;
+    transform: rotate(-180deg) scale(.5);
+    opacity: 0;
+  }
+  #accordion-toggle-bt{
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+  #accordion-toggle-btn .icon-minus.toggle{
+        transform: rotate(0deg) scale(1);
+        opacity: 1;
+  }
+
+  #accordion-toggle-btn .icon-plus.toggle{
+    transform: rotate(180deg) scale(.5);
+    opacity: 0;
+}
+  
+#accordion-toggle-btn .icon-minus.untoggle{
+    transform: rotate(180deg) scale(.5);
+    opacity: 0;
+}
+
+#accordion-toggle-btn .icon-plus.untoggle{
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+
 }
 
 .cube{

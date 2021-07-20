@@ -1,6 +1,7 @@
 import { FunctionComponent, useState } from 'react';
 import { PlusIcon, MinusIcon } from '@heroicons/react/solid'
-
+import { Collapse } from 'react-collapse';
+import cx from 'classnames';
 export type AccordtionProps = {
     header: string;
     subHeader: string;
@@ -14,26 +15,26 @@ export const Accordion: FunctionComponent<AccordtionProps> = ({ header, subHeade
         setToggled(!toggled);
     }
 
-        return (
-            <div className="flex justify-start w-full h-full cursor-pointer" onClick={handleClick}>
-                <div className="flex flex-wrap py-5 items-center bg-main-color flex-grow  rounded-md align-middle" >
-                    <p className="text-white ml-12 font-bold text-2xl	">{header}</p>
+    return (
+        <div className="flex justify-start w-full h-full cursor-pointer" onClick={handleClick}>
+            <div className="flex flex-wrap py-5 items-center bg-main-color flex-grow  rounded-md align-middle" >
+                <p className="text-white ml-12 font-bold text-2xl">{header}</p>
 
-                    <div hidden={!toggled} className="w-full text-white ml-12 mt-6 mr-16 font-semibold	text-base	">
+                <Collapse isOpened={toggled}>
+                    <div className="text-white ml-12 mt-5 mr-16 font-semibold text-base">
                         <p >{subHeader}</p>
                     </div>
-                </div>
-                <div className="flex-none">
-                    <button className="border-0 bg-transparent flex items-center w-10 h-10 mt-5  "
-                        onClick={handleClick}>
-                        {
-                            toggled ? 
-                            <MinusIcon className="inline-block main-color " /> :
-                            <PlusIcon className="inline-block main-color " />
-                        }
-                    </button>
-                </div>
+                </Collapse>
             </div>
+            <div className="flex-none">
+                <button id="accordion-toggle-btn" className="relative border-0 bg-transparent flex items-center w-10 h-10 mt-5  "
+                    onClick={handleClick}>
+                  
+                            <MinusIcon className={cx("absolute icon-minus inline-block main-color", toggled ? 'toggle' : 'untogle')} /> 
+                            <PlusIcon className={cx("absolute icon-plus inline-block main-color", toggled ? 'toggle' : 'untogle')} />
+                </button>
+            </div>
+        </div>
 
-        )
+    )
 }

@@ -1,0 +1,8 @@
+{
+    "locales": ["en", "ru"],
+    "defaultLocale": "en",
+    "pages": {
+      "/404": ["error"],
+      "/": ["home"]
+    }
+  }
