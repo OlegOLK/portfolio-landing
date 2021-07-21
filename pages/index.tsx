@@ -15,15 +15,6 @@ export default function Home() {
 
   return (
     <div>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet" />
-      </Head>
-      <Nav></Nav>
-
       <MainSection />
 
       <VideoSection />
@@ -107,9 +98,6 @@ export default function Home() {
             {t('Start for free')}
           </button></div>
       </div>
-
-
-      <Footer />
     </div>
   )
 }

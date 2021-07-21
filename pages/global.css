@@ -122,7 +122,13 @@ color: rgba(0, 0, 0, 0.7);
 }
 .ReactCollapse--collapse {
     transition: height 500ms;
-  }
+}
+
+#collapse{
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    transition: height 0.3;
+}
 
   #accordion-toggle-btn .icon-plus{
     transition: opacity .3s, transform .3s;

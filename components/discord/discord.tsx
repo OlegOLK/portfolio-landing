@@ -6,7 +6,7 @@ export default function DisctordPopup() {
     return (
         <div className="fixed bottom-4 right-6 z-10">
             <a
-            href="https://discord.com/invite/sHNfyyPpkS" target="_blank" rel="noreferrer" 
+            href="https://discord.gg/SWzBKHEB" target="_blank" rel="noreferrer" 
                 className="shadow-lg cursor-pointer py-3 px-3 flex bg-white items-center justify-start text-base font-semibold rounded-lg h-16 w-72 ">
                 <img src="./discord.svg" className="inline"/>
                 <div className="text-left ml-2">
