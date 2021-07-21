@@ -21,7 +21,7 @@ export default function MainSection() {
                     </p>
                     <div className="mt-16">
                         <button
-                            className="inline relative shadow-lg w-44 py-3 text-base font-semibold bg-main-color rounded-lg text-white ">
+                            className="ripple inline relative shadow-lg w-44 py-3 text-base font-semibold bg-main-color rounded-lg text-white ">
                             {t('Get Started')}
                         </button>
 
@@ -35,9 +35,9 @@ export default function MainSection() {
             </div>
             <div className="flex items-center -mt-44">
                 <img
+                    alt="main-image"
                     className="w-auto h-full"
-                    src="./test.svg">
-                </img>
+                    src="./main-feature.svg" />
             </div>
         </main>
     )

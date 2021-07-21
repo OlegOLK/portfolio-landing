@@ -25,7 +25,7 @@ export default function Home() {
         <Section
           header={t('feature1header')}
           subHeader={t('feature1subheader')}
-          imageSrc='./feature_1.png'
+          imageSrc='./feature_1.svg'
           textPosition={TextToImagePosition.Middle}
           ltr={true}
           cubeProps={({ position: CubePosition.None })}
@@ -35,7 +35,7 @@ export default function Home() {
         <Section
           header={t('feature2header')}
           subHeader={t('feature2subheader')}
-          imageSrc='./feature_2.png'
+          imageSrc='./feature_2.svg'
           textPosition={TextToImagePosition.Middle}
           ltr={false}
           cubeProps={({ position: CubePosition.Vertical })}
@@ -55,7 +55,7 @@ export default function Home() {
         <Section
           header={t('feature4header')}
           subHeader={t('feature4subheader')}
-          imageSrc='./feature_4.png'
+          imageSrc='./feature_4.svg'
           textPosition={TextToImagePosition.Middle}
           ltr={false}
           cubeProps={({ position: CubePosition.HorizontalRigh })}
@@ -64,16 +64,16 @@ export default function Home() {
         {/* Excanges */}
         <div className="col-span-2  text-center">
           <div className="flex justify-center items-center">
-            <img src="cube_1.svg" className="inline" />
+            <img alt="cube" src="cube_1.svg" className="inline" />
             <p className="inline feature-header ml-4 self-center">{t('connectExchange')}</p>
 
           </div>
           <div className="flex justify-between mt-20 space-x-20 mx-24">
-            <img src="binance.png" />
-            <img src="binance.png" />
-            <img src="binance.png" />
-            <img src="binance.png" />
-            <img src="binance.png" />
+            <img alt="binance" src="binance.png" />
+            <img alt="binance" src="binance.png" />
+            <img alt="binance" src="binance.png" />
+            <img alt="binance" src="binance.png" />
+            <img alt="binance" src="binance.png" />
           </div>
 
         </div>

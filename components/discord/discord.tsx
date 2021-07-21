@@ -8,7 +8,7 @@ export default function DisctordPopup() {
             <a
             href="https://discord.gg/SWzBKHEB" target="_blank" rel="noreferrer" 
                 className="shadow-lg cursor-pointer py-3 px-3 flex bg-white items-center justify-start text-base font-semibold rounded-lg h-16 w-72 ">
-                <img src="./discord.svg" className="inline"/>
+                <img  alt="discord" src="./discord.svg" className="inline"/>
                 <div className="text-left ml-2">
                     <p className="discord-header">{t('getSupport')} </p>
                     <p className="discord-sub">{t('joinDiscord')}</p>

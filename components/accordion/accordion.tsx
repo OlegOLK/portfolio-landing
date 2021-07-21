@@ -43,7 +43,7 @@ export const Accordion: FunctionComponent<AccordtionProps> = ({ header, subHeade
             </div>
 
             <div className="flex-none">
-                <button id="accordion-toggle-btn" className="relative border-0 bg-transparent flex items-center w-10 h-10 mt-5  "
+                <button aria-label="expand-accordion" className="accordion-toggle-btn relative border-0 bg-transparent flex items-center w-10 h-10 mt-5  "
                     onClick={handleClick}>
 
                     <MinusIcon className={cx("absolute icon-minus inline-block main-color", toggled ? 'toggle' : 'untogle')} />

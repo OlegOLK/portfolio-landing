@@ -30,7 +30,7 @@ export default function FeatureDescription(props: FeatureDescriptionProps) {
 
             <div className="flex justify-items-start">
                 <div>
-                    <img src="cube_1.svg" className="inline" />
+                    <img src="cube_1.svg" alt="cube" className="inline" />
                 </div>
                 <div>
                     <div className="feature-header ml-1">

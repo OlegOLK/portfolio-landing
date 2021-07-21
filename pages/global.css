@@ -89,11 +89,15 @@ line-height: 22px;
 }
 
 .bg-main-color {
-    background-color: #7DC7A8;
+    background-color: #36B27E;
+}
+
+.page-min-height{
+    min-height: calc(100vh - 20rem)
 }
 
 .main-color {
-    color: #7DC7A8;
+    color: #36B27E;
 }
 
 .-mt-10-p{
@@ -130,36 +134,36 @@ color: rgba(0, 0, 0, 0.7);
     transition: height 0.3;
 }
 
-  #accordion-toggle-btn .icon-plus{
+  .accordion-toggle-btn .icon-plus{
     transition: opacity .3s, transform .3s;
   }
 
-  #accordion-toggle-btn .icon-minus{
+  .accordion-toggle-btn .icon-minus{
     transition: opacity .3s, transform .3s;
     transform: rotate(-180deg) scale(.5);
     opacity: 0;
   }
-  #accordion-toggle-bt{
+  #accordion-toggle-btn{
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-  #accordion-toggle-btn .icon-minus.toggle{
+  .accordion-toggle-btn .icon-minus.toggle{
         transform: rotate(0deg) scale(1);
         opacity: 1;
   }
 
-  #accordion-toggle-btn .icon-plus.toggle{
+  .accordion-toggle-btn .icon-plus.toggle{
     transform: rotate(180deg) scale(.5);
     opacity: 0;
 }
   
-#accordion-toggle-btn .icon-minus.untoggle{
+.accordion-toggle-btn .icon-minus.untoggle{
     transform: rotate(180deg) scale(.5);
     opacity: 0;
 }
 
-#accordion-toggle-btn .icon-plus.untoggle{
+.accordion-toggle-btn .icon-plus.untoggle{
     transform: rotate(0deg) scale(1);
     opacity: 1;
 
@@ -201,3 +205,17 @@ line-height: 54px;
 .footer-bg{
     background: rgba(0, 0, 0, 0.7);
 }
+
+/* Ripple effect */
+.ripple {
+    background-position: center;
+    transition: background 0.8s;
+  }
+  .ripple:hover {
+    background: #7DC7A8 radial-gradient(circle, transparent 1%, #7DC7A8 1%) center/15000%;
+  }
+  .ripple:active {
+    background-color: #71c09f;
+    background-size: 100%;
+    transition: background 0s;
+  }

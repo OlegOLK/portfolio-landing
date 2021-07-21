@@ -23,12 +23,12 @@ export default function Section(props: SectionProps) {
                             subHeader={props.subHeader}
                             cubeProps={props.cubeProps} />
 
-                        <FeatureImage src={props.imageSrc} />
+                        <FeatureImage alt={props.header} src={props.imageSrc} />
                     </>
                 ) :
                     (
                         <>
-                            <FeatureImage src={props.imageSrc} />
+                            <FeatureImage alt={props.header} src={props.imageSrc} />
 
                             <FeatureDescription
                                 textPosition={props.textPosition}

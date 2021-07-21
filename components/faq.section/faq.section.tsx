@@ -15,7 +15,7 @@ export default function FaqSection() {
                 </div>
                 <div className="flex justify-items-start space-x-2">
                     <div>
-                        <img src="cube_1.svg" className="inline" />
+                        <img  alt="cube" src="cube_1.svg" className="inline" />
                     </div>
                     <div>
                         <div className="feature-header">

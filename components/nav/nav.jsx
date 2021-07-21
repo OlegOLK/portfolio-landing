@@ -37,12 +37,12 @@ export default function Navbar() {
                                     <img
                                         className="block lg:hidden h-8 w-auto"
                                         src="/main.svg"
-                                        alt="Workflow"
+                                        alt="main"
                                     />
                                     <img
                                         className="hidden lg:block h-8 w-auto"
                                         src="/main.svg"
-                                        alt="Workflow"
+                                        alt="main"
                                     />
                                 </div>
                                 <div className="hidden sm:block sm:ml-6">

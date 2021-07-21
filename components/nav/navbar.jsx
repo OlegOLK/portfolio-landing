@@ -25,7 +25,7 @@ export default function MyNav() {
         <nav className={classNames("bg-white top-0 z-50 fixed w-full", 
         scrollPosition != 0 ? "shadow-lg" : '')}>
             <div className="container mx-auto ">
-                <div className="relative flex items-center  justify-between h-28">
+                <div className="relative flex items-center justify-between h-28">
                     <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                         <div className="flex-shrink-0 flex items-center cursor-pointer">
                             <a href="/">
@@ -42,13 +42,13 @@ export default function MyNav() {
                             </a>
                         </div>
                         <div className="hidden sm:block sm:ml-6 cursor-pointer">
-                            <div className="flex space-x-8 text-center">
+                            <div className="flex items-center space-x-8 text-center">
                                 <div className=" md:mr-24">
                                     <a href="/" className="text-black logo">{CONSTANTS.AppName}</a>
                                 </div>
                                 <a href="/features" className="secondary-menu cursor-pointer self-center no-underline hover:underline">{t('Features')}</a>
-                                <a className="secondary-menu cursor-pointer self-center no-underline hover:underline">{t('Pricing')}</a>
-                                <a className="secondary-menu cursor-pointer self-center no-underline hover:underline">{t('Contact')}</a>
+                                <a href="/pricing" className="secondary-menu cursor-pointer self-center no-underline hover:underline">{t('Pricing')}</a>
+                                <a href="/contacts" className="secondary-menu cursor-pointer self-center no-underline hover:underline">{t('Contact')}</a>
 
                                 <div className="absolute right-0 flex items-center justify-center">
                                     <LanguageSwitcher/>
@@ -58,7 +58,7 @@ export default function MyNav() {
                                         {t('Sign in')}
                                 </button>
                                     <button
-                                        className="relative hover:opacity-90 hover:scale-105 shadow-lg w-44 py-3 block text-base font-semibold bg-main-color rounded-lg text-white ">
+                                        className="ripple relative hover:opacity-90 hover:scale-105 shadow-lg w-44 py-3 block text-base font-semibold bg-main-color rounded-lg text-white ">
                                         {t('Get Started')}
                             </button>
                                 </div>
