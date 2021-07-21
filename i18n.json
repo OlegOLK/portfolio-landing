@@ -3,6 +3,9 @@
     "defaultLocale": "en",
     "pages": {
       "/404": ["error"],
-      "/": ["home"]
+      "/": ["home"],
+      "/pricing": ["home"],
+      "/signup": ["home"],
+      "/signin": ["home"]
     }
   }

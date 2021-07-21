@@ -5,7 +5,7 @@ import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon } from '@heroicons/react/solid'
 import { GlobeIcon } from '@heroicons/react/outline';
 
-import i18nConfig from '../../i18n.json';
+import i18nConfig from '../i18n.json';
 const { locales } = i18nConfig;
 
 export default function LanguageSwitcher() {

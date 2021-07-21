@@ -1,18 +1,18 @@
-body{
+body {
     font-family: Manrope !important;
     overflow-x: hidden;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 
 }
 
-.font-main{
+.font-main {
     font-family: Manrope !important;
 }
 
-#features{
+#features {
     scroll-margin-top: 150px;
 }
 
@@ -25,7 +25,8 @@ html{
     text-transform: capitalize;
     font-family: Manrope;
 }
-.playIcon{
+
+.playIcon {
     /* clip-path: polygon(0 0, 0% 100%, 100% 50%); */
     /* background-color: #7DC7A8; */
     height: 64px;
@@ -33,7 +34,8 @@ html{
     left: 50%;
     top: 50%
 }
-.play-button{
+
+.play-button {
     height: 10rem;
     width: 10rem;
     clip-path: circle(50%);
@@ -41,39 +43,40 @@ html{
     background-color: white;
 }
 
-.video{
+.video {
     height: calc(100% - 8rem);
 }
-.more-about{
+
+.more-about {
     font-family: Manrope;
-font-style: normal;
-font-weight: 600;
-font-size: 10px;
-line-height: 12px;
-/* identical to box height, or 120% */
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    /* identical to box height, or 120% */
 
-letter-spacing: 2px;
+    letter-spacing: 2px;
 
-color: rgba(0, 0, 0, 0.7);
+    color: rgba(0, 0, 0, 0.7);
 }
 
-.discord-header{
+.discord-header {
     font-family: Manrope;
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 19px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
 
-color: rgba(0, 0, 0, 0.7);
+    color: rgba(0, 0, 0, 0.7);
 
 }
 
-.discord-sub{
+.discord-sub {
     font-family: Manrope;
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 22px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
 }
 
 .secondary-menu {
@@ -92,117 +95,121 @@ line-height: 22px;
     background-color: #36B27E;
 }
 
-.page-min-height{
-    min-height: calc(100vh - 20rem)
+.page-min-height {
+    min-height: calc(100vh - 20rem);
+    min-width: 100vw;
 }
 
 .main-color {
     color: #36B27E;
 }
 
-.-mt-10-p{
+.-mt-10-p {
     margin-top: -20%;
 }
 
-.feature-header{
+.feature-header {
     font-family: Manrope;
-font-style: normal;
-font-weight: 800;
-font-size: 32px;
-line-height: 42px;
-/* or 131% */
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 42px;
+    /* or 131% */
 }
 
-.feature-subheader{
+.feature-subheader {
     font-family: Manrope;
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 32px;
-/* or 200% */
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 32px;
+    /* or 200% */
 
 
-color: rgba(0, 0, 0, 0.7);
+    color: rgba(0, 0, 0, 0.7);
 }
+
 .ReactCollapse--collapse {
     transition: height 500ms;
 }
 
-#collapse{
+#collapse {
     -moz-transition: all 0.3s ease;
     transition: all 0.3s ease;
     transition: height 0.3;
 }
 
-  .accordion-toggle-btn .icon-plus{
+.accordion-toggle-btn .icon-plus {
     transition: opacity .3s, transform .3s;
-  }
+}
 
-  .accordion-toggle-btn .icon-minus{
+.accordion-toggle-btn .icon-minus {
     transition: opacity .3s, transform .3s;
     transform: rotate(-180deg) scale(.5);
     opacity: 0;
-  }
-  #accordion-toggle-btn{
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 }
 
-  .accordion-toggle-btn .icon-minus.toggle{
-        transform: rotate(0deg) scale(1);
-        opacity: 1;
-  }
-
-  .accordion-toggle-btn .icon-plus.toggle{
-    transform: rotate(180deg) scale(.5);
-    opacity: 0;
+#accordion-toggle-btn {
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
-  
-.accordion-toggle-btn .icon-minus.untoggle{
+
+.accordion-toggle-btn .icon-minus.toggle {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+}
+
+.accordion-toggle-btn .icon-plus.toggle {
     transform: rotate(180deg) scale(.5);
     opacity: 0;
 }
 
-.accordion-toggle-btn .icon-plus.untoggle{
+.accordion-toggle-btn .icon-minus.untoggle {
+    transform: rotate(180deg) scale(.5);
+    opacity: 0;
+}
+
+.accordion-toggle-btn .icon-plus.untoggle {
     transform: rotate(0deg) scale(1);
     opacity: 1;
 
 }
 
-.cube{
-    width: 160px;
-height: 160px;
-background: #FFFFFF;
-box-shadow: 0px 8px 16px rgba(137, 160, 172, 0.16);
-border-radius: 10px;
-transform: rotate(-90deg)
-}
-.cube-vertical{
+.cube {
     width: 160px;
     height: 160px;
     background: #FFFFFF;
-box-shadow: 0px 8px 16px rgba(137, 160, 172, 0.16);
-border-radius: 10px;
-transform: rotate(180deg);
+    box-shadow: 0px 8px 16px rgba(137, 160, 172, 0.16);
+    border-radius: 10px;
+    transform: rotate(-90deg)
 }
 
-.side-figure{
+.cube-vertical {
+    width: 160px;
+    height: 160px;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 16px rgba(137, 160, 172, 0.16);
+    border-radius: 10px;
+    transform: rotate(180deg);
+}
+
+.side-figure {
     right: -13vw;
 }
 
-.more-about-app{
+.more-about-app {
     margin-bottom: calc(4rem + 7rem);
 }
 
-.bottom-cta{
+.bottom-cta {
     font-family: Manrope;
-font-style: normal;
-font-weight: 800;
-font-size: 48px;
-line-height: 54px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 54px;
 }
 
-.footer-bg{
+.footer-bg {
     background: rgba(0, 0, 0, 0.7);
 }
 
@@ -210,12 +217,14 @@ line-height: 54px;
 .ripple {
     background-position: center;
     transition: background 0.8s;
-  }
-  .ripple:hover {
+}
+
+.ripple:hover {
     background: #7DC7A8 radial-gradient(circle, transparent 1%, #7DC7A8 1%) center/15000%;
-  }
-  .ripple:active {
+}
+
+.ripple:active {
     background-color: #71c09f;
     background-size: 100%;
     transition: background 0s;
-  }
+}

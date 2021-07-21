@@ -1,20 +1,14 @@
-import FeatureImage from './feature.image/feature.image';
-import FeatureDescription, { TextToImagePosition } from './feature.description/feature.description';
-import { CubeProps } from './feature.abstract.cubes/cubes';
+import { ReactNode } from 'react';
 
-export interface SectionProps {
-    header: string;
-    subHeader: string;
-    imageSrc: string;
-    ltr: boolean;
-    textPosition: TextToImagePosition;
-    cubeProps: CubeProps
+type Props = {
+    children: ReactNode
 }
 
-export default function Section(props: SectionProps) {
+export default function Section(props: Props) {
     return (
         <section className="grid grid-cols-2 w-full col-span-2 gap-x-4 gap-y-44">
-            {
+            {props.children}
+            {/* {
                 props.ltr ? (
                     <>
                         <FeatureDescription
@@ -37,7 +31,7 @@ export default function Section(props: SectionProps) {
                                 cubeProps={props.cubeProps} />
                         </>
                     )
-            }
+            } */}
 
         </section>
     )

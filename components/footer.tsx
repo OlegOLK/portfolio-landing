@@ -1,5 +1,5 @@
 import { ArrowRightIcon } from "@heroicons/react/solid";
-import { CONSTANTS } from './../constants'
+import { CONSTANTS } from './constants'
 import React from "react";
 import useTranslation from 'next-translate/useTranslation'
 

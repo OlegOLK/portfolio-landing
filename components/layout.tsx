@@ -1,5 +1,5 @@
-import Navbar from '../nav/navbar';
-import Footer from '../footer/footer';
+import Navbar from './navbar';
+import Footer from './footer';
 import React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router'
@@ -41,7 +41,6 @@ export default function Layout({ children }) {
             >
                 {children}
             </motion.main>
-            <Footer />
         </>
     )
 }

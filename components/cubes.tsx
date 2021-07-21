@@ -5,7 +5,7 @@ export enum CubePosition {
     HorizontalRigh
 }
 
-export interface CubeProps {
+type CubeProps = {
     position: CubePosition;
 }
 

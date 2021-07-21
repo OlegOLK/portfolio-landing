@@ -1,7 +1,7 @@
 import { ArrowRightIcon } from '@heroicons/react/outline'
 import cx from 'classnames';
-import Cube, { CubeProps } from '../feature.abstract.cubes/cubes';
 import useTranslation from 'next-translate/useTranslation'
+import { ReactNode } from 'react';
 
 export enum TextToImagePosition {
     Top,
@@ -9,14 +9,14 @@ export enum TextToImagePosition {
     Bottom
 }
 
-export interface FeatureDescriptionProps {
+type Props = {
     header: string;
     subHeader: string;
     textPosition: TextToImagePosition;
-    cubeProps: CubeProps
+    children?: ReactNode
 }
 
-export default function FeatureDescription(props: FeatureDescriptionProps) {
+export default function FeatureDescription(props: Props) {
     const { t } = useTranslation('home')
 
     const position = () => {
@@ -26,8 +26,7 @@ export default function FeatureDescription(props: FeatureDescriptionProps) {
     }
     return (
         <div className={cx('flex relative', position())}>
-            <Cube position={props.cubeProps.position} />
-
+            {props.children}
             <div className="flex justify-items-start">
                 <div>
                     <img src="cube_1.svg" alt="cube" className="inline" />

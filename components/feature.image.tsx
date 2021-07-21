@@ -1,11 +1,11 @@
 import cx from 'classnames';
 
-export interface FeatureImageProps {
+type Props = {
     src: string;
     alt: string;
 }
 
-export default function FeatureImage(props: FeatureImageProps) {
+export default function FeatureImage(props: Props) {
 
     return (
         <div className={cx("flex items-start")}>

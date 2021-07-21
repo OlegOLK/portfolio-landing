@@ -43,5 +43,12 @@
     "CONTACTS": "CONTACTS",
     "Mobile": "Mobile",
     "Newsletter": "Newsletter",
-    "Join our mailing list": "Join our mailing list"
+    "Join our mailing list": "Join our mailing list",
+
+
+    "pricingHeading": "Our pricing is simple.\nIt’s free :)",
+    "pricingSubHeading": "Matematically percise tracking of your investments available via\nIQube app. Just try.",
+    "googleAuth": "Continue with Google",
+    "appleAuth": "Continue with Apple",
+    "termsDisclamer": "By using IQube service you accept our Privacy Policy and Terms of Use."
 }

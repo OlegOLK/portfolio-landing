@@ -1,65 +1,82 @@
-import Head from 'next/head'
-import Nav from '../components/nav/navbar';
-import MainSection from '../components/main.section/main.section'
-import FaqSection from '../components/faq.section/faq.section';
+import { MainSection } from '../components/main.section'
+import FaqSection from '../components/faq.section';
 import useTranslation from 'next-translate/useTranslation'
-import Section from '../components/feature.section/section';
-import { TextToImagePosition } from '../components/feature.section/feature.description/feature.description';
-import { CubePosition } from '../components/feature.section/feature.abstract.cubes/cubes';
-import VideoSection from './../components/video.section/video.section';
+import Section from '../components/section';
+import FeatureDescription, { TextToImagePosition } from '../components/feature.description';
+import Cube, { CubePosition } from '../components/cubes';
+import VideoSection from '../components/video.section';
 import React from 'react';
-import Footer from '../components/footer/footer';
+import FeatureImage from '../components/feature.image';
+import Footer from '../components/footer';
+import DisctordPopup from '../components/discord';
+import More from '../components/more';
 
 export default function Home() {
   const { t } = useTranslation('home')
 
   return (
     <div>
-      <MainSection />
+      <MainSection
+        header={t('MainHeader')}
+        subHeader={t('MainSubheader')}
+        imageSrc="./main-feature.svg"
+        mainCta={t('Get Started')}
+        secondaryCta={t('Watch the video')}>
+        <DisctordPopup></DisctordPopup>
+        <More></More>
+      </MainSection>
 
       <VideoSection />
 
       <div id="features"></div>
       <div className="container mx-auto w-full grid  grid-cols-2 gap-x-8 gap-y-36 pl-12	 relative z-0 mt-8">
+
         {/* Feature #1 r->l */}
-        <Section
-          header={t('feature1header')}
-          subHeader={t('feature1subheader')}
-          imageSrc='./feature_1.svg'
-          textPosition={TextToImagePosition.Middle}
-          ltr={true}
-          cubeProps={({ position: CubePosition.None })}
-        ></Section>
+        <Section>
+          <FeatureDescription
+            textPosition={TextToImagePosition.Middle}
+            header={t('feature1header')}
+            subHeader={t('feature1subheader')}
+          />
+          <FeatureImage alt={t('feature1header')} src={'./feature_1.svg'} />
+        </Section>
 
         {/* Feature #2 l->r */}
-        <Section
-          header={t('feature2header')}
-          subHeader={t('feature2subheader')}
-          imageSrc='./feature_2.svg'
-          textPosition={TextToImagePosition.Middle}
-          ltr={false}
-          cubeProps={({ position: CubePosition.Vertical })}
-        ></Section>
+        <Section>
+          <FeatureImage alt={t('feature2header')} src={'./feature_2.svg'} />
+          <FeatureDescription
+            textPosition={TextToImagePosition.Middle}
+            header={t('feature2header')}
+            subHeader={t('feature2subheader')}
+          >
+            <Cube position={CubePosition.Vertical} />
+          </FeatureDescription>
+        </Section>
 
         {/* feature #3 r->l */}
-        <Section
-          header={t('feature3header')}
-          subHeader={t('feature3subheader')}
-          imageSrc='./feature_3.svg'
-          textPosition={TextToImagePosition.Middle}
-          ltr={true}
-          cubeProps={({ position: CubePosition.HorizontalLeft })}
-        ></Section>
+        <Section>
+
+          <FeatureDescription
+            textPosition={TextToImagePosition.Middle}
+            header={t('feature3header')}
+            subHeader={t('feature3subheader')}
+          >
+            <Cube position={CubePosition.HorizontalLeft} />
+          </FeatureDescription>
+          <FeatureImage alt={t('feature3header')} src={'./feature_3.svg'} />
+        </Section>
 
         {/* Feature #4 l->r */}
-        <Section
-          header={t('feature4header')}
-          subHeader={t('feature4subheader')}
-          imageSrc='./feature_4.svg'
-          textPosition={TextToImagePosition.Middle}
-          ltr={false}
-          cubeProps={({ position: CubePosition.HorizontalRigh })}
-        ></Section>
+        <Section>
+          <FeatureImage alt={t('feature4header')} src={'./feature_4.svg'} />
+          <FeatureDescription
+            textPosition={TextToImagePosition.Middle}
+            header={t('feature4header')}
+            subHeader={t('feature4subheader')}
+          >
+            <Cube position={CubePosition.HorizontalRigh} />
+          </FeatureDescription>
+        </Section>
 
         {/* Excanges */}
         <div className="col-span-2  text-center">
@@ -98,6 +115,7 @@ export default function Home() {
             {t('Start for free')}
           </button></div>
       </div>
+      <Footer />
     </div>
   )
 }

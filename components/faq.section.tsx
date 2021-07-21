@@ -1,5 +1,5 @@
 import React from "react";
-import { Accordion } from "../accordion/accordion";
+import { Accordion } from "./accordion";
 import useTranslation from 'next-translate/useTranslation'
 
 export default function FaqSection() {
