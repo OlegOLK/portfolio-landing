@@ -38,13 +38,13 @@ export default function FeatureDescription(props: Props) {
                     <div className="feature-subheader mt-4 whitespace-pre-wrap">
                         {props.subHeader}
                     </div>
-                    <div>
+                    {/* <div>
                         <button
                             className="relative font-main bg-none border-0 text-left  py-3 block text-base font-semibold main-color ml-0">
                             {t('LearnMore')}
                             <ArrowRightIcon className="inline h-5 w-5 ml-2" aria-hidden="true" />
                         </button>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
