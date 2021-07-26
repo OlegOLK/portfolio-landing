@@ -29,7 +29,7 @@ export default function Home() {
       <VideoSection />
 
       <div id="features"></div>
-      <div className="container mx-auto w-full grid  grid-cols-2 gap-x-8 gap-y-36 pl-12	 relative z-0 mt-8">
+      <div className="container z-10 mx-0 lg:mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-12 lg:gap-y-36 pl-0 lg:pl-12	 relative mt-8">
 
         {/* Feature #1 r->l */}
         <Section>
@@ -79,7 +79,7 @@ export default function Home() {
         </Section>
 
         {/* Excanges */}
-        <div className="col-span-2  text-center">
+        <div className="col-span-2 text-left lg:text-center">
           <div className="flex justify-center items-center">
             <img alt="cube" src="cube_1.svg" className="inline" />
             <p className="inline feature-header ml-4 self-center">{t('connectExchange')}</p>
@@ -87,10 +87,10 @@ export default function Home() {
           </div>
           <div className="flex justify-between mt-20 space-x-20 mx-24">
             <img alt="binance" src="binance.png" />
-            <img alt="binance" src="binance.png" />
-            <img alt="binance" src="binance.png" />
-            <img alt="binance" src="binance.png" />
-            <img alt="binance" src="binance.png" />
+            <img alt="binance" className="hidden lg:inline-block" src="binance.png" />
+            <img alt="binance" className="hidden lg:inline-block" src="binance.png" />
+            <img alt="binance" className="hidden lg:inline-block" src="binance.png" />
+            <img alt="binance" className="hidden lg:inline-block" src="binance.png" />
           </div>
 
         </div>

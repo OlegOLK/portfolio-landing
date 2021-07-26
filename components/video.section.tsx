@@ -1,7 +1,7 @@
 export default function VideSection() {
 
     return (
-        <div className="h-screen z-40 relative">
+        <div className="h-screen z-0 lg:z-40">
             <div className="relative w-full video bg-gray-400 mt-16">
                 <div className="absolute inset-y-1/2 play-button bg-red-500 flex items-center justify-center">
                     <div className="playIcon -ml-1">

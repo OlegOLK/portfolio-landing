@@ -8,7 +8,7 @@ type Props = {
 export default function FeatureImage(props: Props) {
 
     return (
-        <div className={cx("flex items-start")}>
+        <div className={cx("flex items-start  z-10")}>
             <img
                 className="w-auto h-auto"
                 src={props.src}

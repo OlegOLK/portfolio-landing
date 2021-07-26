@@ -6,7 +6,7 @@ export default function FaqSection() {
     const { t } = useTranslation('home')
 
     return (
-        <div className="w-full mt-40 container mx-auto flex space-x-32">
+        <div className="w-full mt-20 lg:mt-40 container mx-auto flex space-x-0 lg:space-x-32 flex-wrap">
 
             <div className="flex items-start relative flex-none">
                 <div className="absolute -bottom-12 -left-44">
@@ -30,7 +30,7 @@ export default function FaqSection() {
 
             </div>
             <div className="flex-grow">
-                <div className="flex flex-wrap space-y-6 justify-start items-start mx-32">
+                <div className="flex flex-wrap space-y-6 justify-start items-start mx-2 lg:mx-32">
                     <Accordion header={t('question1')} subHeader={t('answer1')} />
                     <Accordion header={t('question2')} subHeader={t('answer2')} />
                     <Accordion header={t('question3')} subHeader={t('answer3')} />

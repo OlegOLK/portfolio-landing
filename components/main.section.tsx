@@ -1,6 +1,4 @@
 import React, { ReactNode } from "react";
-import DisctordPopup from "./discord";
-import More from "./more";
 
 type Props = {
     header: string;
@@ -14,19 +12,19 @@ type Props = {
 export const MainSection = ({ header, imageSrc, subHeader, mainCta, secondaryCta, children }: Props) => {
 
     return (
-        <div className="lg:container lg:mx-auto grid w-full h-screen lg:grid-cols-2 gap-4 relative box-border lg:mt-16
-        sm:grid-cols-1 md:w-96 md:inset-0">
+        <div className="grid-cols-1 inset-0 lg:mt-16 lg:grid-cols-2 container mx-auto
+        grid w-auto min-h-screen gap-4 box-border ">
             {children}
-            <div className="flex items-center lg:-mt-24">
+            <div className="flex items-center mt-32 lg:-mt-24">
                 <div>
-                    <p className="text-6xl font-bold leading-snug whitespace-pre-wrap">
+                    <p className="text-5xl lg:text-6xl font-bold leading-snug whitespace-pre-wrap break-word text-center lg:text-left">
                         {header}
                     </p>
 
-                    <p className="mt-9 whitespace-pre-wrap text-base opacity-70	 leading-8 font-semibold">
+                    <p className="mt-9 whitespace-pre-wrap text-base opacity-70	text-center lg:text-left leading-8 font-semibold">
                         {subHeader}
                     </p>
-                    <div className="mt-16">
+                    <div className="mt-16 flex items-center justify-center lg:justify-start">
                         <a
                             href="/signup"
                             className="ripple inline-block text-center relative shadow-lg w-44 py-3 text-base font-semibold bg-main-color rounded-lg text-white ">
@@ -41,7 +39,7 @@ export const MainSection = ({ header, imageSrc, subHeader, mainCta, secondaryCta
                 </div>
 
             </div>
-            <div className="flex items-center -mt-44">
+            <div className="hidden lg:flex items-center mt-0 lg:-mt-44">
                 <img
                     alt="main-image"
                     className="w-auto h-full"

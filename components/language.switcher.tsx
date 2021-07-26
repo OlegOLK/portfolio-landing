@@ -6,7 +6,7 @@ import { CheckIcon } from '@heroicons/react/solid'
 import { GlobeIcon } from '@heroicons/react/outline';
 
 import i18nConfig from '../i18n.json';
-const { locales } = i18nConfig;
+const locales = i18nConfig.locales.map(lc=> lc.toUpperCase());
 
 export default function LanguageSwitcher() {
     const { t, lang } = useTranslation();
@@ -14,16 +14,15 @@ export default function LanguageSwitcher() {
     const router = useRouter();
     const { locale } = router;
 
-    function handleChange(value) {
+    function handleChange(value: string) {
         setSelected(value)
-        router.push('/', null, ({ locale: value }));
+        router.push('/', null, ({ locale: value.toLowerCase() }));
     }
 
     return (
         <div className="w-26">
             <Listbox value={selected} onChange={handleChange}>
                 <div className="relative mt-1">
-                    {/* bg-white rounded-lg shadow-md cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500 sm:text-sm */}
                     <Listbox.Button className="flex justify-end items-center relative w-full py-2 pl-3 pr-10 text-right  bg-none border-0 text-base font-semibold main-color">
                         <span className="inset-y-0 left-0 flex items-center pr-2 pointer-events-none main-color">
                             <GlobeIcon
@@ -41,14 +40,14 @@ export default function LanguageSwitcher() {
                         leaveTo="opacity-0"
                     >
                         <Listbox.Options className="absolute w-full py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-                            {locales.map((person, personIdx) => (
+                            {locales.map((locale, localeIdx) => (
                                 <Listbox.Option
-                                    key={personIdx}
+                                    key={localeIdx}
                                     className={({ active }) =>
                                         `${active ? 'text-amber-900 bg-amber-100' : 'text-gray-900'}
-                            cursor-default select-none relative py-2 pl-10 pr-4 main-color`
+                                        cursor-default hover:bg-gray-100 select-none relative py-2 pl-10 pr-4 main-color`
                                     }
-                                    value={person}
+                                    value={locale}
                                 >
                                     {({ selected, active }) => (
                                         <>
@@ -56,7 +55,7 @@ export default function LanguageSwitcher() {
                                                 className={`${selected ? 'font-medium' : 'font-normal'
                                                     } block truncate`}
                                             >
-                                                {person}
+                                                {locale}
                                             </span>
                                             {selected ? (
                                                 <span

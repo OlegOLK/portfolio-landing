@@ -1,3 +1,3 @@
 export const CONSTANTS = {
-    'AppName': 'IQube'
+    'AppName': 'iQube'
 }

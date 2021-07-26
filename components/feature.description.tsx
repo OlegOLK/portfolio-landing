@@ -25,9 +25,9 @@ export default function FeatureDescription(props: Props) {
                 'items-center';
     }
     return (
-        <div className={cx('flex relative', position())}>
+        <div className={cx('flex relative  z-10', position())}>
             {props.children}
-            <div className="flex justify-items-start">
+            <div className="flex justify-items-start z-10">
                 <div>
                     <img src="cube_1.svg" alt="cube" className="inline" />
                 </div>
@@ -41,7 +41,7 @@ export default function FeatureDescription(props: Props) {
                     <div>
                         <button
                             className="relative font-main bg-none border-0 text-left  py-3 block text-base font-semibold main-color ml-0">
-                            {t('Learn more')}
+                            {t('LearnMore')}
                             <ArrowRightIcon className="inline h-5 w-5 ml-2" aria-hidden="true" />
                         </button>
                     </div>
