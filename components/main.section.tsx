@@ -12,7 +12,7 @@ type Props = {
 export const MainSection = ({ header, imageSrc, subHeader, mainCta, secondaryCta, children }: Props) => {
 
     return (
-        <div className="grid-cols-1 inset-0 lg:mt-16 lg:grid-cols-2 container mx-auto
+        <div className="grid-cols-1 pl-14 inset-0 lg:mt-16 lg:grid-cols-2 container mx-auto
         grid w-auto min-h-screen gap-4 box-border ">
             {children}
             <div className="flex items-center mt-32 lg:-mt-24">

@@ -8,7 +8,7 @@ export default function Footer() {
 
     return (
         <footer className="footer-bg w-full h-full lg:h-80 pb-12 lg:pb-0 relative bottom-0">
-            <div className="flex flex-col lg:flex-row flex-wrap justify-center lg:justify-around items-baseline container mx-auto pt-20">
+            <div className="flex flex-col lg:flex-row flex-wrap justify-center lg:justify-between items-baseline container mx-auto pt-20">
                 <div>
                     <img
                         className="inline-block h-8 w-auto -mt-2"

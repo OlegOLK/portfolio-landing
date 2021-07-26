@@ -29,7 +29,7 @@ export default function Home() {
       <VideoSection />
 
       <div id="features"></div>
-      <div className="container z-10 mx-0 lg:mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-12 lg:gap-y-36 pl-0 lg:pl-12	 relative mt-8">
+      <div className="container z-10 mx-0 lg:mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-12 lg:gap-y-36 relative mt-8">
 
         {/* Feature #1 r->l */}
         <Section>
