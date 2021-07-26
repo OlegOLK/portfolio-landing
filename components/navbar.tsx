@@ -43,8 +43,14 @@ export default function MyNav() {
                         </div>
                         <div className="hidden sm:block sm:ml-6 cursor-pointer">
                             <div className="flex items-center space-x-8 text-center">
-                                <div className=" md:mr-24">
-                                    <a href="/" className="text-black logo">{CONSTANTS.AppName}</a>
+                                <div className="relative md:mr-24 z-10">
+                                    <a href="/" className="text-black logo z-10">{CONSTANTS.AppName}</a>
+                                    <span className="absolute top-1 -right-2
+                                     inline-flex items-center justify-center 
+                                     px-2 py-1 text-xs font-bold 
+                                     leading-none z-0
+                                     transform translate-x-1/2 -translate-y-1/2 
+                                     bg-yellow-400 rounded-full">Beta</span>
                                 </div>
                                 <a href="/features" className="secondary-menu cursor-pointer self-center no-underline hover:underline">{t('Features')}</a>
                                 <a href="/pricing" className="secondary-menu cursor-pointer self-center no-underline hover:underline">{t('Pricing')}</a>
