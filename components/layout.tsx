@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 import useTranslation from 'next-translate/useTranslation'
 import { CONSTANTS } from './constants';
+import { AnimateSharedLayout } from 'framer-motion';
 
 const variants = {
     hidden: { opacity: 0, x: -200, y: 0 },
@@ -17,7 +18,7 @@ export default function Layout({ children }) {
     const { t } = useTranslation('home')
 
     return (
-        <>
+        <AnimateSharedLayout>
             <Head>
                 <meta charSet="UTF-8" />
                 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -48,6 +49,6 @@ export default function Layout({ children }) {
             >
                 {children}
             </motion.main>
-        </>
+        </AnimateSharedLayout>
     )
 }

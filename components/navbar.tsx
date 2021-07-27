@@ -45,7 +45,7 @@ export default function MyNav() {
                             <div className="flex items-center space-x-8 text-center">
                                 <div className="relative md:mr-24 z-10">
                                     <a href="/" className="text-black logo z-10">{CONSTANTS.AppName}</a>
-                                    <span className="absolute top-1 -right-2
+                                    <span className="absolute top-0 -right-2
                                      inline-flex items-center justify-center 
                                      px-2 py-1 text-xs font-bold 
                                      leading-none z-0

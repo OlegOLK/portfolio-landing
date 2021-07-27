@@ -2,11 +2,12 @@ import { MainSection } from '../components/main.section'
 import FaqSection from '../components/faq.section';
 import useTranslation from 'next-translate/useTranslation'
 import Section from '../components/section';
-import FeatureDescription, { TextToImagePosition } from '../components/feature.description';
 import Cube, { CubePosition } from '../components/cubes';
 import VideoSection from '../components/video.section';
 import React from 'react';
 import FeatureImage from '../components/feature.image';
+import FeatureDescription, { TextToImagePosition } from '../components/feature.description';
+
 import Footer from '../components/footer';
 import DisctordPopup from '../components/discord';
 import More from '../components/more';

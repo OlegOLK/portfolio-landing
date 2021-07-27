@@ -10,7 +10,7 @@ const locales = i18nConfig.locales.map(lc=> lc.toUpperCase());
 
 export default function LanguageSwitcher() {
     const { t, lang } = useTranslation();
-    const [selected, setSelected] = useState(lang)
+    const [selected, setSelected] = useState(lang.toUpperCase())
     const router = useRouter();
     const { locale } = router;
 
@@ -39,7 +39,7 @@ export default function LanguageSwitcher() {
                         leaveFrom="opacity-100"
                         leaveTo="opacity-0"
                     >
-                        <Listbox.Options className="absolute w-full py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                        <Listbox.Options className="absolute w-full -ml-3 py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                             {locales.map((locale, localeIdx) => (
                                 <Listbox.Option
                                     key={localeIdx}

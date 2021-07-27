@@ -1,7 +1,10 @@
-import { ArrowRightIcon } from '@heroicons/react/outline'
+import { ArrowRightIcon } from '@heroicons/react/outline';
+import Image from "next/image";
 import cx from 'classnames';
 import useTranslation from 'next-translate/useTranslation'
 import { ReactNode } from 'react';
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 export enum TextToImagePosition {
     Top,
@@ -13,7 +16,8 @@ type Props = {
     header: string;
     subHeader: string;
     textPosition: TextToImagePosition;
-    children?: ReactNode
+    children?: ReactNode;
+    notLink?: boolean;
 }
 
 export default function FeatureDescription(props: Props) {
@@ -28,23 +32,34 @@ export default function FeatureDescription(props: Props) {
         <div className={cx('flex relative  z-10', position())}>
             {props.children}
             <div className="flex justify-items-start z-10">
+                <motion.div layoutId="image">
+                    <img src="/cube_1.svg" alt="cube" className="inline" />
+                </motion.div>
                 <div>
-                    <img src="cube_1.svg" alt="cube" className="inline" />
-                </div>
-                <div>
-                    <div className="feature-header ml-1">
+                    <motion.div
+                        layoutId="featureHeader"
+                        className="feature-header ml-1">
                         <span className="break-words text-4xl font-extrabold whitespace-pre-wrap">{props.header}</span>
-                    </div>
-                    <div className="feature-subheader mt-4 whitespace-pre-wrap">
+                    </motion.div>
+                    <motion.div
+                        layoutId="featureSubHeader"
+                        className="feature-subheader mt-4 whitespace-pre-wrap">
                         {props.subHeader}
-                    </div>
-                    {/* <div>
-                        <button
-                            className="relative font-main bg-none border-0 text-left  py-3 block text-base font-semibold main-color ml-0">
-                            {t('LearnMore')}
-                            <ArrowRightIcon className="inline h-5 w-5 ml-2" aria-hidden="true" />
-                        </button>
-                    </div> */}
+                    </motion.div>
+                    {
+                        !props.notLink ?
+                            (
+                                <div>
+                                    <Link href="/features/1" passHref>
+                                        <a className="relative font-main bg-none border-0 text-left cursor-pointer  py-3 block text-base font-semibold main-color ml-0">
+                                            {t('LearnMore')}
+                                            <ArrowRightIcon className="inline h-5 w-5 ml-2" aria-hidden="true" />
+                                        </a>
+                                    </Link>
+                                </div>
+                            ) : <></>
+                    }
+
                 </div>
             </div>
         </div>

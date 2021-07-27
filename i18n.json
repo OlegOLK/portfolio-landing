@@ -6,6 +6,7 @@
       "/": ["home"],
       "/pricing": ["home"],
       "/signup": ["home"],
-      "/signin": ["home"]
+      "/signin": ["home"],
+      "/features/[slug]": ["home"]
     }
   }
