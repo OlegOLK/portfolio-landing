@@ -18,7 +18,7 @@ export const MainSection = ({ header, imageSrc, subHeader, mainCta, secondaryCta
             <div className="flex justify-start w-full h-screen">
                 <div className="flex items-center mt-32 lg:-mt-24" style={{ flex: "1 1 0" }}>
                     <div>
-                        <p className="text-5xl lg:text-6xl font-bold lg:leading-loose whitespace-pre-wrap break-word text-center lg:text-left">
+                        <p className="text-5xl lg:text-6xl font-bold lg:leading-snug whitespace-pre-wrap break-word text-center lg:text-left">
                             {header}
                         </p>
 
