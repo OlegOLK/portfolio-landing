@@ -44,7 +44,7 @@ export default function Footer() {
                     <div>
                         <div className="inline-block">
                             <a href="#" className="cursor-pointer">
-                                <img alt="google play" className="h-8 w-auto main-color" src="./google-play-badge.png" />
+                                <img alt="google play" width={105} className="h-auto main-color" src="./google-play-badge.png" />
                             </a>
                         </div>
                     </div>
@@ -52,7 +52,7 @@ export default function Footer() {
                     <div>
                         <div className="inline-block">
                             <a href="#" className="cursor-pointer">
-                                <img alt="google play" className="h-8 w-auto main-color" src="./Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" />
+                                <img alt="google play" width={105} className="h-auto main-color" src="./app_Store_Badge.svg" />
                             </a>
                         </div>
                     </div>

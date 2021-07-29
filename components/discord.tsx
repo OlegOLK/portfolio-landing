@@ -4,7 +4,7 @@ export default function DisctordPopup() {
     const { t } = useTranslation('home')
 
     return (
-        <div className="fixed bottom-4 right-6 z-20 hidden lg:block">
+        <div className="fixed bottom-16 right-6 z-20 hidden lg:block">
             <a
             href="https://discord.gg/SWzBKHEB" target="_blank" rel="noreferrer" 
                 className="shadow-lg cursor-pointer py-3 px-3 flex bg-white items-center justify-start text-base font-semibold rounded-lg h-16 w-72 ">

@@ -11,6 +11,7 @@ import FeatureDescription, { TextToImagePosition } from '../components/feature.d
 import Footer from '../components/footer';
 import DisctordPopup from '../components/discord';
 import More from '../components/more';
+import Container from '../components/container';
 
 export default function Home() {
   const { t } = useTranslation('home')
@@ -30,63 +31,72 @@ export default function Home() {
       <VideoSection />
 
       <div id="features"></div>
-      <div className="container z-10 mx-0 lg:mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-12 lg:gap-y-36 relative mt-8">
+      <Container>
+        {/* <div className="z-10 w-full relative mt-8"> */}
 
         {/* Feature #1 r->l */}
-        <Section>
+        <Section reverseOnMd={true}>
           <FeatureDescription
-            textPosition={TextToImagePosition.Middle}
+            textPosition={TextToImagePosition.Start}
             header={t('feature1header')}
             subHeader={t('feature1subheader')}
+            cubeSrc="/assets/cubes/cube_feature_1.svg"
           />
-          <FeatureImage alt={t('feature1header')} src={'./feature_1.svg'} />
+          <FeatureImage textPosition={TextToImagePosition.End} alt={t('feature1header')} src={'./feature_1.svg'} />
         </Section>
 
         {/* Feature #2 l->r */}
         <Section>
-          <FeatureImage alt={t('feature2header')} src={'./feature_2.svg'} />
+          <FeatureImage textPosition={TextToImagePosition.Start} alt={t('feature2header')} src={'./feature_2.svg'} />
           <FeatureDescription
-            textPosition={TextToImagePosition.Middle}
+            textPosition={TextToImagePosition.End}
             header={t('feature2header')}
             subHeader={t('feature2subheader')}
+            cubeSrc="/assets/cubes/cube_feature_2.png"
           >
             <Cube position={CubePosition.Vertical} />
           </FeatureDescription>
         </Section>
 
         {/* feature #3 r->l */}
-        <Section>
+        <Section reverseOnMd={true}>
 
           <FeatureDescription
-            textPosition={TextToImagePosition.Middle}
+            textPosition={TextToImagePosition.Start}
             header={t('feature3header')}
             subHeader={t('feature3subheader')}
+            cubeSrc="/assets/cubes/cube_feature_3.png"
           >
             <Cube position={CubePosition.HorizontalLeft} />
           </FeatureDescription>
-          <FeatureImage alt={t('feature3header')} src={'./feature_3.svg'} />
+          <FeatureImage
+            alt={t('feature3header')}
+            textPosition={TextToImagePosition.End}
+            src={'./feature_3.svg'} />
         </Section>
 
         {/* Feature #4 l->r */}
         <Section>
-          <FeatureImage alt={t('feature4header')} src={'./feature_4.svg'} />
+          <FeatureImage textPosition={TextToImagePosition.Start} alt={t('feature4header')} src={'./feature_4.svg'} />
           <FeatureDescription
-            textPosition={TextToImagePosition.Middle}
+            textPosition={TextToImagePosition.End}
             header={t('feature4header')}
             subHeader={t('feature4subheader')}
+            cubeSrc="/assets/cubes/cube_feature_4.png"
           >
             <Cube position={CubePosition.HorizontalRigh} />
           </FeatureDescription>
         </Section>
 
         {/* Excanges */}
-        <div className="col-span-2 text-left lg:text-center">
-          <div className="flex justify-center items-center">
-            <img alt="cube" src="cube_1.svg" className="inline" />
+        {/* <div className="col-span-2 text-left lg:text-center"> */}
+        <Section>
+          <div className="flex justify-center items-center" style={{ flexBasis: "100%" }}>
+            <img alt="cube" src="/assets/cubes/cube_exchanges.png" className="inline" />
             <p className="inline feature-header ml-4 self-center">{t('connectExchange')}</p>
 
           </div>
-          <div className="flex justify-between mt-20 space-x-20 mx-24">
+          <div className="flex w-full justify-center lg:justify-between mt-20 space-x-20">
             <img alt="binance" src="binance.png" />
             <img alt="binance" className="hidden lg:inline-block" src="binance.png" />
             <img alt="binance" className="hidden lg:inline-block" src="binance.png" />
@@ -94,14 +104,14 @@ export default function Home() {
             <img alt="binance" className="hidden lg:inline-block" src="binance.png" />
           </div>
 
-        </div>
+        </Section>
 
 
 
-      </div>
 
-      {/* FAQ */}
-      <FaqSection />
+        {/* FAQ */}
+        <FaqSection />
+      </Container>
 
       <div className="w-full bg-main-color h-full mt-24 py-24">
         <div className="flex flex-wrap justify-center items-center h-full w-full">

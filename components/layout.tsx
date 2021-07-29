@@ -32,11 +32,9 @@ export default function Layout({ children }) {
                 <meta property="og:url" content="https://portfolio-landing-gamma.vercel.app/" />
                 <meta property="og:type" content="website" />
 
-
-
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" />
-                <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin={"true"} />
+                <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap" rel="stylesheet" />
             </Head>
             <Navbar />
             <motion.main
