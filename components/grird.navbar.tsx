@@ -27,13 +27,14 @@ export default function GridNav() {
             scrollPosition != 0 ? "shadow-lg" : '')}>
             <div className="hidden lg:block h-full">
                 <div className="grid grid-cols-12 gap-5 h-full mx-52 my-auto justify-items-start">
-                    <a href="/" className="col-span-2 space-x-4 self-center">
+                    <a href="/" className="col-span-2 space-x-4  self-center">
                         <img
-                            className="lg:inline-block h-8 w-auto"
+                            className="lg:inline-block h-full w-8 justify-self-start"
+                            style={{verticalAlign: "middle"}}
                             src="/main.svg"
                             alt="logo"
                         />
-                        <span className="logo">{CONSTANTS.AppName}</span>
+                        <span className="logo  self-center" style={{verticalAlign: "middle"}}>{CONSTANTS.AppName}</span>
                     </a>
                     <a href="/features" className="col-start-3 secondary-menu cursor-pointer self-center no-underline hover:underline">{t('Features')}</a>
                     <a href="/pricing" className="secondary-menu cursor-pointer self-center no-underline hover:underline">{t('Pricing')}</a>
