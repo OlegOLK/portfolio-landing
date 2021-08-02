@@ -7,6 +7,7 @@
       "/pricing": ["home"],
       "/signup": ["home"],
       "/signin": ["home"],
-      "/features/[slug]": ["home"]
+      "/features/[slug]": ["home"],
+      "/features": ["home"]
     }
   }
