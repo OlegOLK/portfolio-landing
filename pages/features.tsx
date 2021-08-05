@@ -1,13 +1,15 @@
 import useTranslation from 'next-translate/useTranslation'
 import { GridAccordion } from '../components/grid.accordion';
-import Footer from '../components/footer';
+import Footer from '../components/footer.grid';
 import Navbar from '../components/grird.navbar';
+import Cube, { CubePosition } from '../components/cubes';
 export default function Features() {
     const { t } = useTranslation('home')
     return (
         <>
             <Navbar />
-            <div className="grid grid-cols-12 gap-5 mx-auto lg:mx-40 2xl:mx-72 min-h-screen relative" >
+            {/*  */}
+            <div className="grid grid-cols-12 gap-5 mx-auto lg:mx-40 2xl:mx-96 min-h-screen relative" >
                 <div className="col-span-6" style={{ marginTop: "13rem" }}>
                     <h1 className="hero-header whitespace-pre-wrap break-word">
                         {t('MainHeader')}
@@ -30,11 +32,11 @@ export default function Features() {
 
                 <div className="col-start-8 col-span-5 relative z-40" style={{ marginTop: "12rem" }}>
                     <div className="relative">
-                        <img src="./assets/test/main_pattern.svg" className="w-full h-auto z-40 relative" />
-                        <img src="./assets/test/main_left_pattern.png" className="absolute z-0 -top-2 -left-4 w-auto h-auto" />
-                        <img src="./assets/test/main_right_pattern.png" className="absolute z-0 -bottom-5 -right-4 w-auto h-auto" />
-                        <img src="./assets/test/main_left_line.png" className="absolute -bottom-12 z-0 -left-20" height={150} width={295.5} />
-                        <img src="./assets/test/main_right_line.png" className="absolute z-50 top-0 right-28 w-auto h-auto" />
+                        <picture>  <img src="./assets/test/main_pattern.svg" className="w-auto h-auto z-40 relative" /></picture>
+                        <picture>  <img src="./assets/test/main_left_pattern.png" className="absolute z-0 -top-2 -left-4 w-auto h-auto" /></picture>
+                        <picture>  <img src="./assets/test/main_right_pattern.png" className="absolute z-0 -bottom-5 -right-4 w-auto h-auto" /></picture>
+                        <picture>  <img src="./assets/test/main_left_line.png" className="absolute -bottom-12 z-0 -left-20" height={150} width={295.5} /></picture>
+                        <picture>  <img src="./assets/test/main_right_line.png" className="absolute z-50 -top-12 right-9 w-auto h-auto" /></picture>
                     </div>
 
                 </div>
@@ -71,41 +73,46 @@ export default function Features() {
                 </div>
             </div>
 
-            <div className="grid grid-cols-12 gap-5 min-h-screen mx-auto lg:mx-40 2xl:mx-72 mt-40 space-y-40">
-                <div id="features" className="grid grid-cols-12 gap-5 col-span-12">
-                    <div className="col-span-6">
-                        <img src="/assets/cubes/cube_feature_1.svg" className="block" />
-                        <h4 className="break-words text-xl lg:text-4xl font-extrabold whitespace-pre-wrap" style={{ marginTop: "16px" }}>{t('feature1header')}</h4>
-                        <h6 className="feature-subheader mt-4 whitespace-pre-wrap" style={{ marginTop: "32px" }}>{t('feature1subheader')}</h6>
-                        <div className="bg-main-color rounded-md"
-                            style={{ marginTop: "24px", width: "84px", height: "4px" }}> </div>
-                    </div>
-                    <div className="col-start-8 col-span-5 relative z-10">
-                        <img className="block w-full h-auto relative z-10" src="assets/test/f1.png" />
-                        <img className="block absolute z-0 -left-10 -top-12" src="assets/test/f1_left_pattern.png" />
-                        <img className="block absolute z-0 -right-10 top-36" src="assets/test/f1_right_pattern.png" />
-                    </div>
-                </div>
-
-
-                <div className="grid grid-cols-12 gap-5 col-span-12">
-                    <div className="col-span-5 relative z-10">
-                        <img className="block w-full h-auto relative z-10" src="assets/test/f2.png" />
-                        <img className="block absolute z-0 -left-12 top-12" src="assets/test/f2_left_pattern.png" />
-                        <img className="block absolute z-0 -right-12 -top-12" src="assets/test/f2_right_pattern.png" />
-
-                    </div>
-                    <div className="col-start-8 col-span-5 relative">
-                        <img src="assets/test/f2_cube.png" className="block" />
-                        <figure className="bg-main-color absolute" style={{ width: "10px", height: "10px", top: "-10px", left: "-10px" }}></figure>
-                        <h4 className="break-words text-xl lg:text-4xl font-extrabold whitespace-pre-wrap" style={{ marginTop: "16px" }}>{t('feature2header')}</h4>
-                        <h6 className="feature-subheader mt-4 whitespace-pre-wrap" style={{ marginTop: "32px" }}>{t('feature2subheader')}</h6>
-                        <div className="bg-main-color rounded-md"
-                            style={{ marginTop: "24px", width: "84px", height: "4px" }}> </div>
+            <div className=" min-h-screen space-y-40 mt-40">
+                <div className="w-full">
+                    <div id="features" className="grid grid-cols-12 gap-5 mx-auto lg:mx-40 2xl:mx-96">
+                        <div className="col-span-6">
+                            <img src="/assets/cubes/cube_feature_1.svg" className="block" />
+                            <h4 className="break-words text-xl lg:text-4xl font-extrabold whitespace-pre-wrap" style={{ marginTop: "16px" }}>{t('feature1header')}</h4>
+                            <h6 className="feature-subheader mt-4 whitespace-pre-wrap" style={{ marginTop: "32px" }}>{t('feature1subheader')}</h6>
+                            <div className="bg-main-color rounded-md"
+                                style={{ marginTop: "24px", width: "84px", height: "4px" }}> </div>
+                        </div>
+                        <div className="col-start-8 col-span-5 relative z-10">
+                            <img className="block w-full h-auto relative z-10" src="assets/test/f1.png" />
+                            <img className="block absolute z-0 -left-10 -top-12" src="assets/test/f1_left_pattern.png" />
+                            <img className="block absolute z-0 -right-10 top-36" src="assets/test/f1_right_pattern.png" />
+                        </div>
                     </div>
                 </div>
+                <div className="relative">
+                    <div className="absolute flex flex-col space-y-5" style={{right: "-50px"}}>
+                        <figure className="cube inline-block z-0"></figure>
+                        <figure className="cube inline-block z-0"></figure>
+                    </div>
+                    <div className="grid grid-cols-12 gap-5 mx-auto lg:mx-40 2xl:mx-96">
+                        <div className="col-span-5 relative z-10">
+                            <img className="block w-full h-auto relative z-10" src="assets/test/f2.png" />
+                            <img className="block absolute z-0 -left-12 top-12" src="assets/test/f2_left_pattern.png" />
+                            <img className="block absolute z-0 -right-12 -top-12" src="assets/test/f2_right_pattern.png" />
 
-                <div className="grid grid-cols-12 gap-5 col-span-12">
+                        </div>
+                        <div className="col-start-8 col-span-5 relative">
+                            <img src="assets/test/f2_cube.png" className="block" />
+                            <figure className="bg-main-color absolute" style={{ width: "10px", height: "10px", top: "-10px", left: "-10px" }}></figure>
+                            <h4 className="break-words text-xl lg:text-4xl font-extrabold whitespace-pre-wrap" style={{ marginTop: "16px" }}>{t('feature2header')}</h4>
+                            <h6 className="feature-subheader mt-4 whitespace-pre-wrap" style={{ marginTop: "32px" }}>{t('feature2subheader')}</h6>
+                            <div className="bg-main-color rounded-md"
+                                style={{ marginTop: "24px", width: "84px", height: "4px" }}> </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="grid grid-cols-12 gap-5 mx-auto lg:mx-40 2xl:mx-96 mt-40">
                     <div className="col-span-6 self-center">
                         <img src="/assets/cubes/cube_feature_3.png" className="block" />
                         <h4 className="break-words text-xl lg:text-4xl font-extrabold whitespace-pre-wrap" style={{ marginTop: "16px" }}>{t('feature1header')}</h4>
@@ -120,7 +127,7 @@ export default function Features() {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-12 gap-5 col-span-12">
+                <div className="grid grid-cols-12 gap-5 mx-auto lg:mx-40 2xl:mx-96 mt-40">
                     <div className="col-span-5 relative z-10">
                         <img className="block w-full h-auto relative z-10" src="assets/test/f4_1.png" />
                         <img className="block absolute z-0 -left-12 top-72" src="assets/test/f4_left_pattern.png" />
@@ -138,7 +145,7 @@ export default function Features() {
                 </div>
 
 
-                <div className="grid grid-cols-12 gap-5 col-span-12 ">
+                <div className="grid grid-cols-12 gap-5 mx-auto lg:mx-40 2xl:mx-96">
                     <div className="grid justify-items-center col-span-12">
                         <div>
                             <img alt="cube" src="/assets/cubes/cube_exchanges.png" className="inline align-middle" />
@@ -157,7 +164,7 @@ export default function Features() {
                         </div>
                     </div>
                 </div>
-                <div className="grid grid-cols-12 gap-5 col-span-12 ">
+                <div className="grid grid-cols-12 gap-5 mx-auto lg:mx-40 2xl:mx-96">
                     <div className="col-span-3">
                         <img alt="cube" src="/assets/cubes/cube_faq.png" className="block" />
                         <p className="feature-header mt-4">

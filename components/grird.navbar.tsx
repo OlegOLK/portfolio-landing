@@ -26,7 +26,7 @@ export default function GridNav() {
         <nav className={classNames("bg-white h-28 top-0 z-50 fixed w-full",
             scrollPosition != 0 ? "shadow-lg" : '')}>
             <div className="hidden lg:block h-full">
-                <div className="grid grid-cols-12 gap-5 h-full mx-auto lg:mx-40 2xl:mx-72 my-auto justify-items-start">
+                <div className="grid grid-cols-12 gap-5 h-full mx-auto lg:mx-40 2xl:mx-96 my-auto justify-items-start">
                     <a href="/" className="col-span-2 space-x-4  self-center">
                         <img
                             className="lg:inline-block h-full w-8 justify-self-start"
