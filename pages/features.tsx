@@ -7,13 +7,12 @@ export default function Features() {
     return (
         <>
             <Navbar />
-            {/* style={{ minHeight: "55rem" }} */}
-            <div className="grid grid-cols-12 gap-5 mx-52 min-h-screen relative" >
-                <div className="col-span-6" style={{ marginTop: "17rem" }}>
-                    <h1 className="text-5xl lg:text-6xl font-bold lg:leading-snug whitespace-pre-wrap break-word">
+            <div className="grid grid-cols-12 gap-5 mx-auto lg:mx-40 2xl:mx-72 min-h-screen relative" >
+                <div className="col-span-6" style={{ marginTop: "13rem" }}>
+                    <h1 className="hero-header whitespace-pre-wrap break-word">
                         {t('MainHeader')}
                     </h1>
-                    <h5 className="mt-9 whitespace-pre-wrap text-base opacity-70 leading-8 font-semibold">
+                    <h5 className="mt-9 whitespace-pre-wrap opacity-70 hero-sub-header">
                         {t('MainSubheader')}
                     </h5>
                     <div className="mt-16">
@@ -48,7 +47,7 @@ export default function Features() {
                     </a>
                 </div>
 
-                <div className="fixed bottom-12 right-48 z-20 hidden lg:block">
+                <div className="fixed bottom-12 right-24 z-20 hidden lg:block">
                     <a
                         href="https://discord.gg/SWzBKHEB" target="_blank" rel="noreferrer"
                         className="shadow-lg cursor-pointer py-3 px-3 flex bg-white items-center justify-start text-base font-semibold rounded-lg h-16 w-72 ">
@@ -61,7 +60,7 @@ export default function Features() {
                 </div>
             </div>
 
-            <div className="w-screen left-0 bg-gray-400 relative z-50" style={{ height: "721px" }}>+
+            <div className="w-screen left-0 bg-gray-400 relative z-40" style={{ height: "721px" }}>+
                 <div className="absolute inset-y-1/2 play-button bg-red-500 flex items-center justify-center">
                     <div className="playIcon -ml-1">
                         <svg width="64" height="62" viewBox="0 0 64 62" fill="#7DC7A8" xmlns="http://www.w3.org/2000/svg">
@@ -72,7 +71,7 @@ export default function Features() {
                 </div>
             </div>
 
-            <div className="grid grid-cols-12 gap-5 min-h-screen mx-52 mt-40 space-y-60">
+            <div className="grid grid-cols-12 gap-5 min-h-screen mx-auto lg:mx-40 2xl:mx-72 mt-40 space-y-40">
                 <div id="features" className="grid grid-cols-12 gap-5 col-span-12">
                     <div className="col-span-6">
                         <img src="/assets/cubes/cube_feature_1.svg" className="block" />
@@ -82,9 +81,9 @@ export default function Features() {
                             style={{ marginTop: "24px", width: "84px", height: "4px" }}> </div>
                     </div>
                     <div className="col-start-8 col-span-5 relative z-10">
-                        <img className="block w-full h-auto relative z-10" src="assets/test/f1_1.png" />
-                        <img className="block absolute z-0 left-0 -top-10" src="assets/test/f1_left_pattern.png" />
-                        <img className="block absolute z-0 right-0 top-44" src="assets/test/f1_right_pattern.png" />
+                        <img className="block w-full h-auto relative z-10" src="assets/test/f1.png" />
+                        <img className="block absolute z-0 -left-10 -top-12" src="assets/test/f1_left_pattern.png" />
+                        <img className="block absolute z-0 -right-10 top-36" src="assets/test/f1_right_pattern.png" />
                     </div>
                 </div>
 
@@ -117,15 +116,15 @@ export default function Features() {
                     <div className="col-start-8 col-span-5 relative z-10">
                         <img className="block w-full h-auto relative z-10" src="assets/test/f3.png" />
                         <img className="block absolute z-0 left-0 bottom-4" src="assets/test/f3_left_pattern.png" />
-                        <img className="block absolute z-0 right-14 top-44" src="assets/test/f3_right_pattern.png" />
+                        <img className="block absolute z-0 right-8 top-44" src="assets/test/f3_right_pattern.png" />
                     </div>
                 </div>
 
                 <div className="grid grid-cols-12 gap-5 col-span-12">
                     <div className="col-span-5 relative z-10">
                         <img className="block w-full h-auto relative z-10" src="assets/test/f4_1.png" />
-                        <img className="block absolute z-0 -left-12 top-96" src="assets/test/f4_left_pattern.png" />
-                        <img className="block absolute z-0 -right-8 top-36" src="assets/test/f4_right_pattern.png" />
+                        <img className="block absolute z-0 -left-12 top-72" src="assets/test/f4_left_pattern.png" />
+                        <img className="block absolute z-0 -right-8 top-24" src="assets/test/f4_right_pattern.png" />
 
                     </div>
                     <div className="col-start-8 col-span-5 relative self-center">

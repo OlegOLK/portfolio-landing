@@ -8,6 +8,21 @@ html {
 
 }
 
+.hero-header {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 54px;
+    line-height: 74px;
+}
+
+.hero-sub-header {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+
 .font-main {
     font-family: Manrope !important;
 }
