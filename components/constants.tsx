@@ -6,6 +6,7 @@ export type Feature = {
     cubePart?: ReactNode;
     img: ReactNode;
     prefix: number;
+    figures?: ReactNode;
 }
 
 export const FEATURES: Feature[] = [
@@ -31,6 +32,12 @@ export const FEATURES: Feature[] = [
         cubePart: (
             <figure className="bg-main-color absolute" style={{ width: "10px", height: "10px", top: "-10px", left: "-10px" }
             }> </figure>
+        ),
+        figures: (
+            <div className="absolute flex flex-col space-y-5" style={{ right: "-50px" }}>
+                <figure className="cube shadow-xl inline-block z-0"></figure>
+                <figure className="cube shadow-xl inline-block z-0"></figure>
+            </div>
         )
     },
     {
@@ -41,6 +48,12 @@ export const FEATURES: Feature[] = [
                 <img className="block absolute z-0 left-0 bottom-4" src="assets/test/f3_left_pattern.png" />
                 <img className="block absolute z-0 right-8 top-44" src="assets/test/f3_right_pattern.png" />
             </>
+        ),
+        figures: (
+            <div className="absolute flex" style={{ left: "-50px", top: "80%" }}>
+                <figure className="cube self-center shadow-xl inline-block z-0"></figure>
+                <figure className="cube ml-5 shadow-xl inline-block z-0"></figure>
+            </div>
         )
     },
     {
@@ -55,6 +68,12 @@ export const FEATURES: Feature[] = [
         cubePart: (
             <figure className="bg-main-color absolute" style={{ width: "10px", height: "10px", top: "30px", left: "-10px" }
             }> </figure>
+        ),
+        figures: (
+            <div className="absolute flex" style={{ right: "-50px", top: "80%" }}>
+                <figure className="cube self-center shadow-xl inline-block z-0"></figure>
+                <figure className="cube ml-5 shadow-xl inline-block z-0"></figure>
+            </div>
         )
     },
 ]

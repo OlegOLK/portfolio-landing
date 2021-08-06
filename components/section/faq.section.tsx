@@ -7,7 +7,7 @@ export default function FaqSection() {
     const { t } = useTranslation('home')
 
     return (
-        <section className="relative flex justify-center">
+        <section className="relative flex justify-center pb-24">
             <Grid>
                 <div className="col-span-3">
                     <img alt="cube" src="/assets/cubes/cube_faq.png" className="block" />
@@ -26,6 +26,11 @@ export default function FaqSection() {
                     <GridAccordion header={t('question4')} subHeader={t('answer4')} />
                 </div>
             </Grid>
+
+            <div className="absolute flex flex-col space-y-5" style={{ top: "150px", left: "-50px" }}>
+                <figure className="cube shadow-xl inline-block z-0"></figure>
+                <figure className="cube shadow-xl inline-block z-0"></figure>
+            </div>
         </section>
     )
 }

@@ -83,6 +83,7 @@ export default function Home() {
                 }
                 textRight={feature.prefix % 2 != 1}
               >
+                  {feature.figures}
               </SectionWrapper>)
           })
         }
