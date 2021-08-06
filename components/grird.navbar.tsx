@@ -23,18 +23,20 @@ export default function GridNav() {
     }, []);
 
     return (
-        <nav className={classNames("bg-white h-28 top-0 z-50 fixed w-full",
+        <nav className={classNames("bg-white h-28 top-0 z-50 fixed w-screen",
             scrollPosition != 0 ? "shadow-lg" : '')}>
-            <div className="hidden lg:block h-full">
-                <div className="grid grid-cols-12 gap-5 h-full mx-auto lg:mx-40 2xl:mx-96 my-auto justify-items-start">
+            <div className="flex justify-center items-center w-full h-full">
+            
+                <div className="grid grid-cols-12 gap-5 relative my-auto justify-items-start" style={{ width: "1120px" }}>
+
                     <a href="/" className="col-span-2 space-x-4  self-center">
                         <img
                             className="lg:inline-block h-full w-8 justify-self-start"
-                            style={{verticalAlign: "middle"}}
+                            style={{ verticalAlign: "middle" }}
                             src="/main.svg"
                             alt="logo"
                         />
-                        <span className="logo  self-center" style={{verticalAlign: "middle"}}>{CONSTANTS.AppName}</span>
+                        <span className="logo  self-center" style={{ verticalAlign: "middle" }}>{CONSTANTS.AppName}</span>
                     </a>
                     <a href="/features" className="col-start-3 secondary-menu cursor-pointer self-center no-underline hover:underline">{t('Features')}</a>
                     <a href="/pricing" className="secondary-menu cursor-pointer self-center no-underline hover:underline">{t('Pricing')}</a>
@@ -44,11 +46,11 @@ export default function GridNav() {
                         <LanguageSwitcher />
                     </div>
 
-                    <div className="col-start-10 col-span-1 self-center relative">
+                    <div className="col-start-10 col-span-1 flex items-center relative h-full -left-4">
                         <a
                             href="/signin"
-                            className="relative hover:opacity-90 hover:scale-105 bg-none border-0  w-26 py-3 text-base font-semibold main-color">
-                            <FingerPrintIcon className="absolute -left-6 inline h-5 w-5 mr-2" aria-hidden="true" />
+                            className="relative  hover:opacity-90 hover:scale-105 bg-none border-0  w-26 text-base font-semibold main-color">
+                            <img src="/assets/test/user.svg" className=" h-full inline mr-2" width={14} height={16} aria-hidden="true" />
                             {t('Sign in')}
                         </a>
 
@@ -59,24 +61,6 @@ export default function GridNav() {
                         {t('Get Started')}
                     </a>
                 </div>
-
-
-
-                {/*               
-                <div className="flex items-center justify-center">
-                    <LanguageSwitcher />
-                    <a
-                        href="/signin"
-                        className="hover:opacity-90 hover:scale-105 bg-none border-0  w-26 mr-12 py-3 block text-base font-semibold main-color">
-                        <FingerPrintIcon className="inline h-5 w-5 mr-2" aria-hidden="true" />
-                        {t('Sign in')}
-                    </a>
-                    <a
-                        href="/signup"
-                        className="ripple shadow-lg w-44 py-3 block text-center text-base font-semibold bg-main-color rounded-lg text-white ">
-                        {t('Get Started')}
-                    </a>
-                </div> */}
 
             </div>
         </nav >

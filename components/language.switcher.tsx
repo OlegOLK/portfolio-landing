@@ -6,7 +6,7 @@ import { CheckIcon } from '@heroicons/react/solid'
 import { GlobeIcon } from '@heroicons/react/outline';
 
 import i18nConfig from '../i18n.json';
-const locales = i18nConfig.locales.map(lc=> lc.toUpperCase());
+const locales = i18nConfig.locales.map(lc => lc.toUpperCase());
 
 export default function LanguageSwitcher() {
     const { t, lang } = useTranslation();
@@ -24,13 +24,14 @@ export default function LanguageSwitcher() {
             <Listbox value={selected} onChange={handleChange}>
                 <div className="relative mt-1">
                     <Listbox.Button className="flex justify-end items-center relative w-full py-2 pr-10 text-right  bg-none border-0 text-base font-semibold main-color">
-                        <span className="inset-y-0 left-0 flex items-center pr-2 pointer-events-none main-color">
-                            <GlobeIcon
-                                className="w-5 h-5 text-gray-400 main-color"
-                                aria-hidden="true"
-                            />
-                        </span>
-                        <span className="block truncate right-0 uppercase">{selected}</span>
+                        <img
+                            src="/assets/test/globe.svg"
+                            className="text-gray-400 main-color"
+                            height={16}
+                            width={16}
+                            aria-hidden="true"
+                        />
+                        <span className="block ml-2 right-0 uppercase">{selected}</span>
 
                     </Listbox.Button>
                     <Transition
@@ -39,7 +40,7 @@ export default function LanguageSwitcher() {
                         leaveFrom="opacity-100"
                         leaveTo="opacity-0"
                     >
-                        <Listbox.Options className="absolute w-full -ml-3 py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                        <Listbox.Options className="absolute w-full -ml-6 py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                             {locales.map((locale, localeIdx) => (
                                 <Listbox.Option
                                     key={localeIdx}

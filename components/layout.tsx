@@ -1,4 +1,3 @@
-import Navbar from './navbar';
 import React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router'
@@ -6,6 +5,7 @@ import { motion } from 'framer-motion'
 import useTranslation from 'next-translate/useTranslation'
 import { CONSTANTS } from './constants';
 import { AnimateSharedLayout } from 'framer-motion';
+import GridNav from './grird.navbar';
 
 const variants = {
     hidden: { opacity: 0, x: -200, y: 0 },
@@ -36,13 +36,14 @@ export default function Layout({ children }) {
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin={"true"} />
                 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap" rel="stylesheet" />
             </Head>
+            <GridNav />
             <motion.main
                 initial="hidden"
                 animate="enter"
                 exit="exit"
                 variants={variants}
                 transition={{ type: 'linear' }}
-                className="page-min-height"
+                className="page-min-height w-screen"
             >
                 {children}
             </motion.main>
