@@ -51,11 +51,11 @@ export default function Home() {
             </div>
           }
         >
-          <div className="absolute bottom-12 left-0">
+          <div className="absolute lg:bottom-2 2xl:bottom-12 left-0">
             <FeaturesAnchor />
           </div>
 
-          <div className="fixed bottom-12 right-24 z-20 hidden lg:block">
+          <div className="fixed lg:bottom-2 2xl:bottom-12 right-24 z-20 hidden lg:block">
             <DisctordPopup />
           </div>
         </Hero>

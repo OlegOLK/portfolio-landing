@@ -11,11 +11,11 @@ type Props = {
 export default function Hero({ text, image, children, fullScreen }: Props) {
     return (
         <Grid fullScreen={fullScreen}>
-            <div className="col-span-6" style={{ marginTop: "231px" }}>
+            <div className="col-span-6 lg:mt-44 2xl:mt-56">
                 {text}
             </div>
 
-            <div className="col-start-8 col-span-5 relative z-40" style={{ marginTop: "186px" }}>
+            <div className="col-start-8 lg:mt-36 2xl:mt-52 col-span-5 relative z-40">
                 {image}
             </div>
             {children}
