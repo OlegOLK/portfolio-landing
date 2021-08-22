@@ -40,7 +40,6 @@ export default function Home() {
             header={t('MainHeader')}
             subHeader={t('MainSubheader')}
             mainCta={t('Get Started')}
-            // secondaryCta={t('Watch the video')}
           />}
           image={
             <div className="relative">

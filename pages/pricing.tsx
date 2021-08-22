@@ -18,7 +18,6 @@ export default function Pricing() {
                         header={t('pricingHeading')}
                         subHeader={t('pricingSubHeading')}
                         mainCta={t('Get Started')}
-                        secondaryCta={t('Watch the video')}
                     />}
                     image={
                         <div className="relative">
