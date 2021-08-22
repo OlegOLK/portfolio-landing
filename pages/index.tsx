@@ -56,7 +56,7 @@ export default function Home() {
             <FeaturesAnchor />
           </div>
 
-          <div className="fixed bottom-32 right-12 z-50 hidden lg:block">
+          <div className="fixed bottom-12 right-12 z-50 hidden lg:block">
             <DisctordPopup />
           </div>
 
