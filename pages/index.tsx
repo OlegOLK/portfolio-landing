@@ -51,48 +51,46 @@ export default function Home() {
             </div>
           }
         >
-   
+
           <div className="absolute bottom-12 left-0 z-40">
             <FeaturesAnchor />
           </div>
 
-          <div className="fixed bottom-32 right-24 z-50 hidden lg:block">
+          <div className="fixed bottom-32 right-12 z-50 hidden lg:block">
             <DisctordPopup />
           </div>
 
           <div className="absolute">
             <Grid fullScreen={true}>
-            <div className="col-span-1 relative">
-              <img src="./assets/patterns/main/BTC.png" className="w-auto absolute -left-4 h-auto mt-52" />
-              <img src="./assets/patterns/main_left_pattern.png" height={500} width={500} style={{top: "248px", height:"500px", width: "500px", left: "-550%", maxWidth: "500px"}} className="absolute z-40 relative" />
-            </div>
-            
-            <div className="col-start-3 col-span-1 text-center relative">
-                <figure className="rounded" style={{ marginTop: "173px", boxShadow: "0px 4px 8px rgba(137, 160, 172, 0.16)", height:"75px", width: "75px"}}></figure>
-                <p className="font-extrabold" style={{color: "#EFF0F3", marginTop: "53px", fontSize: "44px", lineHeight: "44px"}}>$</p>
-                <img src="./assets/patterns/main/chart.png" style={{marginTop: "285px"}} className="absolute -right-4 w-auto h-auto" />
-            </div>
-               <img src="./assets/patterns/main/plus.png" className="col-start-6 col-span-1 w-auto h-auto mt-32" />
-               <div className="col-start-8 col-span-1 text-center relative">
-                  <img src="./assets/patterns/main/BTC.png" className="w-auto h-auto absolute -left-2" style={{marginTop: "693px"}} />
-               </div>
-                <div className="col-start-11 col-span-1 relative">
-                  <img src="./assets/patterns/main/plus_big.png" className="absolute w-auto h-auto mt-48 -left-8" /> 
-                  <figure className="rounded" style={{marginTop: "588px", boxShadow: "0px 4px 8px rgba(137, 160, 172, 0.16)", height:"75px", width: "75px"}}></figure>
-                </div>
-                <div className="col-start-12 col-span-1 relative">
-                <img src="./assets/patterns/main_right_pattern.png" height={532} width={491} style={{height:"532px", width: "491px", left: "-20%", maxWidth: "491px"}} className=" top-24 z-40 relative" />
-                  <img src="./assets/patterns/main/symbol.png" className="w-auto h-auto absolute" style={{marginTop: "-61px"}} />
-                  
-                </div>
-               
+              <div className="col-span-1 relative">
+                <img src="./assets/patterns/main/BTC.png" className="w-auto absolute -left-4 h-auto mt-52" />
+                <img src="./assets/patterns/main_left_pattern.png" height={500} width={500} style={{ top: "248px", height: "500px", width: "500px", left: "-550%", maxWidth: "500px" }} className="z-40 relative" />
+              </div>
+
+              <div className="col-start-3 col-span-1 text-center relative">
+                <figure className="rounded" style={{ marginTop: "173px", boxShadow: "0px 4px 8px rgba(137, 160, 172, 0.16)", height: "75px", width: "75px" }}></figure>
+                <p className="font-extrabold" style={{ color: "#EFF0F3", marginTop: "53px", fontSize: "44px", lineHeight: "44px" }}>$</p>
+                <img src="./assets/patterns/main/chart.png" style={{ marginTop: "285px" }} className="absolute -right-4 w-auto h-auto" />
+              </div>
+              <img src="./assets/patterns/main/plus.png" className="col-start-6 col-span-1 w-auto h-auto mt-32" />
+              <div className="col-start-8 col-span-1 text-center relative">
+                <img src="./assets/patterns/main/BTC.png" className="w-auto h-auto absolute -left-2" style={{ marginTop: "693px" }} />
+              </div>
+              <div className="col-start-11 col-span-1 relative">
+                <img src="./assets/patterns/main/plus_big.png" className="absolute w-auto h-auto mt-48 -left-8" />
+                <figure className="rounded" style={{ marginTop: "588px", boxShadow: "0px 4px 8px rgba(137, 160, 172, 0.16)", height: "75px", width: "75px" }}></figure>
+              </div>
+              <div className="col-start-12 col-span-1 relative">
+                <img src="./assets/patterns/main_right_pattern.png" height={532} width={491} style={{ height: "532px", width: "491px", left: "-20%", maxWidth: "491px" }} className=" top-24 z-40 relative" />
+                <img src="./assets/patterns/main/symbol.png" className="w-auto h-auto absolute" style={{ marginTop: "-61px" }} />
+
+              </div>
+
             </Grid>
           </div>
         </Hero>
 
       </Container>
-
-      <VideSection />
 
       <div className="min-h-screen space-y-10 mt-10">
         <div id="features"></div>
@@ -112,9 +110,11 @@ export default function Home() {
                     feature.img
                 }
                 textRight={feature.prefix % 2 != 1}
-              >
-                  {/* {feature.figures} */}
-              </SectionWrapper>)
+
+                children={
+                  feature.figures
+                }
+              />)
           })
         }
 

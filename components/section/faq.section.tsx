@@ -8,6 +8,25 @@ export default function FaqSection() {
 
     return (
         <section className="relative flex justify-center pb-24 pt-28">
+            <div className="absolute h-full z-0">
+                <Grid>
+                    <figure
+                        className="rounded absolute col-span-1"
+                        style={{ marginTop: "354px", boxShadow: "0px 4px 8px rgba(137, 160, 172, 0.16)", height: "75px", width: "75px" }}></figure>
+
+                    <figure
+                        className="rounded absolute col-start-2 col-span-1"
+                        style={{ marginTop: "274px", left: "-20px", boxShadow: "0px 4px 8px rgba(137, 160, 172, 0.16)", height: "75px", width: "75px" }}></figure>
+                    
+                    <figure
+                        className="rounded absolute col-start-3 col-span-1"
+                        style={{marginTop: "-72px",boxShadow: "0px 4px 8px rgba(137, 160, 172, 0.16)", height: "75px", width: "75px" }}></figure>
+
+                    <figure
+                        className="rounded absolute col-start-12 col-span-1"
+                        style={{marginTop: "0px", right: "-150px", boxShadow: "0px 4px 8px rgba(137, 160, 172, 0.16)", height: "75px", width: "75px" }}></figure>
+                </Grid>
+            </div>
             <Grid>
                 <div className="col-span-3">
                     <img alt="cube" src="/assets/cubes/cube_faq.png" className="block" />
@@ -27,10 +46,7 @@ export default function FaqSection() {
                 </div>
             </Grid>
 
-            <div className="absolute flex flex-col space-y-5" style={{ top: "150px", left: "-50px" }}>
-                <figure className="cube shadow-xl inline-block z-0"></figure>
-                <figure className="cube shadow-xl inline-block z-0"></figure>
-            </div>
+            
         </section>
     )
 }
