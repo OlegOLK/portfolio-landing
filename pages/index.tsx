@@ -32,20 +32,7 @@ export default function Home() {
   return (
     <>
 
-      <Container outer={
-        <>
-        {/* <div className="absolute top-24 -right-60">
-          <picture>
-            <img src="./assets/patterns/main_right_pattern.png" className="w-auto h-auto z-40 relative" />
-          </picture>
-        </div>
-        <div className="absolute top-60 -left-60">
-          <picture>
-            <img src="./assets/patterns/main_left_pattern.png" className="w-auto h-auto z-40 relative" />
-          </picture>
-        </div> */}
-        </>
-      }>
+      <Container>
 
         <Hero
           fullScreen={true}
@@ -82,7 +69,7 @@ export default function Home() {
             </div>
             
             <div className="col-start-3 col-span-1 text-center relative">
-                <figure className="rounded" style={{ marginTop: "173px", boxShadow: "0px 4px 8px rgba(137, 160, 172, 0.16);", height:"75px", width: "75px"}}></figure>
+                <figure className="rounded" style={{ marginTop: "173px", boxShadow: "0px 4px 8px rgba(137, 160, 172, 0.16)", height:"75px", width: "75px"}}></figure>
                 <p className="font-extrabold" style={{color: "#EFF0F3", marginTop: "53px", fontSize: "44px", lineHeight: "44px"}}>$</p>
                 <img src="./assets/patterns/main/chart.png" style={{marginTop: "285px"}} className="absolute -right-4 w-auto h-auto" />
             </div>
@@ -92,7 +79,7 @@ export default function Home() {
                </div>
                 <div className="col-start-11 col-span-1 relative">
                   <img src="./assets/patterns/main/plus_big.png" className="absolute w-auto h-auto mt-48 -left-8" /> 
-                  <figure className="rounded" style={{marginTop: "588px", boxShadow: "0px 4px 8px rgba(137, 160, 172, 0.16);", height:"75px", width: "75px"}}></figure>
+                  <figure className="rounded" style={{marginTop: "588px", boxShadow: "0px 4px 8px rgba(137, 160, 172, 0.16)", height:"75px", width: "75px"}}></figure>
                 </div>
                 <div className="col-start-12 col-span-1 relative">
                 <img src="./assets/patterns/main_right_pattern.png" height={532} width={491} style={{height:"532px", width: "491px", left: "-20%", maxWidth: "491px"}} className=" top-24 z-40 relative" />
