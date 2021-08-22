@@ -1,11 +1,10 @@
 type Props = {
     header: string,
     subHeader: string,
-    mainCta: string,
-    secondaryCta: string
+    mainCta: string
 }
 
-export default function HeroCtaText({ header, subHeader, mainCta, secondaryCta }: Props) {
+export default function HeroCtaText({ header, subHeader, mainCta }: Props) {
     return (
         <>
             <h1 className="hero-header whitespace-pre-wrap break-word">
