@@ -43,7 +43,7 @@ export default function Layout({ children }) {
                 exit="exit"
                 variants={variants}
                 transition={{ type: 'linear' }}
-                className="page-min-height w-screen"
+                className="w-screen"
             >
                 {children}
             </motion.main>

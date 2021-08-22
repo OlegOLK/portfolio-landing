@@ -1,13 +1,18 @@
 import { ReactNode } from "react"
 
 type Props = {
-    children: ReactNode
+    children: ReactNode,
+    outer: ReactNode
 }
 
-export default function Container({ children }: Props) {
+export default function Container({ children, outer }: Props) {
     return (
-        <div className="flex justify-center w-full">
-            {children}
+        <div className="w-full relative">
+            {outer}
+            <div className="flex justify-center w-full relative">
+                {children}
+            </div>
         </div>
+        
     )
 }

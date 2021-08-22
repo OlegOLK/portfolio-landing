@@ -8,7 +8,7 @@ type Props = {
 
 export default function Grid({ children, fullScreen }: Props) {
     return (
-        <div className={cx("grid grid-cols-12 gap-5 relative", fullScreen ? "min-h-screen" : "h-auto")} style={{ width: "1120px" }}>
+        <div className={cx("grid grid-cols-12 gap-5 relative")} style={{ width: "1120px", minHeight: fullScreen ? "90vh" : "h-auto" }}>
             {children}
         </div>
     )

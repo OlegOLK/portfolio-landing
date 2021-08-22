@@ -11,12 +11,12 @@ type Props = {
 
 export default function SectionWrapper({ left, right, textRight, children }: Props) {
     return (
-        <section className="relative flex justify-center">
+        <section className="relative flex justify-center feature-section" style={{height: "697px"}}>
             <Grid>
-                <div className={cx("col-span-6 relative z-10", textRight ? "col-span-5 " : "self-center col-span-6")}>
+                <div className={cx("col-span-6 relative z-10", textRight ? "col-span-5 self-center" : "self-center col-span-6")}>
                     {left}
                 </div>
-                <div className={cx("relative z-10", textRight ? "col-start-8 self-center col-span-6" : "col-span-5  col-start-8")}>
+                <div className={cx("relative z-10", textRight ? "col-start-8 self-center col-span-6 " : "self-center col-span-5  col-start-8")}>
                     {right}
                 </div>
             </Grid>

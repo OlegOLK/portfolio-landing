@@ -7,7 +7,7 @@ export default function FaqSection() {
     const { t } = useTranslation('home')
 
     return (
-        <section className="relative flex justify-center pb-24">
+        <section className="relative flex justify-center pb-24 pt-28">
             <Grid>
                 <div className="col-span-3">
                     <img alt="cube" src="/assets/cubes/cube_faq.png" className="block" />

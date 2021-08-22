@@ -20,10 +20,11 @@ export default function LanguageSwitcher() {
     }
 
     return (
+        // flex items-center justify-center
         <div className="w-26">
             <Listbox value={selected} onChange={handleChange}>
                 <div className="relative mt-1">
-                    <Listbox.Button className="flex justify-end items-center relative w-full py-2 pr-10 text-right  bg-none border-0 text-base font-semibold main-color">
+                    <Listbox.Button className="flex justify-end items-center w-full py-2  text-right  bg-none border-0 text-base font-semibold main-color">
                         <img
                             src="/assets/test/globe.svg"
                             className="text-gray-400 main-color"
@@ -40,33 +41,24 @@ export default function LanguageSwitcher() {
                         leaveFrom="opacity-100"
                         leaveTo="opacity-0"
                     >
-                        <Listbox.Options className="absolute w-full -ml-6 py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                        <Listbox.Options className="absolute w-full w-16 mt-1 overflow-auto text-base bg-white shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                             {locales.map((locale, localeIdx) => (
                                 <Listbox.Option
                                     key={localeIdx}
                                     className={({ active }) =>
                                         `${active ? 'text-amber-900 bg-amber-100' : 'text-gray-900'}
-                                        cursor-default hover:bg-gray-100 select-none relative py-2 pl-10 pr-4 main-color`
+                                        cursor-default hover:bg-gray-100 select-none relative text-center main-color`
                                     }
                                     value={locale}
                                 >
                                     {({ selected, active }) => (
                                         <>
                                             <span
-                                                className={`${selected ? 'font-medium' : 'font-normal'
-                                                    } block truncate`}
+                                                className={`${selected ? 'font-medium bg-main-color text-white' : 'font-normal'
+                                                    } block truncate py-2`}
                                             >
                                                 {locale}
                                             </span>
-                                            {selected ? (
-                                                <span
-                                                    className={`${active ? 'text-amber-600' : 'text-amber-600'
-                                                        }
-                                  absolute inset-y-0 left-0 flex items-center pl-3`}
-                                                >
-                                                    <CheckIcon className="w-5 h-5" aria-hidden="true" />
-                                                </span>
-                                            ) : null}
                                         </>
                                     )}
                                 </Listbox.Option>

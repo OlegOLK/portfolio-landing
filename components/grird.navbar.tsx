@@ -29,24 +29,32 @@ export default function GridNav() {
             
                 <div className="grid grid-cols-12 gap-5 relative my-auto justify-items-start" style={{ width: "1120px" }}>
 
-                    <a href="/" className="col-span-2 space-x-4  self-center">
+                    <a href="/" className="col-span-3 space-x-4 relative self-center">
                         <img
                             className="lg:inline-block h-full w-8 justify-self-start"
                             style={{ verticalAlign: "middle" }}
                             src="/main.svg"
                             alt="logo"
                         />
-                        <span className="logo  self-center" style={{ verticalAlign: "middle" }}>{CONSTANTS.AppName}</span>
+                        <span className="logo relative self-center" style={{ verticalAlign: "middle" }}>
+                        {CONSTANTS.AppName}
+                              <span 
+                            style={{backgroundColor: "#592FFF",borderRadius: "2px", fontSize: "10px", lineHeight: "14px"}} 
+                            className="text-white p-1 font-extralight absolute -right-8 -top-2">
+                                beta
+                        </span>
+                        </span>
+                    
                     </a>
-                    <a href="/features" className="col-start-3 secondary-menu cursor-pointer self-center no-underline hover:underline">{t('Features')}</a>
-                    <a href="/pricing" className="secondary-menu cursor-pointer self-center no-underline hover:underline">{t('Pricing')}</a>
-                    <a href="/contacts" className="secondary-menu cursor-pointer self-center no-underline hover:underline">{t('Contact')}</a>
-
-                    <div className="col-start-8 col-span-1 self-center">
+                    <a href="/features" className="col-start-4 justify-self-center secondary-menu cursor-pointer self-center no-underline hover:underline">{t('Features')}</a>
+                    <a href="/pricing" className="secondary-menu justify-self-center cursor-pointer self-center no-underline hover:underline">{t('Pricing')}</a>
+                    <a href="/contacts" className="secondary-menu justify-self-center cursor-pointer self-center no-underline hover:underline">{t('Contact')}</a>
+                    {/*col-start-9 w-full */}
+                    <div className="col-start-8 col-span-1 self-center ">
                         <LanguageSwitcher />
                     </div>
 
-                    <div className="col-start-10 col-span-1 flex items-center relative h-full -left-4">
+                    <div className="col-start-10 col-span-1 flex items-center h-full">
                         <a
                             href="/signin"
                             className="relative  hover:opacity-90 hover:scale-105 bg-none border-0  w-26 text-base font-semibold main-color">
