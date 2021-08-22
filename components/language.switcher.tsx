@@ -24,7 +24,7 @@ export default function LanguageSwitcher() {
         <div className="w-26">
             <Listbox value={selected} onChange={handleChange}>
                 <div className="relative mt-1">
-                    <Listbox.Button className="flex justify-end items-center w-full py-2  text-right  bg-none border-0 text-base font-semibold main-color">
+                    <Listbox.Button className="flex justify-end items-center w-full py-2 text-right bg-none border-0 text-base font-semibold main-color">
                         <img
                             src="/assets/test/globe.svg"
                             className="text-gray-400 main-color"

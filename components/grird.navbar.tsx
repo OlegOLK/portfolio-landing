@@ -42,7 +42,7 @@ export default function GridNav() {
                             style={{backgroundColor: "#592FFF",borderRadius: "2px", fontSize: "10px", lineHeight: "14px"}} 
                             className="text-white p-1 font-extralight absolute -right-8 -top-2">
                                 beta
-                        </span>
+                            </span>
                         </span>
                     
                     </a>
