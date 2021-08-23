@@ -39,7 +39,7 @@ export const FEATURES: Feature[] = [
                     </Grid>
                 </div>
                 <div className="w-full h-full absolute z-40">
-                    <div className="absolute grid grid-cols-3 gap-2 lg:-bottom-72 lg:-right-80 2xl:-bottom-72 2xl:-right-64">
+                    <div className="absolute grid grid-cols-3 gap-2 lg:-bottom-72 lg:-right-96 2xl:-bottom-72 2xl:-right-64">
                         {
                             Array(9).fill(0).map((v, i) => {
                                 return (
