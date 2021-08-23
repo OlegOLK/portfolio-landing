@@ -134,6 +134,54 @@ export const FEATURES: Feature[] = [
             }> </figure>
         )
     },
+    {
+        prefix: 5,
+        img: (
+            <>
+                <img src="assets/test/f3.png" alt="automated wallets update picture" className="block w-full h-auto relative z-10" />
+                {/* <img className="block absolute z-0 -left-10 -top-12" src="assets/test/f1_left_pattern.png" />
+                <img className="block absolute z-0 -right-10 top-36" src="assets/test/f1_right_pattern.png" /> */}
+            </>
+        ),
+        figures: (
+            <>
+                <div className="absolute h-full">
+                    <Grid>
+                        <figure
+                            className="rounded absolute col-span-1"
+                            style={{ marginTop: "43px", left: "-75px", boxShadow: "0px 4px 8px rgba(137, 160, 172, 0.16)", height: "75px", width: "75px" }}></figure>
+
+                        <div className="col-start-5 col-span-1 relative">
+                            <figure
+                                className="rounded absolute"
+                                style={{ boxShadow: "0px 4px 8px rgba(137, 160, 172, 0.16)", height: "75px", width: "75px" }}></figure>
+                            <figure
+                                className="rounded absolute"
+                                style={{ marginTop: "496px", boxShadow: "0px 4px 8px rgba(137, 160, 172, 0.16)", height: "75px", width: "75px" }}></figure>
+                        </div>
+
+                        <figure
+                            className="rounded absolute col-start-6 col-span-1"
+                            style={{ marginTop: "75px", left: "-20px", boxShadow: "0px 4px 8px rgba(137, 160, 172, 0.16)", height: "75px", width: "75px" }}></figure>
+                    </Grid>
+                </div>
+                <div className="w-full h-full absolute z-40">
+                    <div style={{ bottom: "-266px", right: "-250px" }} className="absolute grid grid-cols-3 gap-2">
+                        {
+                            Array(9).fill(0).map((v,i) => {
+                                return (
+                                    <figure
+                                        key={i+"feature-1"}
+                                        className="z-40 bg-white"
+                                        style={{ borderRadius: "10px", boxShadow: "0px 4px 8px rgba(137, 160, 172, 0.16)", height: "160px", width: "160px" }}></figure>
+                                )
+                            })
+                        }
+                    </div>
+                </div>
+            </>
+        )
+    },
 ]
 
 

@@ -29,7 +29,7 @@ export default function GridNav() {
             
                 <div className="grid grid-cols-12 gap-5 relative my-auto justify-items-start" style={{ width: "1120px" }}>
 
-                    <a href="/" className="col-span-3 space-x-4 relative self-center">
+                    <a href="/" className="col-span-2 space-x-4 relative self-center">
                         <img
                             className="lg:inline-block h-full w-8 justify-self-start"
                             style={{ verticalAlign: "middle" }}
@@ -40,17 +40,17 @@ export default function GridNav() {
                         {CONSTANTS.AppName}
                               <span 
                             style={{backgroundColor: "#592FFF",borderRadius: "2px", fontSize: "10px", lineHeight: "14px"}} 
-                            className="text-white p-1 font-extralight absolute -right-8 -top-2">
+                            className="text-white py-0.5 px-2 font-extralight absolute -right-9 -top-2">
                                 beta
                             </span>
                         </span>
                     
                     </a>
-                    <a href="/features" className="col-start-4 justify-self-center secondary-menu cursor-pointer self-center no-underline hover:underline">{t('Features')}</a>
+                    <a href="/features" className="col-start-3 justify-self-center secondary-menu cursor-pointer self-center no-underline hover:underline">{t('Features')}</a>
                     <a href="/pricing" className="secondary-menu justify-self-center cursor-pointer self-center no-underline hover:underline">{t('Pricing')}</a>
                     <a href="/contacts" className="secondary-menu justify-self-center cursor-pointer self-center no-underline hover:underline">{t('Contact')}</a>
                     {/*col-start-9 w-full */}
-                    <div className="col-start-8 col-span-1 self-center ">
+                    <div className="col-start-9 col-span-1 self-center justify-self-end">
                         <LanguageSwitcher />
                     </div>
 
