@@ -19,11 +19,6 @@ export default function Pricing() {
                         subHeader={t('pricingSubHeading')}
                         mainCta={t('Get Started')}
                     />}
-                    image={
-                        <div className="relative">
-                            <picture>  <img src="./assets/test/pricing.png" className="w-auto h-auto z-40 relative" /></picture>
-                        </div>
-                    }
                 >
                 </Hero>
 

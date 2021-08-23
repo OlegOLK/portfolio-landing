@@ -12,9 +12,9 @@ export default function GridFooter() {
             <div className="mt-14">
                 <Grid>
                     {/* <div className="flex flex-col col-span-12 lg:flex-row flex-wrap justify-center lg:justify-between items-baseline pt-20"> */}
-                    <a href="/" className="col-span-2 space-x-4 relative self-start text-white">
+                    <a href="/" className="mx-4 lg:mx-0 mb-10 lg:mb:0 col-span-4 lg:col-span-2 space-x-4 relative self-start text-white">
                         <img
-                            className="lg:inline-block h-full w-8 justify-self-start"
+                            className="inline-block h-full w-8 justify-self-start"
                             style={{ verticalAlign: "middle" }}
                             src="/main.svg"
                             alt="logo"
@@ -30,28 +30,28 @@ export default function GridFooter() {
 
                     </a>
 
-                    <div className="space-y-2 mt-2 col-start-3 col-span-2">
+                    <div className="mx-4 lg:mx-0 my-10 lg:my-0 space-y-2 mt-2 col-start-1 lg:col-start-3 col-span-2">
                         <p className="text-gray-400 capitalize">{t('PRODUCT')}</p>
                         <p className="text-white text-sm">{t('Features')}</p>
                         <p className="text-white text-sm"> {t('How it works')}</p>
                         <p className="text-white text-sm">{t('Pricing')}</p>
                     </div>
 
-                    <div className="space-y-2 mt-2 col-start-5 col-span-2">
+                    <div className="mx-4 lg:mx-0 my-10 lg:my-0 space-y-2 mt-2 col-start-3 lg:col-start-5 col-span-2">
                         <p className="text-gray-400 capitalize">{t('COMPANY')}</p>
                         <p className="text-white text-sm">{t('Our team')}</p>
                         <p className="text-white text-sm"> {t('Policies')} </p>
                         <p className="text-white text-sm">{t('Terms and conditions')}</p>
                     </div>
 
-                    <div className="space-y-2 mt-2 col-start-7 col-span-2">
+                    <div className="mx-4 lg:mx-0 my-10 lg:my-0 space-y-2 mt-2 col-start-1 lg:col-start-7 col-span-2">
                         <p className="text-gray-400 capitalize">{t('CONTACTS')}</p>
                         <p className="text-white text-sm">info@form.com</p>
                         <p className="text-white text-sm">882-587-3025 </p>
                         <p className="text-white text-sm">6116 Willa River 610</p>
                     </div>
 
-                    <div className="space-y-2 mt-2 items-baseline col-start-9 col-span-2">
+                    <div className="mx-4 lg:mx-0 space-y-2 mt-2 items-baseline col-start-3 lg:col-start-9 col-span-2">
                         <p className="text-gray-400 capitalize">{t('Mobile')}</p>
                         <div>
                             <div className="inline-block">
@@ -70,12 +70,12 @@ export default function GridFooter() {
                         </div>
                     </div>
 
-                        <div className="space-y-2 mt-2 col-start-11 col-span-2">
+                        <div className="mx-4 lg:mx-0 space-y-2 mt-2 col-start-1 lg:col-start-11 col-span-4 lg:col-span-2">
                             <p className="text-gray-400 capitalize">{t('Newsletter')}</p>
                             <div className="flex flex-wrap flex-col justify-start space-x-0 space-y-2">
                                 <label htmlFor="sub-email" className="text-white  block flex-grow text-sm">{t('Join our mailing list')}</label>
                                 <div className="relative">
-                                    <input placeholder="Add your email" type="email" id="sub-email" name="sub-email" className=" rounded-r-md relative h-10 w-44 rounded-l-md px-2 inline-block" />
+                                    <input placeholder="Add your email" type="email" id="sub-email" name="sub-email" className=" rounded-r-md relative h-10 w-full lg:w-44 rounded-l-md px-2 inline-block" />
                                     <button aria-label="subscribe-mail"
                                         className="absolute text-xs w-10 rounded-r-md h-10 right-0  bg-none border-0 font-semibold bg-main-color">
                                         <ArrowRightIcon className="text-white inline h-5 w-5 " aria-hidden="true" />

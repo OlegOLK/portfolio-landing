@@ -14,6 +14,7 @@ import { Feature, FEATURES } from '../components/constants';
 import FaqSection from '../components/section/faq.section';
 import Footer from '../components/footer.grid';
 import Grid from '../components/grid';
+import Link from 'next/link';
 
 function formatTextSection(feature: Feature, t) {
   return (
@@ -41,18 +42,9 @@ export default function Home() {
             subHeader={t('MainSubheader')}
             mainCta={t('Get Started')}
           />}
-          image={
-            <div className="relative">
-              <picture>  <img src="./assets/test/main_pattern.svg" className="w-auto h-auto z-40 relative" /></picture>
-              <picture>  <img src="./assets/test/main_left_pattern.png" className="absolute z-0 -top-2 -left-4 w-auto h-auto" /></picture>
-              <picture>  <img src="./assets/test/main_right_pattern.png" className="absolute z-0 -bottom-5 -right-4 w-auto h-auto" /></picture>
-              <picture>  <img src="./assets/test/main_left_line.png" className="absolute -bottom-12 z-0 -left-20" height={150} width={295.5} /></picture>
-              <picture>  <img src="./assets/test/main_right_line.png" className="absolute z-50 -top-12 right-9 w-auto h-auto" /></picture>
-            </div>
-          }
         >
 
-          <div className="absolute bottom-12 left-0 z-40">
+          <div className="w-full lg:w-auto absolute bottom-12 left-0 z-40">
             <FeaturesAnchor />
           </div>
 
@@ -64,7 +56,7 @@ export default function Home() {
             <Grid fullScreen={true}>
               <div className="col-span-1 relative">
                 <img src="./assets/patterns/main/BTC.png" className="w-auto absolute -left-4 h-auto mt-52" />
-                <img src="./assets/patterns/main_left_pattern.png" height={500} width={500} style={{ top: "248px", height: "500px", width: "500px", left: "-550%", maxWidth: "500px" }} className="z-40 relative" />
+                <img src="./assets/patterns/main_left_pattern.png" height={500} width={500} style={{ top: "248px", height: "500px", width: "500px", left: "-550%", maxWidth: "500px" }} className="hidden lg:block z-40 relative" />
               </div>
 
               <div className="col-start-3 col-span-1 text-center relative">
@@ -81,7 +73,7 @@ export default function Home() {
                 <figure className="rounded" style={{ marginTop: "588px", boxShadow: "0px 4px 8px rgba(137, 160, 172, 0.16)", height: "75px", width: "75px" }}></figure>
               </div>
               <div className="col-start-12 col-span-1 relative">
-                <img src="./assets/patterns/main_right_pattern.png" height={532} width={491} style={{ height: "532px", width: "491px", left: "-20%", maxWidth: "491px" }} className=" top-24 z-40 relative" />
+                <img src="./assets/patterns/main_right_pattern.png" height={532} width={491} style={{ height: "532px", width: "491px", left: "-20%", maxWidth: "491px" }} className="hidden lg:block top-24 z-40 relative" />
                 <img src="./assets/patterns/main/symbol.png" className="w-auto h-auto absolute" style={{ marginTop: "-61px" }} />
 
               </div>
@@ -92,7 +84,7 @@ export default function Home() {
 
       </Container>
 
-      <div className="min-h-screen space-y-10 mt-10">
+      <div className="min-h-screen space-y-20 lg:space-y-10 mt-10">
         <div id="features"></div>
         {
           FEATURES.map((feature) => {
@@ -124,16 +116,19 @@ export default function Home() {
 
       <div className="w-full bg-main-color h-full mt-24 py-24">
         <div className="flex flex-wrap justify-center items-center h-full w-full">
-          <div className="w-full">
+          <div className="w-full mx-4 lg:mx-0">
             <p className="text-white bottom-cta mt-32	text-center whitespace-pre-wrap">{t('mainCTA')}</p>
             <p className="text-white text-center mt-8 text-base	whitespace-pre-wrap">{t('secondaryCTA')}</p>
 
 
           </div>
-          <button
-            className="mt-16 shadow-lg w-44 py-3 block text-base font-semibold bg-white rounded-lg ">
-            {t('Start for free')}
-          </button></div>
+          <Link href="/signup">
+            <button
+              className="mt-16 shadow-lg w-44 py-3 block text-base font-semibold bg-white rounded-lg ">
+              {t('Start for free')}
+            </button>
+          </Link>
+        </div>
       </div>
       <Footer />
 

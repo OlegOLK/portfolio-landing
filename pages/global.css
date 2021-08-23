@@ -8,24 +8,6 @@ html {
 
 }
 
-.hero-header {
-    font-style: normal;
-    font-weight: 800;
-    font-size: 54px;
-    line-height: 74px;
-}
-
-.hero-sub-header {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 32px;
-}
-
-
-.font-main {
-    font-family: Manrope !important;
-}
 
 #features {
     scroll-margin-top: 150px;
@@ -37,12 +19,9 @@ html {
     font-size: 24px;
     line-height: 33px;
     text-align: center;
-    font-family: Manrope;
 }
 
 .playIcon {
-    /* clip-path: polygon(0 0, 0% 100%, 100% 50%); */
-    /* background-color: #7DC7A8; */
     height: 64px;
     width: 64px;
     left: 50%;
@@ -86,7 +65,6 @@ html {
 }
 
 .discord-sub {
-    font-family: Manrope;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
@@ -94,7 +72,6 @@ html {
 }
 
 .secondary-menu {
-    font-family: Manrope;
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
@@ -109,20 +86,11 @@ html {
     background-color: #36B27E;
 }
 
-.page-min-height {
-    min-height: calc(100vh - 20rem);
-}
-
 .main-color {
     color: #36B27E;
 }
 
-.-mt-10-p {
-    margin-top: -20%;
-}
-
 .feature-header {
-    font-family: Manrope;
     font-style: normal;
     font-weight: 800;
     font-size: 32px;
@@ -131,19 +99,12 @@ html {
 }
 
 .feature-subheader {
-    font-family: Manrope;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 32px;
     /* or 200% */
-
-
     color: rgba(0, 0, 0, 0.7);
-}
-
-.ReactCollapse--collapse {
-    transition: height 500ms;
 }
 
 #collapse {
@@ -197,29 +158,11 @@ html {
     transform: rotate(-90deg);
 }
 
-.feature-section:nth-child(odd){
+.feature-section:nth-child(odd) {
     background: #F5F6F8;
 }
 
-.cube-vertical {
-    width: 160px;
-    height: 160px;
-    background: #FFFFFF;
-    box-shadow: 0px 8px 16px rgba(137, 160, 172, 0.16);
-    border-radius: 10px;
-    transform: rotate(180deg);
-}
-
-.side-figure {
-    right: -13vw;
-}
-
-.more-about-app {
-    margin-bottom: calc(4rem + 7rem);
-}
-
 .bottom-cta {
-    font-family: Manrope;
     font-style: normal;
     font-weight: 800;
     font-size: 48px;
@@ -244,4 +187,72 @@ html {
     background-color: #71c09f;
     background-size: 100%;
     transition: background 0s;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .grid-width {
+        width: 100vw;
+    }
+
+    .hero-header {
+        font-weight: 800 !important;
+        font-size: 36px;
+        line-height: 42px;
+    }
+    
+    .hero-sub-header {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 32px;
+    }
+}
+
+@media (min-width: 768px) {
+    .grid-width {
+        width: 100vw;
+    }
+
+    .hero-header {
+        font-style: normal;
+        font-weight: 800 !important;
+        font-size: 36px;
+        line-height: 42px;
+    }
+    
+    .hero-sub-header {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 32px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid-width {
+        width: 1120px;
+    }
+
+    .hero-header {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 54px;
+        line-height: 74px;
+    }
+    
+    .hero-sub-header {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 32px;
+    }
+}
+
+
+.grid-row-1{
+    grid-row: 1;
 }

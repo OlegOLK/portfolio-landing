@@ -8,7 +8,7 @@ export default function FaqSection() {
 
     return (
         <section className="relative flex justify-center pb-24 pt-28">
-            <div className="absolute h-full z-0">
+            <div className="absolute h-full z-0 hidden lg:block">
                 <Grid>
                     <figure
                         className="rounded absolute col-span-1"
@@ -28,7 +28,7 @@ export default function FaqSection() {
                 </Grid>
             </div>
             <Grid>
-                <div className="col-span-3">
+                <div className="col-span-4 mb-4 lg:mb-0 lg:col-span-3 mx-4 lg:mx-0">
                     <img alt="cube" src="/assets/cubes/cube_faq.png" className="block" />
                     <p className="feature-header mt-4">
                         {t('FAQs')}
@@ -38,7 +38,7 @@ export default function FaqSection() {
                     </p>
                 </div>
 
-                <div className="col-start-5 col-span-8 space-y-5">
+                <div className="col-start-1 col-span-4 lg:col-start-5 lg:col-span-8 space-y-5 mx-4 lg:mx-0">
                     <GridAccordion header={t('question1')} subHeader={t('answer1')} />
                     <GridAccordion header={t('question2')} subHeader={t('answer2')} />
                     <GridAccordion header={t('question3')} subHeader={t('answer3')} />

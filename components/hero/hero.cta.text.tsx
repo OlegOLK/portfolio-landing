@@ -16,7 +16,7 @@ export default function HeroCtaText({ header, subHeader, mainCta }: Props) {
             <div style={{marginTop:"56px"}}>
                 <a
                     href="/signup"
-                    className="ripple inline-block text-center relative shadow-lg w-44 py-3 text-base font-semibold bg-main-color rounded-lg text-white ">
+                    className="ripple inline-block text-center relative shadow-lg w-11/12 lg:w-44 py-3 text-base font-semibold bg-main-color rounded-lg text-white ">
                     {mainCta}
                 </a>
             </div>

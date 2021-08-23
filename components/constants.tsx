@@ -18,7 +18,7 @@ export const FEATURES: Feature[] = [
         ),
         figures: (
             <>
-                <div className="absolute h-full">
+                <div className="absolute h-full hidden lg:block">
                     <Grid>
                         <figure
                             className="rounded absolute col-span-1"
@@ -38,8 +38,10 @@ export const FEATURES: Feature[] = [
                             style={{ marginTop: "75px", left: "-20px", boxShadow: "0px 4px 8px rgba(137, 160, 172, 0.16)", height: "75px", width: "75px" }}></figure>
                     </Grid>
                 </div>
-                <div className="w-full h-full absolute z-40">
-                    <div className="absolute grid grid-cols-3 gap-2 lg:-bottom-72 lg:-right-96 2xl:-bottom-72 2xl:-right-64">
+                <div className="w-full h-full absolute z-40 hidden lg:block">
+                    <div className="absolute grid grid-cols-3 gap-2 
+                    lg:-bottom-72 lg:-right-96 
+                    2xl:-bottom-72 2xl:-right-64">
                         {
                             Array(9).fill(0).map((v, i) => {
                                 return (
@@ -58,7 +60,7 @@ export const FEATURES: Feature[] = [
     {
         prefix: 2,
         img: (
-            <img className="block w-full h-auto relative z-10"  width={455} height={455} src="assets/test/f2.png" />
+            <img className="block w-full h-auto relative z-10" width={455} height={455} src="assets/test/f2.png" />
         ),
         cubePart: (
             <figure className="bg-main-color absolute" style={{ width: "10px", height: "10px", top: "-10px", left: "-10px" }
@@ -68,11 +70,11 @@ export const FEATURES: Feature[] = [
     {
         prefix: 3,
         img: (
-            <img className="block w-full h-auto relative z-10"  width={455} height={455} src="assets/test/f3.png" />
+            <img className="block w-full h-auto relative z-10" width={455} height={455} src="assets/test/f3.png" />
         ),
         figures: (
             <>
-                <div className="absolute h-full">
+                <div className="absolute h-full z-0 hidden lg:block">
                     <Grid>
                         <figure
                             className="rounded absolute col-start-4 col-span-1"
@@ -91,8 +93,10 @@ export const FEATURES: Feature[] = [
                             style={{ marginTop: "155px", right: "-150px", boxShadow: "0px 4px 8px rgba(137, 160, 172, 0.16)", height: "75px", width: "75px" }}></figure>
                     </Grid>
                 </div>
-                <div className="w-full h-full absolute z-40">
-                    <div style={{ bottom: "-266px", left: "-250px" }} className="absolute grid grid-cols-3 gap-2">
+                <div className="w-full h-full absolute z-40 hidden lg:block">
+                    <div className="absolute grid grid-cols-3 gap-2
+                                    lg:-bottom-72 lg:-left-96 
+                                    2xl:-bottom-72 2xl:-left-64">
                         {
                             Array(9).fill(0).map((v, i) => {
                                 return (
@@ -111,7 +115,7 @@ export const FEATURES: Feature[] = [
     {
         prefix: 4,
         img: (
-            <img className="block w-full h-auto relative z-10"  width={455} height={455} src="assets/test/f4.png" />
+            <img className="block w-full h-auto relative z-10" width={455} height={455} src="assets/test/f4.png" />
         ),
         cubePart: (
             <figure className="bg-main-color absolute"
@@ -121,11 +125,11 @@ export const FEATURES: Feature[] = [
     {
         prefix: 5,
         img: (
-            <img src="assets/test/f3.png"  width={455} height={455} alt="automated wallets update picture" className="block w-full h-auto relative z-10" />
+            <img src="assets/test/f3.png" width={455} height={455} alt="automated wallets update picture" className="block w-full h-auto relative z-10" />
         ),
         figures: (
             <>
-                <div className="absolute h-full">
+                <div className="absolute h-full hidden lg:block">
                     <Grid>
                         <figure
                             className="rounded absolute col-span-1"
