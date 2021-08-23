@@ -21,10 +21,9 @@ export default function LanguageSwitcher() {
 
     return (
         // flex items-center justify-center
-        <div className="w-26">
             <Listbox value={selected} onChange={handleChange}>
-                <div className="relative mt-1">
-                    <Listbox.Button className="flex justify-end items-center w-full py-2 text-right bg-none border-0 text-base font-semibold main-color">
+                {/* <div className="relative mt-1"> */}
+                    <Listbox.Button className="flex justify-end items-center w-full text-right bg-none border-0 text-base font-semibold main-color">
                         <img
                             src="/assets/test/globe.svg"
                             className="text-gray-400 main-color"
@@ -65,8 +64,7 @@ export default function LanguageSwitcher() {
                             ))}
                         </Listbox.Options>
                     </Transition>
-                </div>
+                {/* </div> */}
             </Listbox>
-        </div>
     )
 }

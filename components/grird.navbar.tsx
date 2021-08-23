@@ -54,15 +54,13 @@ export default function GridNav() {
                         <LanguageSwitcher />
                     </div>
 
-                    <div className="col-start-10 col-span-1 flex items-center h-full">
                         <a
                             href="/signin"
-                            className="relative  hover:opacity-90 hover:scale-105 bg-none border-0  w-26 text-base font-semibold main-color">
-                            <img src="/assets/test/user.svg" className=" h-full inline mr-2" width={14} height={16} aria-hidden="true" />
+                            className="col-start-10 col-span-1 flex items-center relative bg-none border-0  w-26 text-base font-semibold main-color">
+                            <img src="/assets/test/user.svg" className="h-full inline mr-2" width={14} height={16} aria-hidden="true" />
                             {t('Sign in')}
                         </a>
 
-                    </div>
                     <a
                         href="/signup"
                         className="self-center col-span-2 ripple shadow-lg w-full py-3 text-center text-base font-semibold bg-main-color rounded-lg text-white ">
