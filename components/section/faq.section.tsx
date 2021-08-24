@@ -7,7 +7,7 @@ export default function FaqSection() {
     const { t } = useTranslation('home')
 
     return (
-        <section className="relative flex justify-center pb-24 pt-28">
+        <section className="relative flex justify-center pb-10 lg:pb-24 mt-5 lg:pt-28">
             <div className="absolute h-full z-0 hidden lg:block">
                 <Grid>
                     <figure

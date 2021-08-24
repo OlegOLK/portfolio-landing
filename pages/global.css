@@ -198,6 +198,9 @@ html {
     .grid-width {
         width: 100vw;
     }
+    .section-heigh {
+        height: 100%;
+    }
 
     .hero-header {
         font-weight: 800 !important;
@@ -216,7 +219,9 @@ html {
     .grid-width {
         width: 100vw;
     }
-
+    .section-heigh {
+        height: 697px;
+    }
     .hero-header {
         font-style: normal;
         font-weight: 800 !important;
@@ -236,7 +241,9 @@ html {
     .grid-width {
         width: 1120px;
     }
-
+    .section-heigh {
+        height: 697px;
+    }
     .hero-header {
         font-style: normal;
         font-weight: 800;

@@ -96,7 +96,7 @@ export default function GridNav() {
     }, []);
 
     return (
-        <nav className={classNames("bg-white h-28 top-0 z-50 fixed w-screen",
+        <nav className={classNames("bg-white h-11 lg:h-28 top-0 z-50 fixed w-screen",
             scrollPosition != 0 ? "shadow-lg" : '')}>
             <div className="flex justify-center items-center w-full h-full">
 
@@ -154,7 +154,7 @@ export default function GridNav() {
                                 {CONSTANTS.AppName}
                                 <span
                                     style={{ backgroundColor: "#592FFF", borderRadius: "2px", fontSize: "10px", lineHeight: "14px" }}
-                                    className="text-white py-0.5 px-2 font-extralight absolute -right-9 -top-2">
+                                    className="text-white py-0.5 px-2 font-extralight absolute -right-9 -top-1">
                                     beta
                                 </span>
                             </span>
@@ -177,7 +177,7 @@ export default function GridNav() {
                         leaveFrom="opacity-100 scale-100"
                         leaveTo="opacity-0 scale-95"
                     >
-                        <Popover.Panel style={{ height: "570px" }} className="absolute bg-main-color  top-24 inset-x-0 transition transform origin-top-right md:hidden">
+                        <Popover.Panel style={{ height: "570px" }} className="absolute bg-main-color  top-11 inset-x-0 transition transform origin-top-right md:hidden">
                             {
                                 <div className="flex flex-col items-center mt-28 text-white space-y-8" >
                                     <a href="/features" className="secondary-menu cursor-pointer no-underline hover:underline">{t('Features')}</a>

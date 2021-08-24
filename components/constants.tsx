@@ -14,7 +14,7 @@ export const FEATURES: Feature[] = [
     {
         prefix: 1,
         img: (
-            <img src="assets/test/f1.png" alt="automated wallets update picture" width={455} height={455} className="block relative z-10" />
+            <img src="assets/test/f1.png" alt="automated wallets update picture" width={455} height={455} className="block relative z-10 rounded-none lg:rounded-2xl" />
         ),
         figures: (
             <>
@@ -60,7 +60,7 @@ export const FEATURES: Feature[] = [
     {
         prefix: 2,
         img: (
-            <img className="block w-full h-auto relative z-10" width={455} height={455} src="assets/test/f2.png" />
+            <img className="block w-full h-auto relative z-10 rounded-none lg:rounded-2xl" width={455} height={455} src="assets/test/f2.png" />
         ),
         cubePart: (
             <figure className="bg-main-color absolute" style={{ width: "10px", height: "10px", top: "-10px", left: "-10px" }
@@ -70,7 +70,7 @@ export const FEATURES: Feature[] = [
     {
         prefix: 3,
         img: (
-            <img className="block w-full h-auto relative z-10" width={455} height={455} src="assets/test/f3.png" />
+            <img className="block w-full h-auto relative z-10 rounded-none lg:rounded-2xl" width={455} height={455} src="assets/test/f3.png" />
         ),
         figures: (
             <>
@@ -115,7 +115,7 @@ export const FEATURES: Feature[] = [
     {
         prefix: 4,
         img: (
-            <img className="block w-full h-auto relative z-10" width={455} height={455} src="assets/test/f4.png" />
+            <img className="block w-full h-auto relative z-10 rounded-none lg:rounded-2xl" width={455} height={455} src="assets/test/f4.png" />
         ),
         cubePart: (
             <figure className="bg-main-color absolute"
@@ -125,7 +125,7 @@ export const FEATURES: Feature[] = [
     {
         prefix: 5,
         img: (
-            <img src="assets/test/f3.png" width={455} height={455} alt="automated wallets update picture" className="block w-full h-auto relative z-10" />
+            <img src="assets/test/f3.png" width={455} height={455} alt="automated wallets update picture" className="block w-full h-auto relative z-10 rounded-none lg:rounded-2xl" />
         ),
         figures: (
             <>

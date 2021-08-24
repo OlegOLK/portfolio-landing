@@ -114,10 +114,10 @@ export default function Home() {
         <FaqSection />
       </div>
 
-      <div className="w-full bg-main-color h-full mt-24 py-24">
+      <div className="w-full bg-main-color h-full mt-12 lg:mt-24 py-24">
         <div className="flex flex-wrap justify-center items-center h-full w-full">
           <div className="w-full mx-4 lg:mx-0">
-            <p className="text-white bottom-cta mt-32	text-center whitespace-pre-wrap">{t('mainCTA')}</p>
+            <p className="text-white bottom-cta mt-10 lg:mt-32	text-center whitespace-pre-wrap">{t('mainCTA')}</p>
             <p className="text-white text-center mt-8 text-base	whitespace-pre-wrap">{t('secondaryCTA')}</p>
 
 
