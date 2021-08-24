@@ -44,7 +44,7 @@ export default function Home() {
           />}
         >
 
-          <div className="w-full lg:w-auto absolute bottom-12 left-0 z-40">
+          <div className="w-full lg:w-auto absolute bottom-0 lg:bottom-12 left-0 z-40">
             <FeaturesAnchor />
           </div>
 

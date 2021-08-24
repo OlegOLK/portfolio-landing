@@ -10,7 +10,7 @@ type Props = {
 export default function Hero({ text, children, fullScreen }: Props) {
     return (
         <Grid fullScreen={fullScreen}>
-            <div className="col-start-1 col-span-4 lg:col-start-4 lg:col-span-6 text-center z-40 mt-36 lg:mt-52">
+            <div className="col-start-1 col-span-4 lg:col-start-4 lg:col-span-6 text-center z-40 mt-36 mb-16 lg:mb-0 lg:mt-52">
                 {text}
             </div>
             {children}
