@@ -1,11 +1,10 @@
+import Navbar from './navbar';
 import React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 import useTranslation from 'next-translate/useTranslation'
 import { CONSTANTS } from './constants';
-import { AnimateSharedLayout } from 'framer-motion';
-import GridNav from './grird.navbar';
 
 const variants = {
     hidden: { opacity: 0, x: -200, y: 0 },
@@ -18,7 +17,7 @@ export default function Layout({ children }) {
     const { t } = useTranslation('home')
 
     return (
-        <AnimateSharedLayout>
+        <>
             <Head>
                 <meta charSet="UTF-8" />
                 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -32,21 +31,23 @@ export default function Layout({ children }) {
                 <meta property="og:url" content="https://portfolio-landing-gamma.vercel.app/" />
                 <meta property="og:type" content="website" />
 
+
+
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin={"true"} />
-                <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap" rel="stylesheet" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" />
+                <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet" />
             </Head>
-            <GridNav />
+            <Navbar />
             <motion.main
                 initial="hidden"
                 animate="enter"
                 exit="exit"
                 variants={variants}
                 transition={{ type: 'linear' }}
-                className="w-screen"
+                className="page-min-height"
             >
                 {children}
             </motion.main>
-        </AnimateSharedLayout>
+        </>
     )
 }

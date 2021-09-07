@@ -8,7 +8,7 @@ export type AccordtionProps = {
     isToggled?: boolean;
 }
 
-export const GridAccordion: FunctionComponent<AccordtionProps> = ({ header, subHeader, isToggled }) => {
+export const Accordion: FunctionComponent<AccordtionProps> = ({ header, subHeader, isToggled }) => {
     const [toggled, setToggled] = useState<boolean>(isToggled);
     const subHeaderRef = useRef<HTMLDivElement>(null);
 
@@ -27,8 +27,8 @@ export const GridAccordion: FunctionComponent<AccordtionProps> = ({ header, subH
     }
 
     return (
-        <div className="grid grid-cols-8 gap-5 cursor-pointer" onClick={handleClick}>
-            <div className="col-span-7 py-5 items-center bg-main-color flex-grow  rounded-md align-middle" >
+        <div className="flex justify-start w-full h-full cursor-pointer" onClick={handleClick}>
+            <div className="flex flex-wrap py-5 items-center bg-main-color flex-grow  rounded-md align-middle" >
                 <div>
                     <p className="text-white ml-12 font-bold text-2xl">{header}</p>
 
@@ -42,7 +42,7 @@ export const GridAccordion: FunctionComponent<AccordtionProps> = ({ header, subH
                 </div>
             </div>
 
-            <div className="col-span-1">
+            <div className="flex-none">
                 <button aria-label="expand-accordion" className="accordion-toggle-btn relative border-0 bg-transparent flex items-center w-10 h-10 mt-5  "
                     onClick={handleClick}>
 

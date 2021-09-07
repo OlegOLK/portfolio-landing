@@ -1,5 +1,5 @@
 body {
-    font-family: 'Manrope', sans-serif;
+    font-family: Manrope !important;
     overflow-x: hidden;
 }
 
@@ -7,21 +7,6 @@ html {
     scroll-behavior: smooth;
 
 }
-
-.hero-header {
-    font-style: normal;
-    font-weight: 800;
-    font-size: 54px;
-    line-height: 74px;
-}
-
-.hero-sub-header {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 32px;
-}
-
 
 .font-main {
     font-family: Manrope !important;
@@ -194,11 +179,7 @@ html {
     background: #FFFFFF;
     box-shadow: 0px 8px 16px rgba(137, 160, 172, 0.16);
     border-radius: 10px;
-    transform: rotate(-90deg);
-}
-
-.feature-section:nth-child(odd){
-    background: #F5F6F8;
+    transform: rotate(-90deg)
 }
 
 .cube-vertical {

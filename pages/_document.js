@@ -25,7 +25,7 @@ export default class MyDocument extends Document {
             }}
           />
         </Head>
-        <body className="min-h-screen">
+        <body>
           <Main />
           <NextScript />
         </body>
