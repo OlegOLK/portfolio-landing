@@ -47,37 +47,37 @@ export default function Navbar() {
 
 
                 <Link href={MenuItems[0]} locale={lang}>
-                    <p
+                    <a href={MenuItems[0]}
                         key={"menu-item-1"}
                         className={cx(
                             `text-uppercase col-start-5 col-span-1 text-center self-center justify-self-center`,
                             styles.navListItem)}>
                         {t(MenuItems[0])}
-                    </p>
+                    </a>
                 </Link>
 
                 <Link href={MenuItems[1]} locale={lang}>
-                    <p
+                    <a href={MenuItems[1]}
                         key={"menu-item-2"}
                         className={cx(
                             ` col-start-6 col-span-1 text-center self-center justify-self-center`,
                             styles.navListItem)}>
                         {t(MenuItems[1])}
-                    </p>
+                    </a>
                 </Link>
                 <Link href={MenuItems[2]} locale={lang}>
-                    <p
+                    <a href={MenuItems[2]}
                         key={"menu-item-3"}
                         className={cx(
                             ` col-start-7 col-span-1 text-center self-center justify-self-center`,
                             styles.navListItem)}>
                         {t(MenuItems[2])}
-                    </p>
-                </Link>               
+                    </a>
+                </Link>
                 <LanguageSwitcher />
                 <button onClick={goToApp} className="col-start-10 col-span-1 nav-list-item">
                     <p className="flex items-center color-main" style={{ textTransform: "none" }}>
-                        <img src="./assets/user.png" height="17" width="16" className="inline mr-2"></img>
+                        <img alt="user image" src="./assets/user.png" height="17" width="16" className="inline mr-2"></img>
                         {t('Sign in')}
                     </p>
                 </button>
@@ -100,13 +100,13 @@ export default function Navbar() {
                     {
                         MenuItems.map((item, index) => {
                             return (
-                                <Link href={item} locale={lang}>
-                                    <p
+                                <Link  key={"link-a-" + index} href={item} locale={lang}>
+                                    <a href={item}
                                         key={"nav-a-" + index} className={cx(
                                             "text-center self-center justify-self-center",
                                             styles.navListItem)}>
                                         {t(item)}
-                                    </p>
+                                    </a>
                                 </Link>
                             )
                         })
@@ -134,7 +134,7 @@ export default function Navbar() {
 
                     <Popover.Button className="col-start-4 col-span-1 flex justify-end content-center items-center h-full">
                         <span className="sr-only">Open menu</span>
-                        <img src="/assets/icons/menu.svg" aria-hidden="true" />
+                        <img alt="menu icon" src="/assets/icons/menu.svg" aria-hidden="true" />
                         {/* <MenuIcon className="h-6 w-6" aria-hidden="true" /> */}
                     </Popover.Button>
                 </Grid>
@@ -152,9 +152,9 @@ export default function Navbar() {
                     <Popover.Panel style={{ height: "570px" }} className="absolute bg-color-main  top-14 inset-x-0 transition transform origin-top-right lg:hidden">
                         {
                             <div className="flex flex-col items-center mt-28 text-white space-y-8" >
-                                <Link href="features" locale={lang} > <p className="secondary-menu cursor-pointer no-underline hover:underline">{t(MenuItems[0])}</p></Link>
-                                <Link href="pricing" locale={lang} > <p className="secondary-menu cursor-pointer no-underline hover:underline">{t(MenuItems[1])}</p></Link>
-                                <Link href="contacts" locale={lang} > <p className="secondary-menu cursor-pointer no-underline hover:underline">{t(MenuItems[2])}</p></Link>
+                                <Link href="features" locale={lang} > <a href="features" className="secondary-menu cursor-pointer no-underline hover:underline">{t(MenuItems[0])}</a></Link>
+                                <Link href="pricing" locale={lang} > <a href="pricing" className="secondary-menu cursor-pointer no-underline hover:underline">{t(MenuItems[1])}</a></Link>
+                                <Link href="contacts" locale={lang} > <a href="contacts" className="secondary-menu cursor-pointer no-underline hover:underline">{t(MenuItems[2])}</a></Link>
                                 <a
                                     onClick={goToApp}
                                     className="self-center col-span-2 ripple shadow-lg w-44 py-3 text-center text-base font-semibold bg-white rounded-lg color-main ">

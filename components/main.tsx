@@ -22,7 +22,7 @@ export default function Main({header, subHeader}: Props) {
             {/* SMALL PATTERNS */}
             <Grid additionalStyles="h-full absolute z-0 w-full">
                 <div className="col-start-1 col-span-1 relative">
-                    <img src="./assets/patterns/main/BTC.png" className="absolute left-0" height="43" width="58"
+                    <img alt="btc pattern" src="./assets/patterns/main/BTC.png" className="absolute left-0" height="43" width="58"
                         style={{ marginTop: "107px" }} ></img>
                 </div>
 
@@ -30,38 +30,38 @@ export default function Main({header, subHeader}: Props) {
                     <figure className="hidden lg:block small-cube -right-4 absolute" style={{ marginTop: "61px", height: "75px", width: "75px" }}>
                     </figure>
                     <p className="hidden lg:block dollar-symbol text-left" style={{ marginTop: "171px" }}>$</p>
-                    <img src="./assets/patterns/main/chart.png" width="60" height="68" className="absolute -right-4"
+                    <img alt="chart pattern" src="./assets/patterns/main/chart.png" width="60" height="68" className="absolute -right-4"
                         style={{ marginTop: "285px" }} />
                 </div>
 
                 <div className="col-start-1 lg:col-start-6 col-span-1 relative">
-                    <img src="./assets/patterns/main/plus.png" className="absolute -left-6" height="48" width="48"
+                    <img alt="plus pattern" src="./assets/patterns/main/plus.png" className="absolute -left-6" height="48" width="48"
                         style={{ marginTop: "22px" }} />
                 </div>
 
                 <div className="hidden lg:block col-start-8 col-span-1 relative">
-                    <img src="./assets/patterns/main/BTC.png" className="absolute right-0" height="43" width="58"
+                    <img alt="btc pattern" src="./assets/patterns/main/BTC.png" className="absolute right-0" height="43" width="58"
                         style={{ marginTop: "581px" }} />
                 </div>
 
                 <div className="col-start-11 col-span-1 relative">
-                    <img src="./assets/patterns/main/plus_big.png" className="absolute -left-8" height="64" width="64"
+                    <img alt="plus pattern" src="./assets/patterns/main/plus_big.png" className="absolute -left-8" height="64" width="64"
                         style={{ marginTop: "72px" }} />
                     <figure className="small-cube" style={{ marginTop: "476px" }}></figure>
                 </div>
 
                 <div className="col-start-12 col-span-1 relative">
-                    <img src="./assets/patterns/main/symbol.png" height="44" width="34"
+                    <img alt="symbold pattern" src="./assets/patterns/main/symbol.png" height="44" width="34"
                         style={{ marginTop: "367px" }} ></img>
                 </div>
             </Grid>
 
             {/* Big pattern blocks */}
             <div className="hidden	xl:block w-full h-full absolute z-0">
-                <img src="./assets/patterns/main_left_pattern.png" height="500" width="500" className="absolute z-0"
+                <img alt="big left pattern" src="./assets/patterns/main_left_pattern.png" height="500" width="500" className="absolute z-0"
                     style={{ top: "136px", height: "500px", width: "500px", maxWidth: "500px", left: "-250px", display: "inline-block" }} />
 
-                <img src="./assets/patterns/main_right_pattern.png" height="500" width="500" className="absolute z-0"
+                <img alt="big right pattern" src="./assets/patterns/main_right_pattern.png" height="500" width="500" className="absolute z-0"
                     style={{ top: "-24px", height: "500px", width: "500px", maxWidth: "500px", right: "-250px", display: "inline-block" }} />
             </div>
             

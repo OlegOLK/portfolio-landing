@@ -31,7 +31,7 @@ export default function LanguageSwitcher({ reverseColor }: Props) {
 
                 <Listbox.Button aria-label="Language switcher" className={cx(styles.navListItem)}>
                     <p className="color-main justify-end">
-                        <img  src="/assets/globe.png" height="17" width="16" className="inline-block mr-2" />
+                        <img alt="globe laguage switcher image" src="/assets/globe.png" height="17" width="16" className="inline-block mr-2" />
                         {selected}
                     </p>
 

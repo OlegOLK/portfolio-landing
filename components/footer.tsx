@@ -41,10 +41,10 @@ const Breadcrumbs: Breadcrumb[] = [
         node: (
             <div className="flex flex-col">
                 <button className="bg-none">
-                    <img src="/assets/google_play.png" width="117" height="29" />
+                    <img alt="google play badge image" src="/assets/google_play.png" width="117" height="29" />
                 </button>
                 <button className="bg-none mt-4">
-                    <img src="/assets/app_store.png" width="111" height="30" />
+                    <img alt="apple store badge image" src="/assets/app_store.png" width="111" height="30" />
                 </button>
             </div>
         )
@@ -53,9 +53,9 @@ const Breadcrumbs: Breadcrumb[] = [
         header: "social",
         node: (
             <div key={"menu-link"} className="flex flex-row lg:flex-col xl:flex-row ">
-                <a key={"a-menu-link-1"}><img src="/assets/icons/twitter.svg" height="13" width="16" className="inline" /></a>
-                <a key={"a-menu-link-2"}><img src="/assets/icons/linkedin-in.svg" height="14" width="14" className="inline ml-2.5 lg:ml-0 xl:ml-2.5" /></a>
-                <a key={"a-menu-link-3"}><img src="/assets/icons/telegram-plane.svg" height="11.74" width="14" className="inline ml-2.5 lg:ml-0 xl:ml-2.5" /></a>
+                <a key={"a-menu-link-1"}><img alt="twitter image" src="/assets/icons/twitter.svg" height="13" width="16" className="inline" /></a>
+                <a key={"a-menu-link-2"}><img alt="linkedin image" src="/assets/icons/linkedin-in.svg" height="14" width="14" className="inline ml-2.5 lg:ml-0 xl:ml-2.5" /></a>
+                <a key={"a-menu-link-3"}><img alt="telegram image" src="/assets/icons/telegram-plane.svg" height="11.74" width="14" className="inline ml-2.5 lg:ml-0 xl:ml-2.5" /></a>
             </div>
         )
     }
@@ -111,7 +111,7 @@ export default function Footer() {
 
                 <div className="block col-start-12 col-span-1">
                     <a href="#" className={cx("bg-none flex justify-center items-center", styles.topButton)}>
-                        <img src="/assets/icons/arrow-top.svg" height="8" width="8" />
+                        <img alt="scroll to top image" src="/assets/icons/arrow-top.svg" height="8" width="8" />
                     </a>
 
                 </div>
@@ -124,7 +124,7 @@ export default function Footer() {
                     </div>
                     <div className="flex col-start-4 col-span-1 justify-end">
                         <a href="#" className={cx("bg-none flex justify-center items-center", styles.topButton)}>
-                            <img src="/assets/icons/arrow-top.svg" height="8" width="8" />
+                            <img alt="scroll to top image" src="/assets/icons/arrow-top.svg" height="8" width="8" />
                         </a>
                     </div>
 

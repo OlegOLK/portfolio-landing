@@ -1,10 +1,5 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 import React from 'react'
 import useTranslation from 'next-translate/useTranslation'
-import Grid from '../components/gird'
-import Navbar from '../components/navbar'
 import Main from '../components/main'
 import Section from '../components/section'
 import Faq from '../components/faq'
@@ -35,12 +30,12 @@ export default function Home() {
         imgAlt="Security-First Approach image"
         cube={
           <div className="relative">
-            <img height="42" width="42" src="./assets/features/security_first_approach_cube.png" />
+            <img height="42" width="42" alt="secutiry first approach cube image" src="./assets/features/security_first_approach_cube.png" />
           </div>
         }
         verticalCubes={
           <div className="absolute hidden lg:block w-full h-full">
-            <img src="assets/patterns/vertical_3_cubes.png" width="160" height="500" className="absolute"
+            <img src="assets/patterns/vertical_3_cubes.png" alt="vertical cube patterns" width="160" height="500" className="absolute"
               style={{ bottom: "-250px", left: "-80px", height: "500px", width: "160px" }} />
           </div>
         } />
@@ -57,7 +52,7 @@ export default function Home() {
             <figure className="absolute bg-color-main"
               style={{ height: "10px", width: "10px", top: "-10px", left: "-10px" }}>
             </figure>
-            <img height="32" width="32" src="./assets/features/multi_currency_support_cube.png" />
+            <img height="32" width="32" alt="feature cube image" src="./assets/features/multi_currency_support_cube.png" />
           </div>
         } />
 
@@ -71,12 +66,16 @@ export default function Home() {
         imgAlt="Every Satoshi Counts image"
         cube={
           <div className="relative">
-            <img height="42" width="32" src="./assets/features/every_statoshi_counts_cube.png" />
+            <img height="42" width="32"
+              alt="feature cube image"
+              src="./assets/features/every_statoshi_counts_cube.png" />
           </div>
         }
         verticalCubes={
           <div className="w-full h-full absolute hidden lg:block">
-            <img src="assets/patterns/vertical_3_cube_right.png" width="160" height="500" className="absolute"
+            <img
+              alt="vertical cube patterns"
+              src="assets/patterns/vertical_3_cube_right.png" width="160" height="500" className="absolute"
               style={{ bottom: "-250px", right: "-80px", height: "500px", width: "160px" }} />
           </div>
         } />
@@ -91,7 +90,7 @@ export default function Home() {
         imgAlt="Data-Driven Decisions image"
         cube={
           <div className="relative">
-            <img height="32" width="32" src="./assets/features/data_driven_cube.png" />
+            <img alt="feature cube image" height="32" width="32" src="./assets/features/data_driven_cube.png" />
             <figure className="absolute bg-color-main"
               style={{ borderRadius: "1px", top: "32px", left: "-10px", height: "10px", width: "10px" }}>
             </figure>
@@ -107,11 +106,12 @@ export default function Home() {
         imgSrc="./assets/features/share_portfolio.png"
         imgAlt="Share Your Portfolio image"
         cube={
-          <img height="32" width="42" src="./assets/features/share_portfolio_cube.png" />
+          <img alt="feature cube image" height="32" width="42" src="./assets/features/share_portfolio_cube.png" />
         }
         verticalCubes={
           <div className="absolute hidden lg:block w-full h-full">
-            <img src="assets/patterns/vertical_3_cubes.png" width="160" height="500" className="absolute"
+            <img alt="vertical cube patterns"
+              src="assets/patterns/vertical_3_cubes.png" width="160" height="500" className="absolute"
               style={{ bottom: "-250px", left: "-80px", height: "500px", width: "160px" }} />
           </div>
         } />

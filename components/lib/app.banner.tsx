@@ -12,7 +12,7 @@ export default function AppBanner({ hFull, inverse }: Props) {
         <Link href="/">
             <a className={cx("flex items-center", hFull ? 'h-full' : '')}>
                 <picture>
-                    <Image className="inline" height="32" width="32" src="/assets/logo_cube.png" />
+                    <Image alt="logo cube image" className="inline" height="32" width="32" src="/assets/logo_cube.png" />
                 </picture>
                 <p className={cx("ml-4 inline app-banner relative", inverse ? 'text-white' : '')}>
                     iQube

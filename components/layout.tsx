@@ -20,7 +20,7 @@ export default function Layout({ children }) {
         <AnimateSharedLayout>
             <Head>
                 <meta charSet="UTF-8" />
-                <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
                 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
                 <title>iQube {router.pathname.substring(1, router.pathname.length)}</title>
@@ -30,10 +30,6 @@ export default function Layout({ children }) {
                 <meta property="og:description" content={t('MainHeader')} />
                 <meta property="og:url" content="https://iQube.app/" />
                 <meta property="og:type" content="website" />
-
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin={"true"} />
-                <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
             </Head>
             <Navbar />
             <motion.main

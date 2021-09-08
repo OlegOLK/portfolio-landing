@@ -40,7 +40,7 @@ export default function Faq() {
                 <Grid additionalStyles="h-full">
                     <div className="col-span-4 col-start-1 mt-36 z-40">
                         <picture>
-                            <img height="32" width="32" src="./assets/cube.png" />
+                            <img  alt="faq cube image" height="32" width="32" src="./assets/cube.png" />
                         </picture>
                         <p className={cx("text-h2 text-left", styles.header)}>{t('FAQs')}</p>
 
