@@ -1,8 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { GA_TRACKING_ID } from '../lib/gtag'
+import { GA_TRACKING_ID, HJ_TRACKING_ID, OPT_TRACKING_ID } from '../lib/gtag'
 
-export const HJ_TRACKING_ID = process.env.NEXT_PUBLIC_HOTJAR_ID
-export const OPT_TRACKING_ID = process.env.NEXT_PUBLIC_OPTIMIZE_ID
+
 
 export default class MyDocument extends Document {
   render() {
