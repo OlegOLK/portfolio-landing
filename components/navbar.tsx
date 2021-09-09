@@ -47,32 +47,32 @@ export default function Navbar() {
 
 
                 <Link href={MenuItems[0]} locale={lang}>
-                    <a href={MenuItems[0]}
+                    <p
                         key={"menu-item-1"}
                         className={cx(
                             `text-uppercase col-start-5 col-span-1 text-center self-center justify-self-center`,
                             styles.navListItem)}>
                         {t(MenuItems[0])}
-                    </a>
+                    </p>
                 </Link>
 
                 <Link href={MenuItems[1]} locale={lang}>
-                    <a href={MenuItems[1]}
+                    <p
                         key={"menu-item-2"}
                         className={cx(
                             ` col-start-6 col-span-1 text-center self-center justify-self-center`,
                             styles.navListItem)}>
                         {t(MenuItems[1])}
-                    </a>
+                    </p>
                 </Link>
                 <Link href={MenuItems[2]} locale={lang}>
-                    <a href={MenuItems[2]}
+                    <p
                         key={"menu-item-3"}
                         className={cx(
                             ` col-start-7 col-span-1 text-center self-center justify-self-center`,
                             styles.navListItem)}>
                         {t(MenuItems[2])}
-                    </a>
+                    </p>
                 </Link>
                 <LanguageSwitcher />
                 <button onClick={goToApp} className="col-start-10 col-span-1 nav-list-item">
@@ -100,13 +100,13 @@ export default function Navbar() {
                     {
                         MenuItems.map((item, index) => {
                             return (
-                                <Link  key={"link-a-" + index} href={item} locale={lang}>
-                                    <a href={item}
+                                <Link key={"link-a-" + index} href={item} locale={lang}>
+                                    <p
                                         key={"nav-a-" + index} className={cx(
                                             "text-center self-center justify-self-center",
                                             styles.navListItem)}>
                                         {t(item)}
-                                    </a>
+                                    </p>
                                 </Link>
                             )
                         })
@@ -152,9 +152,16 @@ export default function Navbar() {
                     <Popover.Panel style={{ height: "570px" }} className="absolute bg-color-main  top-14 inset-x-0 transition transform origin-top-right lg:hidden">
                         {
                             <div className="flex flex-col items-center mt-28 text-white space-y-8" >
-                                <Link href="features" locale={lang} > <a href="features" className="secondary-menu cursor-pointer no-underline hover:underline">{t(MenuItems[0])}</a></Link>
-                                <Link href="pricing" locale={lang} > <a href="pricing" className="secondary-menu cursor-pointer no-underline hover:underline">{t(MenuItems[1])}</a></Link>
-                                <Link href="contacts" locale={lang} > <a href="contacts" className="secondary-menu cursor-pointer no-underline hover:underline">{t(MenuItems[2])}</a></Link>
+                                {/* <Link href="features" locale={lang} > */}
+                                     <a href="features" className="secondary-menu cursor-pointer no-underline hover:underline">{t(MenuItems[0])}</a>
+                                     {/* </Link> */}
+                                {/* <Link href="pricing" locale={lang} > */}
+                                     <a href="pricing" className="secondary-menu cursor-pointer no-underline hover:underline">{t(MenuItems[1])}</a>
+                                     {/* </Link> */}
+                                {/* <Link href="contacts" locale={lang} > */}
+                                    <a href="contacts" className="secondary-menu cursor-pointer no-underline hover:underline">{t(MenuItems[2])}
+                                    </a>
+                                {/* </Link> */}
                                 <a
                                     onClick={goToApp}
                                     className="self-center col-span-2 ripple shadow-lg w-44 py-3 text-center text-base font-semibold bg-white rounded-lg color-main ">

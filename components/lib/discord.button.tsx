@@ -6,7 +6,7 @@ export default function Disctord() {
 
     return (
         <a
-            href="https://discord.gg/SWzBKHEB" target="_blank" rel="noreferrer"
+            href="https://discord.gg/jGJvCD23Kc" target="_blank" rel="noreferrer"
             className="shadow-lg cursor-pointer py-3 px-3 flex bg-white items-center justify-start text-base font-semibold rounded-lg h-16 w-72 ">
             <Image alt="discord" src="/assets/icons/discord.svg" width="36" height="40" className="inline" />
             <div className="text-left ml-2">
