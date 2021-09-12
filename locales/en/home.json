@@ -26,7 +26,7 @@
     "Start for free": "Start for free",
     "FAQsubheader": "You might be wondering",
     "question1": "How does iQube work?",
-    "answer1": "Using various integrations with wallets and exchanges, iQube receives a complete history of trading operations and then simultaneously calculates the profitability of each transaction in two main currencies: BTC and USD. iQube provides information such as total income earned in a period of historical account existence time, income for each trade, the effectiveness of your trading strategy in relation to the BTC hold, risk/profitability of the portfolio using the Monte Carlo simulation technique, profitability of each asset in the portfolio, and much more.",
+    "answer1": "Using various integrations with wallets and exchanges, iQube receives a complete history of trading operations and then simultaneously calculates the profitability of each transaction in two main currencies: BTC and USD.\n\niQube provides information such as total income earned in a period of historical account existence time, income for each trade, the effectiveness of your trading strategy in relation to the BTC hold, risk/profitability of the portfolio using the Monte Carlo simulation technique, profitability of each asset in the portfolio, and much more.",
     "question2": "How does the exchange integration works?",
     "answer2": "You will be asked to provide Read-Only API keys. Keys would be used for constant sync of your assets and trades.",
     "question3": "What is the Portfolio?",
