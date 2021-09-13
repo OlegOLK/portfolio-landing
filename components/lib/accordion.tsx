@@ -13,7 +13,6 @@ export const Accordion: FunctionComponent<AccordtionProps> = ({ header, subHeade
     const subHeaderRef = useRef<HTMLDivElement>(null);
 
     const handleClick = () => {
-        console.log("A");
         setToggled(!toggled);
     }
 
