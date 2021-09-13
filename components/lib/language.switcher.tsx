@@ -20,18 +20,18 @@ export default function LanguageSwitcher({ reverseColor }: Props) {
     const router = useRouter();
     const { locale } = router;
 
-   async function handleChange(value: string) {
+    async function handleChange(value: string) {
         setSelected(value)
         setLanguage(value.toLowerCase());
     }
 
     return (
-        <div className="col-start-8 col-span-1 flex items-center">
+        <div className="flex items-center">
             <Listbox value={selected} onChange={handleChange}>
 
                 <Listbox.Button aria-label="Language switcher" className={cx(styles.navListItem)}>
-                    <p className="color-main justify-end">
-                        <img alt="globe laguage switcher image" src="/assets/globe.png" height="17" width="16" className="inline-block mr-2" />
+                    <p className={cx(" justify-end ", reverseColor ? 'text-white' : 'color-main')}>
+                        <img alt="globe laguage switcher image" src={reverseColor? "/assets/globe.svg" : "/assets/globe.png"} height="17" width="16" className="inline-block mr-2" />
                         {selected}
                     </p>
 
@@ -42,7 +42,7 @@ export default function LanguageSwitcher({ reverseColor }: Props) {
                     leaveFrom="opacity-100"
                     leaveTo="opacity-0"
                 >
-                    <Listbox.Options style={{bottom: "-30px"}} className="absolute w-16 overflow-auto text-base bg-white shadow-lg max-h-60 sm:text-sm">
+                    <Listbox.Options className="absolute w-16 overflow-auto text-base bg-white shadow-lg max-h-60 sm:text-sm bottom-16 lg:-bottom-16">
                         {locales.map((locale, localeIdx) => (
                             <Listbox.Option
                                 key={localeIdx}

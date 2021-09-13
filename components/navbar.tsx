@@ -74,7 +74,10 @@ export default function Navbar() {
                         {t(MenuItems[2])}
                     </p>
                 </Link>
-                <LanguageSwitcher />
+                <div className="col-start-8 col-span-1 flex items-center">
+                    <LanguageSwitcher />
+                </div>
+
                 <button onClick={goToApp} className="col-start-10 col-span-1 nav-list-item">
                     <p className="flex items-center color-main" style={{ textTransform: "none" }}>
                         <img alt="user image" src="./assets/user.png" height="17" width="16" className="inline mr-2"></img>
@@ -96,7 +99,7 @@ export default function Navbar() {
             <Grid additionalStyles="hidden lg:flex xl:hidden 2xl:hidden items-center justify-between grid-w-full">
 
                 <AppBanner />
-                <div className="space-x-8">
+                <div className="space-x-8 w-auto flex items-center">
                     {
                         MenuItems.map((item, index) => {
                             return (
@@ -153,20 +156,23 @@ export default function Navbar() {
                         {
                             <div className="flex flex-col items-center mt-28 text-white space-y-8" >
                                 {/* <Link href="features" locale={lang} > */}
-                                     <a href="features" className="secondary-menu cursor-pointer no-underline hover:underline">{t(MenuItems[0])}</a>
-                                     {/* </Link> */}
+                                <a href="features" className="secondary-menu cursor-pointer no-underline hover:underline">{t(MenuItems[0])}</a>
+                                {/* </Link> */}
                                 {/* <Link href="pricing" locale={lang} > */}
-                                     <a href="pricing" className="secondary-menu cursor-pointer no-underline hover:underline">{t(MenuItems[1])}</a>
-                                     {/* </Link> */}
+                                <a href="pricing" className="secondary-menu cursor-pointer no-underline hover:underline">{t(MenuItems[1])}</a>
+                                {/* </Link> */}
                                 {/* <Link href="contacts" locale={lang} > */}
-                                    <a href="contacts" className="secondary-menu cursor-pointer no-underline hover:underline">{t(MenuItems[2])}
-                                    </a>
+                                <a href="contacts" className="secondary-menu cursor-pointer no-underline hover:underline">{t(MenuItems[2])}
+                                </a>
+
                                 {/* </Link> */}
                                 <a
                                     onClick={goToApp}
                                     className="self-center col-span-2 ripple shadow-lg w-44 py-3 text-center text-base font-semibold bg-white rounded-lg color-main ">
                                     {t('Get Started')}
                                 </a>
+                                <LanguageSwitcher reverseColor={true} />
+
                             </div>
                         }
                     </Popover.Panel>
