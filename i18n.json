@@ -1,5 +1,5 @@
 {
-    "locales": ["en", "ru"],
+    "locales": ["en", "ru", "tr"],
     "defaultLocale": "en",
     "pages": {
       "/404": ["error"],
