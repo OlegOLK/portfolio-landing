@@ -9,16 +9,17 @@ export type AccordtionProps = {
 }
 
 export const Accordion: FunctionComponent<AccordtionProps> = ({ header, subHeader, isToggled }) => {
-    const [toggled, setToggled] = useState<boolean>(isToggled);
+    const [toggled, setToggled] = useState<boolean>(false);
     const subHeaderRef = useRef<HTMLDivElement>(null);
 
     const handleClick = () => {
+        console.log("A");
         setToggled(!toggled);
     }
 
     const growSize = () => {
         var growDiv = subHeaderRef.current;
-        if (!growDiv || growDiv.clientHeight) {
+        if (!toggled || !growDiv || growDiv.clientHeight) {
             return 0;
         } else {
 
