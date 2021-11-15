@@ -31,6 +31,8 @@ export default function Layout({ children }) {
                 <meta property="og:url" content="https://iQube.app/" />
                 <meta property="og:type" content="website" />
             </Head>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KDKKWL" height="0" width="0" style={{display:"none", visibility:"hidden"}}></iframe>
+
             <Navbar />
             <motion.main
                 initial="hidden"
