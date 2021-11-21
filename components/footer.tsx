@@ -7,39 +7,57 @@ import useTranslation from 'next-translate/useTranslation'
 
 type Breadcrumb = {
     header: string;
-    subHeaders?: string[];
-    node?: ReactNode
+    subHeaders?: SubHeader[];
+    node?: ReactNode;
+    note?: string;
+}
+
+type SubHeader = {
+    title: string;
+    href?: string;
 }
 
 const Breadcrumbs: Breadcrumb[] = [
     {
         header: "product",
         subHeaders: [
-            "features",
-            "how it works",
-            "pricing"
+            {
+                title: "features",
+                href: "#features"
+            }
+            // "how it works",
+            // "pricing"
         ]
     },
     {
         header: "company",
         subHeaders: [
-            "our team",
-            "policies",
-            "terms and conditions"
+            {
+                title: "our team"
+            },
+            {
+                title: "policies"
+            },
+            {
+                title: "terms and conditions"
+            }
         ]
     },
     {
         header: "contacts",
         subHeaders: [
-            "email",
-            "phone",
-            "address"
+            {
+                title: "email",
+                href: "mailto:iqube.hq@gmail.com"
+            }            
         ]
     },
     {
         header: "mobile",
+        note: "stay tuned",
         node: (
             <div className="flex flex-col">
+
                 <button className="bg-none">
                     <img alt="google play badge image" src="/assets/google_play.png" width="117" height="29" />
                 </button>
@@ -52,10 +70,12 @@ const Breadcrumbs: Breadcrumb[] = [
     {
         header: "social",
         node: (
-            <div key={"menu-link"} className="flex flex-row lg:flex-col xl:flex-row ">
-                <a key={"a-menu-link-1"}><img alt="twitter image" src="/assets/icons/twitter.svg" height="13" width="16" className="inline" /></a>
-                <a key={"a-menu-link-2"}><img alt="linkedin image" src="/assets/icons/linkedin-in.svg" height="14" width="14" className="inline ml-2.5 lg:ml-0 xl:ml-2.5" /></a>
-                <a key={"a-menu-link-3"}><img alt="telegram image" src="/assets/icons/telegram-plane.svg" height="11.74" width="14" className="inline ml-2.5 lg:ml-0 xl:ml-2.5" /></a>
+            <div key={"menu-link"} className="flex flex-row lg:flex-col xl:flex-row flex-wrap">
+                <a target="_blank" href="https://twitter.com/iQubeHQ" key={"a-menu-link-1"}><img alt="twitter image" src="/assets/icons/twitter.svg" height="13" width="16" className="inline" /></a>
+                <a target="_blank" href="https://www.linkedin.com/company/iqubeapp" key={"a-menu-link-2"}><img alt="linkedin image" src="/assets/icons/linkedin-in.svg" height="14" width="14" className="inline ml-2.5 lg:ml-0 xl:ml-2.5" /></a>
+                <a target="_blank" href="https://medium.com/@iqube.app/" key={"a-menu-link-3"}><img alt="medium image" src="/assets/icons/medium.png" height="25" width="25" className="inline h-auto ml-1 lg:ml-0 xl:ml-2.5" /></a>
+                <a target="_blank" href="https://www.youtube.com/channel/UCR5T6bdf_e_LDJLL0JXVkkg" key={"a-menu-link-4"}><img alt="youtube image" src="/assets/icons/youtube.svg" height="20" width="20" className="inline text-white  h-auto ml-1 lg:ml-0 xl:ml-2.5" /></a>
+                <a target="_blank" href="https://www.facebook.com/iqubeapp" key={"a-menu-link-5"}><img alt="facebook image" src="/assets/icons/facebook.svg" height="20" width="16" className="inline h-auto ml-1 lg:ml-0 xl:ml-2.5" /></a>
             </div>
         )
     }
@@ -82,7 +102,18 @@ export default function Footer() {
                                 index == 4 ? 'col-span-1' : "col-span-2",
                                 styles.listMt)}
                                 key={"head-" + index + item.header}>
-                                <p key={"p-" + index + item.header} className={cx("mb-3", styles.listHeader)}>{t(item.header)}</p>
+                                <p key={"p-" + index + item.header} className={cx("mb-3", styles.listHeader)}>
+                                    {t(item.header)}
+
+                                    {
+                                        item.note ? (
+                                            <span
+                                                key={"span-" + index + item.note}
+                                                className={cx("ml-2 inline-block", styles.listHeader)}
+                                            >({t(item.note)})</span>
+                                        ) : (<></>)
+                                    }
+                                </p>
                                 {
                                     item.subHeaders ? (
                                         <ul
@@ -92,7 +123,7 @@ export default function Footer() {
                                                 item.subHeaders.map((sub, index) => {
                                                     return (
                                                         <li className="capitalize" key={"sub-" + index + item.header}>
-                                                            {t(sub)}
+                                                             <a href={sub.href ?? '#'}>{t(sub.title)}</a>
                                                         </li>
                                                     )
                                                 })
@@ -136,7 +167,17 @@ export default function Footer() {
                                     index == 4 ? 'col-span-1' : "",
                                     styles.listMt)}
                                     key={"head-" + index + item.header}>
-                                    <p className={cx("mb-3", styles.listHeader)}>{item.header}</p>
+                                    <p className={cx("mb-3", styles.listHeader)}>
+                                        {t(item.header)}
+                                        {
+                                            item.note ? (
+                                                <span
+                                                    key={"span-" + index + item.note}
+                                                    className={cx("inline-block", styles.listHeader)}
+                                                >({t(item.note)})</span>
+                                            ) : (<></>)
+                                        }
+                                    </p>
                                     {
                                         item.subHeaders ? (
                                             <ul className={cx("space-y-2 text-white", styles.listItem)}>
@@ -144,7 +185,7 @@ export default function Footer() {
                                                     item.subHeaders.map((sub, index) => {
                                                         return (
                                                             <li className="capitalize" key={"sub-" + index + item.header}>
-                                                                {t(sub)}
+                                                                <a href={sub.href ?? '#'}>{t(sub.title)}</a>
                                                             </li>
                                                         )
                                                     })

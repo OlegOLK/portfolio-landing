@@ -12,9 +12,7 @@ import { NavigateToApp } from '../lib/navigate.to.app';
 import { useRouter } from 'next/router'
 
 const MenuItems: string[] = [
-    "features",
-    "pricing",
-    "contact"
+    "features"
 ]
 
 export default function Navbar() {
@@ -45,8 +43,13 @@ export default function Navbar() {
                     <AppBanner />
                 </div>
 
-
-                <Link href={MenuItems[0]} locale={lang}>
+                <a href="#features"
+                    className={cx(
+                        `text-uppercase col-start-5 col-span-1 text-center self-center justify-self-center`,
+                        styles.navListItem)}>
+                    {t(MenuItems[0])}
+                </a>
+                {/* <Link href={MenuItems[0]} locale={lang}>
                     <p
                         key={"menu-item-1"}
                         className={cx(
@@ -54,9 +57,9 @@ export default function Navbar() {
                             styles.navListItem)}>
                         {t(MenuItems[0])}
                     </p>
-                </Link>
+                </Link> */}
 
-                <Link href={MenuItems[1]} locale={lang}>
+                {/* <Link href={MenuItems[1]} locale={lang}>
                     <p
                         key={"menu-item-2"}
                         className={cx(
@@ -73,7 +76,7 @@ export default function Navbar() {
                             styles.navListItem)}>
                         {t(MenuItems[2])}
                     </p>
-                </Link>
+                </Link> */}
                 <div className="col-start-8 col-span-1 flex items-center">
                     <LanguageSwitcher />
                 </div>
@@ -103,14 +106,20 @@ export default function Navbar() {
                     {
                         MenuItems.map((item, index) => {
                             return (
-                                <Link key={"link-a-" + index} href={item} locale={lang}>
-                                    <p
-                                        key={"nav-a-" + index} className={cx(
-                                            "text-center self-center justify-self-center",
-                                            styles.navListItem)}>
-                                        {t(item)}
-                                    </p>
-                                </Link>
+                                // <Link key={"link-a-" + index} href={item} locale={lang}>
+                                //     <p
+                                //         key={"nav-a-" + index} className={cx(
+                                //             "text-center self-center justify-self-center",
+                                //             styles.navListItem)}>
+                                //         {t(item)}
+                                //     </p>
+                                // </Link>
+                                <a  key={"link-a-" + index} href="#features"
+                                    className={cx(
+                                        "text-center self-center justify-self-center",
+                                        styles.navListItem)}>
+                                    {t(item)}
+                                </a>
                             )
                         })
                     }
@@ -156,14 +165,14 @@ export default function Navbar() {
                         {
                             <div className="flex flex-col items-center mt-28 text-white space-y-8" >
                                 {/* <Link href="features" locale={lang} > */}
-                                <a href="features" className="secondary-menu cursor-pointer no-underline hover:underline">{t(MenuItems[0])}</a>
+                                <a href="#features" className="secondary-menu cursor-pointer no-underline hover:underline">{t(MenuItems[0])}</a>
                                 {/* </Link> */}
                                 {/* <Link href="pricing" locale={lang} > */}
-                                <a href="pricing" className="secondary-menu cursor-pointer no-underline hover:underline">{t(MenuItems[1])}</a>
+                                {/* <a href="pricing" className="secondary-menu cursor-pointer no-underline hover:underline">{t(MenuItems[1])}</a> */}
                                 {/* </Link> */}
                                 {/* <Link href="contacts" locale={lang} > */}
-                                <a href="contacts" className="secondary-menu cursor-pointer no-underline hover:underline">{t(MenuItems[2])}
-                                </a>
+                                {/* <a href="contacts" className="secondary-menu cursor-pointer no-underline hover:underline">{t(MenuItems[2])} */}
+                                {/* </a> */}
 
                                 {/* </Link> */}
                                 <a
