@@ -1,10 +1,13 @@
+import useTranslation from "next-translate/useTranslation";
+
 /* This example requires Tailwind CSS v2.0+ */
 const people = [
     {
         name: 'Oleksii Vashchenko',
         role: 'Co-Founder',
         imageUrl:
-            'https://media-exp1.licdn.com/dms/image/C4D03AQEmyiay7VOAoA/profile-displayphoto-shrink_400_400/0/1603517537734?e=1643241600&v=beta&t=QCe64WHonfJdziXo-wJqXa3FWJs9Aprx7bY1HE8in8o',
+            '/team_pics/alexey_main.png',
+        altImageUrl:"/team_pics/alexey_alt.png",    
         twitterUrl: 'https://twitter.com/alexeyvashch',
         linkedinUrl: 'https://www.linkedin.com/in/alexeyvaschenko/',
     },
@@ -12,7 +15,8 @@ const people = [
         name: 'Dmytro Kuian',
         role: 'Co-Founder',
         imageUrl:
-            'https://media-exp1.licdn.com/dms/image/C4D03AQFEZACBpzTmLA/profile-displayphoto-shrink_400_400/0/1549301374965?e=1643241600&v=beta&t=-6tQR-N8u1TWUeffL6ESazi_xAfb3JTxyCEOQ78cx3s',
+            '/team_pics/dmitry_main.png',
+        altImageUrl:"/team_pics/dmitry_alt.png",     
         twitterUrl: '#',
         linkedinUrl: 'https://www.linkedin.com/in/dmytro-kuian-53bb9917a/',
     },
@@ -20,15 +24,16 @@ const people = [
         name: 'Oleg Krotenko',
         role: 'Co-Founder',
         imageUrl:
-            'https://media-exp1.licdn.com/dms/image/C5103AQFrQRXIwWmXaQ/profile-displayphoto-shrink_400_400/0/1517602752194?e=1643241600&v=beta&t=gKLcL4XCqSRB7r7jChqDxgsryAp2puWz2nQA5bTMryk',
+            '/team_pics/oleg_main.png',
+        altImageUrl:"/team_pics/oleg_alt.png",
         twitterUrl: '#',
         linkedinUrl: 'https://www.linkedin.com/in/oleg-krotenko-04001211a/',
     },
     {
-        name: 'Elena Kuian',
+        name: 'Olena Kuian',
         role: 'Marketologist',
-        imageUrl:
-            'https://media-exp1.licdn.com/dms/image/C4E03AQGfyxFW_Xqw6w/profile-displayphoto-shrink_400_400/0/1637665713303?e=1643241600&v=beta&t=z1SWZRVefFIadS4gIk4qcOBON691lAMbPv0vfoxtA0U',
+        imageUrl: '/team_pics/olena_main.png',
+        altImageUrl:"/team_pics/olena_alt.png",
         twitterUrl: '#',
         linkedinUrl: 'https://www.linkedin.com/in/kuyan/',
     },
@@ -36,7 +41,9 @@ const people = [
         name: 'Natalia Polishchuk',
         role: 'UX Designer',
         imageUrl:
-            'https://i.imgur.com/aNfKNpu.jpg',
+            '/team_pics/natali_main.png',
+        altImageUrl:
+        '/team_pics/natali_alt.png',
         twitterUrl: '#',
         linkedinUrl: '#',
     },
@@ -44,6 +51,7 @@ const people = [
 ]
 
 export default function OurTeam() {
+  const { t } = useTranslation('home');
     return (       
         <div id="team" className="bg-white">
           <div className="max-w-7xl mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-24">
@@ -51,8 +59,11 @@ export default function OurTeam() {
               <div className="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
                 <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">Meet our team</h2>
                 <p className="text-xl text-gray-500">
-                  team description
+                  {t('aboutteam')}                  
                 </p>
+                <p className="text-xl text-gray-500">
+                  {t('mission')}                  
+                </p>                
               </div>
               <ul
                 role="list"
@@ -61,7 +72,9 @@ export default function OurTeam() {
                 {people.map((person) => (
                   <li key={person.name}>
                     <div className="space-y-6">
-                      <img className="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" src={person.imageUrl} alt="" />
+                      <img className="aspect-w-3 aspect-h-2" src={person.imageUrl}
+                      onMouseOver={e => (e.currentTarget.src = person.altImageUrl)}
+                      onMouseOut={e => (e.currentTarget.src = person.imageUrl)} alt="" />
                       <div className="space-y-2">
                         <div className="text-lg leading-6 font-medium space-y-1">
                           <h3>{person.name}</h3>
@@ -69,7 +82,7 @@ export default function OurTeam() {
                         </div>
                         <ul role="list" className="flex justify-center space-x-5">
                           <li>
-                            <a href={person.twitterUrl} className="text-gray-400 hover:text-gray-500">
+                            <a target="_blank" href={person.twitterUrl} className="text-gray-400 hover:text-gray-500">
                               <span className="sr-only">Twitter</span>
                               <svg className="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
@@ -77,7 +90,7 @@ export default function OurTeam() {
                             </a>
                           </li>
                           <li>
-                            <a href={person.linkedinUrl} className="text-gray-400 hover:text-gray-500">
+                            <a target="_blank" href={person.linkedinUrl} className="text-gray-400 hover:text-gray-500">
                               <span className="sr-only">LinkedIn</span>
                               <svg className="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
                                 <path
