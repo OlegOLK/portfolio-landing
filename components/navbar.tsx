@@ -13,7 +13,8 @@ import { useRouter } from 'next/router'
 
 const MenuItems: string[] = [
     "features",
-    "faq"
+    "faq",
+    "team"
 ]
 
 export default function Navbar() {
@@ -56,6 +57,12 @@ export default function Navbar() {
                         `text-uppercase col-start-6 col-span-1 text-center self-center justify-self-center`,
                          styles.navListItem)}>
                     {t(MenuItems[1])}
+                </a>
+                <a href="#team" 
+                    className={cx(
+                        `text-uppercase col-start-7 col-span-1 text-center self-center justify-self-center`,
+                         styles.navListItem)}>
+                    {t(MenuItems[2])}
                 </a>
                 {/* <Link href={MenuItems[0]} locale={lang}>
                     <p
