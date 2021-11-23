@@ -12,7 +12,8 @@ import { NavigateToApp } from '../lib/navigate.to.app';
 import { useRouter } from 'next/router'
 
 const MenuItems: string[] = [
-    "features"
+    "features",
+    "faq"
 ]
 
 export default function Navbar() {
@@ -49,6 +50,13 @@ export default function Navbar() {
                         styles.navListItem)}>
                     {t(MenuItems[0])}
                 </a>
+
+                <a href="#faq" 
+                    className={cx(
+                        `text-uppercase col-start-6 col-span-1 text-center self-center justify-self-center`,
+                         styles.navListItem)}>
+                    {t(MenuItems[1])}
+                </a>
                 {/* <Link href={MenuItems[0]} locale={lang}>
                     <p
                         key={"menu-item-1"}
@@ -83,7 +91,7 @@ export default function Navbar() {
 
                 <button onClick={goToApp} className="col-start-10 col-span-1 nav-list-item">
                     <p className="flex items-center color-main" style={{ textTransform: "none" }}>
-                        <img alt="user image" src="./assets/user.png" height="17" width="16" className="inline mr-2"></img>
+                        <img alt="user image" src="./assets/person.svg" height="17" width="16" className="inline mr-2"></img>
                         {t('Sign in')}
                     </p>
                 </button>
@@ -114,7 +122,7 @@ export default function Navbar() {
                                 //         {t(item)}
                                 //     </p>
                                 // </Link>
-                                <a  key={"link-a-" + index} href="#features"
+                                <a key={"link-a-" + index} href="#features"
                                     className={cx(
                                         "text-center self-center justify-self-center",
                                         styles.navListItem)}>

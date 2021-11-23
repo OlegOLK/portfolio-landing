@@ -9,6 +9,7 @@ export default function Faq() {
     const { t } = useTranslation('home')
     return (
         <>
+            <div id="faq"></div>
             <section className={cx("w-full flex justify-center items-center relative",
                 styles.section,
                 styles.faqBg)}>

@@ -122,7 +122,7 @@ export default function Footer() {
                                             {
                                                 item.subHeaders.map((sub, index) => {
                                                     return (
-                                                        <li className="capitalize" key={"sub-" + index + item.header}>
+                                                        <li key={"sub-" + index + item.header}>
                                                              <a href={sub.href ?? '#'}>{t(sub.title)}</a>
                                                         </li>
                                                     )

@@ -30,8 +30,8 @@ export default function LanguageSwitcher({ reverseColor }: Props) {
             <Listbox value={selected} onChange={handleChange}>
 
                 <Listbox.Button aria-label="Language switcher" className={cx(styles.navListItem)}>
-                    <p className={cx(" justify-end ", reverseColor ? 'text-white' : 'color-main')}>
-                        <img alt="globe laguage switcher image" src={reverseColor? "/assets/globe.svg" : "/assets/globe.png"} height="17" width="16" className="inline-block mr-2" />
+                    <p className={cx("flex items-center justify-end ", reverseColor ? 'text-white' : 'color-main')}>
+                        <img alt="globe laguage switcher image" src={reverseColor? "/assets/globe.svg" : "/assets/globe_filled.svg"} height="17" width="16" className="inline-block mr-2" />
                         {selected}
                     </p>
 
