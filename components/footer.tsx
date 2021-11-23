@@ -24,6 +24,10 @@ const Breadcrumbs: Breadcrumb[] = [
             {
                 title: "features",
                 href: "#features"
+            },
+            {
+                title: "faq",
+                href: "#faq"
             }
             // "how it works",
             // "pricing"
