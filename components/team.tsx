@@ -17,7 +17,7 @@ const people = [
         imageUrl:
             '/team_pics/dmitry_main.png',
         altImageUrl:"/team_pics/dmitry_alt.png",     
-        twitterUrl: '#',
+        twitterUrl: 'https://twitter.com/iQubeHQ',
         linkedinUrl: 'https://www.linkedin.com/in/dmytro-kuian-53bb9917a/',
     },
     {
@@ -26,7 +26,7 @@ const people = [
         imageUrl:
             '/team_pics/oleg_main.png',
         altImageUrl:"/team_pics/oleg_alt.png",
-        twitterUrl: '#',
+        twitterUrl: 'https://twitter.com/iQubeHQ',
         linkedinUrl: 'https://www.linkedin.com/in/oleg-krotenko-04001211a/',
     },
     {
@@ -34,7 +34,7 @@ const people = [
         role: 'Marketologist',
         imageUrl: '/team_pics/olena_main.png',
         altImageUrl:"/team_pics/olena_alt.png",
-        twitterUrl: '#',
+        twitterUrl: 'https://twitter.com/iQubeHQ',
         linkedinUrl: 'https://www.linkedin.com/in/kuyan/',
     },
     {
@@ -44,8 +44,8 @@ const people = [
             '/team_pics/natali_main.png',
         altImageUrl:
         '/team_pics/natali_alt.png',
-        twitterUrl: '#',
-        linkedinUrl: '#',
+        twitterUrl: 'https://twitter.com/iQubeHQ',
+        linkedinUrl: 'https://www.linkedin.com/company/iqubeapp',
     },
     // More people...
 ]
