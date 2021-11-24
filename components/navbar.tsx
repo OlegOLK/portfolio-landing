@@ -176,14 +176,14 @@ export default function Navbar() {
                     leaveFrom="opacity-100 scale-100"
                     leaveTo="opacity-0 scale-95"
                 >
-                    <Popover.Panel style={{ height: "570px" }} className="absolute bg-color-main  top-14 inset-x-0 transition transform origin-top-right lg:hidden">
+                    <Popover.Panel style={{ height: "470px" }} className="absolute bg-color-main  top-14 inset-x-0 transition transform origin-top-right lg:hidden">
                         {
                             <div className="flex flex-col items-center mt-28 text-white space-y-8" >
                                 {/* <Link href="features" locale={lang} > */}
                                 {
                                     MenuItems.map((item) => {                                                                                
                                         return (
-                                            <a href={"#" + item} className="secondary-menu cursor-pointer no-underline hover:underline">{t(item)}</a>
+                                            <Popover.Button as="a" href={"#" + item} className="secondary-menu cursor-pointer no-underline hover:underline">{t(item)}</Popover.Button>
                                         )
                                     })
                                 }
