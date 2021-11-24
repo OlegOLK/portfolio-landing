@@ -1,0 +1,68 @@
+.heading {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 64px;
+}
+
+.subHeader {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.description {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.termHeader {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 42px;
+}
+
+.termText {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+@media (max-width: 1023px) {
+    .main {
+        margin-top: 138px;
+        min-height: 606px;
+        margin-bottom: 56px;
+    }   
+}
+
+@media (min-width: 1024px) {
+    .main {
+        margin-top: 112px;
+        min-height: 38rem;
+        margin-bottom: 82px;
+    }
+    .mt{
+        margin-top: 4.5rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .main {
+        margin-top: 112px;
+        min-height: 38rem;
+        margin-bottom: 82px;
+    }
+    .mt{
+        margin-top: 4.5rem;
+    }
+}
+
+
+@media (min-width: 1536px) {
+    .main {
+        margin-top: 112px;
+        min-height: 710px;
+        margin-bottom: 49px;
+    }
+}
