@@ -9,6 +9,7 @@ export default function Faq() {
     const { t } = useTranslation('home')
     return (
         <>
+            <div id="faq"></div>
             <section className={cx("w-full flex justify-center items-center relative",
                 styles.section,
                 styles.faqBg)}>
@@ -52,6 +53,7 @@ export default function Faq() {
                         <Accordion  header={t('question2')} subHeader={t('answer2')} />
                         <Accordion  header={t('question3')} subHeader={t('answer3')} />
                         <Accordion  header={t('question4')} subHeader={t('answer4')} />
+                        <Accordion  header={t('question5')} subHeader={t('answer5')} />
                     </div>
                 </Grid>
             </section>

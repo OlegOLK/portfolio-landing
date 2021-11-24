@@ -12,7 +12,9 @@ import { NavigateToApp } from '../lib/navigate.to.app';
 import { useRouter } from 'next/router'
 
 const MenuItems: string[] = [
-    "features"
+    "features",
+    "faq",
+    "team"
 ]
 
 export default function Navbar() {
@@ -49,6 +51,19 @@ export default function Navbar() {
                         styles.navListItem)}>
                     {t(MenuItems[0])}
                 </a>
+
+                <a href="#faq"
+                    className={cx(
+                        `text-uppercase col-start-6 col-span-1 text-center self-center justify-self-center`,
+                        styles.navListItem)}>
+                    {t(MenuItems[1])}
+                </a>
+                <a href="#team"
+                    className={cx(
+                        `text-uppercase col-start-7 col-span-1 text-center self-center justify-self-center`,
+                        styles.navListItem)}>
+                    {t(MenuItems[2])}
+                </a>
                 {/* <Link href={MenuItems[0]} locale={lang}>
                     <p
                         key={"menu-item-1"}
@@ -83,7 +98,7 @@ export default function Navbar() {
 
                 <button onClick={goToApp} className="col-start-10 col-span-1 nav-list-item">
                     <p className="flex items-center color-main" style={{ textTransform: "none" }}>
-                        <img alt="user image" src="./assets/user.png" height="17" width="16" className="inline mr-2"></img>
+                        <img alt="user image" src="./assets/person.svg" height="17" width="16" className="inline mr-2"></img>
                         {t('Sign in')}
                     </p>
                 </button>
@@ -104,7 +119,7 @@ export default function Navbar() {
                 <AppBanner />
                 <div className="space-x-8 w-auto flex items-center">
                     {
-                        MenuItems.map((item, index) => {
+                        MenuItems.map((item, index) => {                            
                             return (
                                 // <Link key={"link-a-" + index} href={item} locale={lang}>
                                 //     <p
@@ -114,7 +129,7 @@ export default function Navbar() {
                                 //         {t(item)}
                                 //     </p>
                                 // </Link>
-                                <a  key={"link-a-" + index} href="#features"
+                                <a key={"link-a-" + index} href={"#" + item}
                                     className={cx(
                                         "text-center self-center justify-self-center",
                                         styles.navListItem)}>
@@ -161,11 +176,20 @@ export default function Navbar() {
                     leaveFrom="opacity-100 scale-100"
                     leaveTo="opacity-0 scale-95"
                 >
-                    <Popover.Panel style={{ height: "570px" }} className="absolute bg-color-main  top-14 inset-x-0 transition transform origin-top-right lg:hidden">
+                    <Popover.Panel style={{ height: "470px" }} className="absolute bg-color-main  top-14 inset-x-0 transition transform origin-top-right lg:hidden">
                         {
                             <div className="flex flex-col items-center mt-28 text-white space-y-8" >
                                 {/* <Link href="features" locale={lang} > */}
-                                <a href="#features" className="secondary-menu cursor-pointer no-underline hover:underline">{t(MenuItems[0])}</a>
+                                {
+                                    MenuItems.map((item) => {                                                                                
+                                        return (
+                                            <Popover.Button as="a" href={"#" + item} className="secondary-menu cursor-pointer no-underline hover:underline">{t(item)}</Popover.Button>
+                                        )
+                                    })
+                                }
+                                {/* <a href="#features" className="secondary-menu cursor-pointer no-underline hover:underline">{t(MenuItems[0])}</a>
+                                <a href="#faq" className="secondary-menu cursor-pointer no-underline hover:underline">{t(MenuItems[1])}</a>
+                                <a href="#team" className="secondary-menu cursor-pointer no-underline hover:underline">{t(MenuItems[2])}</a> */}
                                 {/* </Link> */}
                                 {/* <Link href="pricing" locale={lang} > */}
                                 {/* <a href="pricing" className="secondary-menu cursor-pointer no-underline hover:underline">{t(MenuItems[1])}</a> */}

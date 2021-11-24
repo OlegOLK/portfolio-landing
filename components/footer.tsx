@@ -24,6 +24,10 @@ const Breadcrumbs: Breadcrumb[] = [
             {
                 title: "features",
                 href: "#features"
+            },
+            {
+                title: "faq",
+                href: "#faq"
             }
             // "how it works",
             // "pricing"
@@ -33,14 +37,22 @@ const Breadcrumbs: Breadcrumb[] = [
         header: "company",
         subHeaders: [
             {
-                title: "our team"
+                title: "our team",
+                href: "#team",
             },
             {
-                title: "policies"
+                title: "policies",
+                href: "docs/Privacy_Policy.docx"
             },
             {
-                title: "terms and conditions"
-            }
+                title: "terms and conditions",
+                href: "docs/Terms_and_Conditions.docx"
+            },
+            {
+                title: "security",
+                href: "docs/Security_iQube.docx"
+            },
+
         ]
     },
     {
@@ -122,7 +134,7 @@ export default function Footer() {
                                             {
                                                 item.subHeaders.map((sub, index) => {
                                                     return (
-                                                        <li className="capitalize" key={"sub-" + index + item.header}>
+                                                        <li key={"sub-" + index + item.header}>
                                                              <a href={sub.href ?? '#'}>{t(sub.title)}</a>
                                                         </li>
                                                     )
@@ -205,7 +217,7 @@ export default function Footer() {
             </div>
             <div className={cx("bottom-0 footer-bg w-full flex justify-center items-center", styles.bg, styles.copyrightsBorder)}
                 style={{ height: "34px" }}>
-                <p className={cx("text-center", styles.copyrights)}>©2021 - iQube | All rights reserved</p>
+                <p className={cx("text-center", styles.copyrights)}>©2021 - iQube.app | All rights reserved</p>
             </div>
         </footer>
     )

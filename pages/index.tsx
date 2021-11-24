@@ -6,6 +6,7 @@ import Faq from '../components/faq'
 import Cta from '../components/cta'
 import Footer from '../components/footer';
 import Disctord from '../components/lib/discord.button'
+import OurTeam from '../components/team'
 
 export default function Home() {
   const { t } = useTranslation('home')
@@ -115,8 +116,9 @@ export default function Home() {
               style={{ bottom: "-250px", left: "-80px", height: "500px", width: "160px" }} />
           </div>
         } />
-
+      
       <Faq />
+      <OurTeam />
       <Cta />
       <Footer />
     </>
