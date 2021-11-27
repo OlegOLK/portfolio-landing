@@ -25,9 +25,9 @@ export default function Layout({ children }) {
 
                 <title>iQube {router.pathname.substring(1, router.pathname.length)}</title>
                 <link rel="icon" href="/main.ico" />
-                <meta name="description" content={t('MainHeader')} />
-                <meta property="og:title" content={t('MainSubheader')} />
-                <meta property="og:description" content={t('MainHeader')} />
+                <meta name="description" content={t('SocialSubheader')} />
+                <meta property="og:title" content={t('SocialHeader')} />
+                <meta property="og:description" content={t('SocialSubheader')} />
                 <meta property="og:url" content="https://iQube.app/" />
                 <meta property="og:image" content="/assets/featured_image.png" />
                 <meta property="og:type" content="website" />
