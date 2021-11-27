@@ -29,6 +29,7 @@ export default function Layout({ children }) {
                 <meta property="og:title" content={t('MainSubheader')} />
                 <meta property="og:description" content={t('MainHeader')} />
                 <meta property="og:url" content="https://iQube.app/" />
+                <meta property="og:image" content="/assets/featured_image.png" />
                 <meta property="og:type" content="website" />
             </Head>
             <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KDKKWL" height="0" width="0" style={{display:"none", visibility:"hidden"}}></iframe>
